@@ -4,10 +4,18 @@ declare(strict_types=1);
 
 namespace Knospe\Core;
 
+use Knospe\Database\Connection;
+use Knospe\Domain\Post\PostgresPostRepository;
+use Knospe\Domain\Post\PostRepositoryInterface;
+use Knospe\Domain\User\PostgresUserRepository;
+use Knospe\Domain\User\UserRepositoryInterface;
+use Knospe\Http\Middleware\CsrfMiddleware;
 use Knospe\Http\Middleware\ErrorHandlingMiddleware;
 use Knospe\Support\Config;
+use Knospe\Support\Session;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
+use PDO;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Log\LoggerInterface;
@@ -17,8 +25,8 @@ use Psr\Log\LoggerInterface;
  * Grunddiensten ein und verarbeitet eine Anfrage, indem er den Router als
  * Kern-Handler hinter die Middleware-Pipeline haengt.
  *
- * Bewusst schlank - die eigentliche Arbeit steckt in Container, Router und
- * Pipeline, die jeweils fuer sich verstaendlich sind.
+ * Die konkreten Datenbank-Umsetzungen werden hier an ihre Interfaces
+ * gebunden - der uebrige Code kennt nur die Interfaces.
  *
  * Lern mehr: docs/02-architektur/02-ordner-bedeutung-detailliert.md
  */
@@ -39,35 +47,48 @@ final class Kernel
 
     private function registerServices(): void
     {
-        // Konfiguration ist bereits fertig - als Instanz hinterlegen.
+        // Fertige Werte als Instanz hinterlegen.
         $this->container->instance(Config::class, $this->config);
 
-        // Ein einfacher Logger, der nach stderr schreibt (im Container sichtbar
-        // ueber "./knospe logs php").
+        // Logger nach stderr (sichtbar ueber "./knospe logs php").
         $this->container->set(LoggerInterface::class, static function (): LoggerInterface {
             $logger = new Logger('knospe');
             $logger->pushHandler(new StreamHandler('php://stderr'));
 
             return $logger;
         });
+
+        // Datenbank: lazy, erst beim ersten Bedarf verbunden.
+        $this->container->set(PDO::class, fn (): PDO => Connection::create($this->config));
+
+        // Repository-Interfaces an ihre PostgreSQL-Umsetzungen binden.
+        $this->container->set(
+            UserRepositoryInterface::class,
+            static fn (Container $c): UserRepositoryInterface
+                => new PostgresUserRepository($c->get(PDO::class)),
+        );
+        $this->container->set(
+            PostRepositoryInterface::class,
+            static fn (Container $c): PostRepositoryInterface
+                => new PostgresPostRepository($c->get(PDO::class)),
+        );
     }
 
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
-        // Router als Kern-Handler; er kennt den Container, um Handler zu holen.
         $router = new Router($this->container);
 
         /** @var iterable<array{0: string, 1: string, 2: string}> $routes */
         $routes = require dirname(__DIR__, 2) . '/config/routes.php';
         $router->addMany($routes);
 
-        // Pipeline: erst Fehlerbehandlung, dann der Router. Weitere Middleware
-        // (z.B. Auth) kommen in spaeteren Meilensteinen dazu.
+        // Pipeline: erst Fehlerbehandlung (aussen), dann CSRF-Schutz, dann Router.
         $pipeline = new Pipeline($router, [
             new ErrorHandlingMiddleware(
                 $this->container->get(LoggerInterface::class),
                 $this->config->appDebug,
             ),
+            new CsrfMiddleware($this->container->get(Session::class)),
         ]);
 
         return $pipeline->handle($request);
