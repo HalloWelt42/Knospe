@@ -1,0 +1,128 @@
+/* Globale Gestaltung und ein paar wiederverwendbare Klassen.
+   Bewusst schlicht und dunkel gehalten. Akzente ueber volle Raender oder
+   Flaechen - keine reinen Links/Rechts-Randstreifen.
+   Lern mehr: docs/04-frontend/06-styling-css.md */
+
+:root {
+  --bg: #0f1115;
+  --panel: #171a21;
+  --panel-2: #1e222b;
+  --text: #e6e8eb;
+  --muted: #8b93a1;
+  --accent: #3b82f6;
+  --accent-hover: #2f6fe0;
+  --ok: #4ade80;
+  --err: #f87171;
+  --border: #262b36;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Chakra Petch', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.btn {
+  padding: 0.55rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.btn-ghost {
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  color: var(--text);
+}
+
+.btn-danger {
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--err);
+  font: inherit;
+  cursor: pointer;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.9rem;
+}
+
+.field label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.field input,
+.field textarea {
+  padding: 0.6rem 0.7rem;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font: inherit;
+}
+
+.field .fehler {
+  color: var(--err);
+  font-size: 0.8rem;
+}
+
+.karte {
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 1.2rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.err {
+  color: var(--err);
+}
