@@ -7,7 +7,7 @@ namespace Knospe\Core\Exception;
 use Throwable;
 
 /**
- * Angemeldet, aber ohne Recht fuer diese Aktion (z.B. fremder Beitrag).
+ * Angemeldet, aber ohne Recht für diese Aktion (z.B. fremder Beitrag).
  * Ergibt HTTP 403.
  */
 final class ForbiddenException extends HttpException

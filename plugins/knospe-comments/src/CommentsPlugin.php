@@ -11,9 +11,9 @@ use Knospe\Plugin\PluginMetadata;
 /**
  * Beispiel-Plugin "Kommentare".
  *
- * Zeigt alle Faehigkeiten eines Knospe-Plugins:
+ * Zeigt alle Fähigkeiten eines Knospe-Plugins:
  *  - eigene Routen (/api/comments ...)
- *  - eigene Migration (Tabelle comments, laeuft beim Aktivieren)
+ *  - eigene Migration (Tabelle comments, läuft beim Aktivieren)
  *  - eine Aktion (reagiert auf post.deleted)
  *  - einen Filter (comment.content)
  *  - einen Frontend-Teil (frontend/comments.plugin.ts + CommentsPanel.svelte)
@@ -40,15 +40,15 @@ final class CommentsPlugin extends AbstractPlugin
         $manager->routes()->add('POST', '/api/comments', CommentController::class . '@store');
         $manager->routes()->add('DELETE', '/api/comments/{id}', CommentController::class . '@destroy');
 
-        // Aktion: auf das Loeschen eines Beitrags reagieren. Die Fremdschluessel
-        // raeumen dank ON DELETE CASCADE bereits mit auf - dieser Hook zeigt, wie
-        // ein Plugin ueberhaupt auf Kern-Ereignisse reagieren kann.
+        // Aktion: auf das Löschen eines Beitrags reagieren. Die Fremdschlüssel
+        // räumen dank ON DELETE CASCADE bereits mit auf - dieser Hook zeigt, wie
+        // ein Plugin überhaupt auf Kern-Ereignisse reagieren kann.
         $manager->hooks()->addAction('post.deleted', static function (int $postId) use ($manager): void {
             $manager->db()->prepare('DELETE FROM comments WHERE post_id = ?')->execute([$postId]);
         });
 
-        // Filter: den Kommentartext bereinigen. Andere Plugins koennten ihn
-        // ueber denselben Filter zusaetzlich veraendern.
+        // Filter: den Kommentartext bereinigen. Andere Plugins könnten ihn
+        // über denselben Filter zusätzlich verändern.
         $manager->hooks()->addFilter('comment.content', static fn (string $text): string => trim($text));
     }
 

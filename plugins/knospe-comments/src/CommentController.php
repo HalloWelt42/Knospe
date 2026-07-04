@@ -15,8 +15,8 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
 /**
- * Steuert die Kommentar-Endpunkte. Wird ueber den Container aufgeloest, seine
- * Abhaengigkeiten (PDO, Hook-Bus, Anmeldung) werden automatisch verkabelt -
+ * Steuert die Kommentar-Endpunkte. Wird über den Container aufgelöst, seine
+ * Abhängigkeiten (PDO, Hook-Bus, Anmeldung) werden automatisch verkabelt -
  * ein Plugin-Controller funktioniert also genauso wie ein Kern-Handler.
  *
  * Lern mehr: docs/05-plugins/05-plugin-datenzugriff.md
@@ -54,7 +54,7 @@ final class CommentController
         $content = $this->hooks->applyFilter('comment.content', (string) ($data['content'] ?? ''));
 
         if ($postId <= 0 || $content === '') {
-            throw new ValidationException('Eingabe ungueltig', [
+            throw new ValidationException('Eingabe ungültig', [
                 'content' => 'Bitte Beitrag und Text angeben.',
             ]);
         }
@@ -84,11 +84,11 @@ final class CommentController
             return Json::response(['status' => 'nicht gefunden'], 404);
         }
         if ((int) $row['author_id'] !== $user->id) {
-            throw new ForbiddenException('Nur der Autor darf diesen Kommentar loeschen.');
+            throw new ForbiddenException('Nur der Autor darf diesen Kommentar löschen.');
         }
 
         $this->pdo->prepare('DELETE FROM comments WHERE id = ?')->execute([$id]);
 
-        return Json::response(['status' => 'geloescht']);
+        return Json::response(['status' => 'gelöscht']);
     }
 }

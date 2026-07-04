@@ -1,10 +1,10 @@
 #!/bin/sh
 # ============================================================
-# Knospe - Verwaltungsskript fuer den Alltag
+# Knospe - Verwaltungsskript für den Alltag
 # ============================================================
 # Ein kleiner Helfer als einziger Einstieg. Jeder Befehl ruft im Kern nur
 # dokumentierte Docker-, Composer- und npm-Kommandos auf - es passiert
-# nichts Verstecktes, alles laesst sich auch von Hand ausfuehren.
+# nichts Verstecktes, alles lässt sich auch von Hand ausführen.
 # Lern mehr: docs/06-deployment/02-docker-befehle-alltag.md
 set -eu
 
@@ -40,7 +40,7 @@ cmd_up() {
   dc up -d
   # Migrationen laufen, sobald der Runner existiert (ab Meilenstein M2).
   if [ -f backend/bin/console ]; then
-    echo "[knospe] Fuehre ausstehende Migrationen aus ..."
+    echo "[knospe] Führe ausstehende Migrationen aus ..."
     dc exec -T php php bin/console migrate || true
   fi
   cmd_status
@@ -95,10 +95,10 @@ cmd_restore() {
 }
 
 cmd_reset() {
-  printf "Das loescht Container UND das Datenbank-Volume dieser Installation. Fortfahren? [j/N] "
+  printf "Das löscht Container UND das Datenbank-Volume dieser Installation. Fortfahren? [j/N] "
   read -r ans
   case "$ans" in
-    j|J|y|Y) dc down -v; echo "[knospe] Zurueckgesetzt." ;;
+    j|J|y|Y) dc down -v; echo "[knospe] Zurückgesetzt." ;;
     *) echo "Abgebrochen." ;;
   esac
 }
@@ -108,17 +108,17 @@ usage() {
 Knospe - Verwaltung
 
   ./knospe setup            .env erzeugen (falls fehlend) und Images bauen
-  ./knospe up               Stack starten (fuehrt Migrationen aus)
+  ./knospe up               Stack starten (führt Migrationen aus)
   ./knospe down             Stack stoppen
   ./knospe restart          Dienste neu starten
   ./knospe status           Adressen und Zustand anzeigen
   ./knospe logs [dienst]    Logs folgen (z.B. php, postgres, node)
-  ./knospe migrate          Ausstehende Migrationen ausfuehren
+  ./knospe migrate          Ausstehende Migrationen ausführen
   ./knospe seed             Startdaten einspielen
-  ./knospe update           git pull + Abhaengigkeiten + Migrationen
+  ./knospe update           git pull + Abhängigkeiten + Migrationen
   ./knospe backup           Datenbank nach ./backups sichern
   ./knospe restore <datei>  Datenbank aus Sicherung wiederherstellen
-  ./knospe reset            Alles zuruecksetzen (loescht das DB-Volume!)
+  ./knospe reset            Alles zurücksetzen (löscht das DB-Volume!)
 EOF
 }
 

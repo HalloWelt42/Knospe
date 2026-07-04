@@ -1,10 +1,10 @@
 import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 
-// Vite-Konfiguration fuer die Knospe-SPA.
+// Vite-Konfiguration für die Knospe-SPA.
 // - Der Dev-Proxy leitet /api an das PHP-Backend weiter (same-origin, kein CORS).
-// - fs.allow erlaubt Vite den Zugriff auf den plugins/-Ordner ausserhalb der
-//   Frontend-Wurzel, damit Plugin-Frontends eingebunden werden koennen.
+// - fs.allow erlaubt Vite den Zugriff auf den plugins/-Ordner außerhalb der
+//   Frontend-Wurzel, damit Plugin-Frontends eingebunden werden können.
 // Lern mehr: docs/04-frontend/05-vite-und-tooling.md
 export default defineConfig({
   plugins: [svelte()],

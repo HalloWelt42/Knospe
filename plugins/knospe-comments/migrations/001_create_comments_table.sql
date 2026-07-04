@@ -1,6 +1,6 @@
 -- Plugin-Migration 001: Tabelle "comments"
--- Laeuft automatisch beim Aktivieren des Plugins. Verweist auf posts und users;
--- ON DELETE CASCADE sorgt fuer saubere Aufraeumarbeit auf Datenbank-Ebene.
+-- Läuft automatisch beim Aktivieren des Plugins. Verweist auf posts und users;
+-- ON DELETE CASCADE sorgt für saubere Aufräumarbeit auf Datenbank-Ebene.
 
 CREATE TABLE IF NOT EXISTS comments (
     id         BIGSERIAL PRIMARY KEY,

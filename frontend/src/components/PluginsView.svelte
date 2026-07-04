@@ -1,6 +1,6 @@
 <script lang="ts">
   // Verwaltung der Plugins: auflisten, aktivieren, deaktivieren.
-  // So kann der Nutzer alles in der Oberflaeche erledigen (kein Skript noetig).
+  // So kann der Nutzer alles in der Oberfläche erledigen (kein Skript nötig).
   // Lern mehr: docs/05-plugins/01-plugin-system-konzept.md
   import { onMount } from 'svelte';
   import { api, ApiError } from '../lib/api';
@@ -50,7 +50,7 @@
 {#if !auth.user}
   <p class="muted">Bitte zuerst <a href="#/login">anmelden</a>.</p>
 {:else if laden}
-  <p class="muted">Laedt ...</p>
+  <p class="muted">Lädt ...</p>
 {:else if fehler}
   <p class="err">{fehler}</p>
 {:else if plugins.length === 0}
@@ -86,8 +86,8 @@
     {/each}
   </ul>
   <p class="muted hinweis">
-    Beim Aktivieren laufen die Migrationen des Plugins automatisch. Fuer
-    beigesteuerte Oberflaechen-Teile aktualisiert der Vite-Entwicklungsserver
+    Beim Aktivieren laufen die Migrationen des Plugins automatisch. Für
+    beigesteuerte Oberflächen-Teile aktualisiert der Vite-Entwicklungsserver
     von selbst.
   </p>
 {/if}

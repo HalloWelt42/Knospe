@@ -11,7 +11,7 @@ use Throwable;
 
 /**
  * Anwendungslogik rund um Plugins: auflisten, aktivieren, deaktivieren und
- * (fuer den Kernel) die aktivierten Plugins booten.
+ * (für den Kernel) die aktivierten Plugins booten.
  *
  * Beim Aktivieren laufen die Plugin-Migrationen und enable() wird einmal
  * aufgerufen. Beim Deaktivieren bleiben die Daten erhalten (nur disable()).
@@ -128,7 +128,7 @@ final class PluginService
     }
 
     /**
-     * Fuehrt die noch nicht angewendeten SQL-Migrationen eines Plugins aus.
+     * Führt die noch nicht angewendeten SQL-Migrationen eines Plugins aus.
      *
      * @param array{id: string, path: string} $manifest
      */

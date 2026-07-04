@@ -7,12 +7,12 @@ namespace Knospe\Plugin;
 use RuntimeException;
 
 /**
- * Findet Plugins im Dateisystem und laedt ihren Code.
+ * Findet Plugins im Dateisystem und lädt ihren Code.
  *
  *  - discover(): liest alle plugins/<id>/manifest.json
  *  - registerAutoload(): meldet einen Autoloader an, der den Namensraum des
  *    Plugins auf seinen src/-Ordner abbildet (so bleibt jedes Plugin
- *    eigenstaendig, ohne Eintrag in der composer.json).
+ *    eigenständig, ohne Eintrag in der composer.json).
  *  - instantiate(): erzeugt die Boot-Klasse des Plugins.
  *
  * Lern mehr: docs/05-plugins/02-plugin-struktur.md

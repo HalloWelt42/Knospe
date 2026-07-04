@@ -3,7 +3,7 @@
 # ============================================================
 # Drei Dienste: php (JSON-API), postgres (Datenbank), node (Vite-Frontend).
 # Projektname, Host-Ports und Zugangsdaten kommen aus der .env, damit sich
-# zwei Installationen nie stoeren. Container-intern bleiben die Ports fest.
+# zwei Installationen nie stören. Container-intern bleiben die Ports fest.
 # Lern mehr: docs/06-deployment/01-docker-compose-detailliert.md
 name: ${COMPOSE_PROJECT_NAME:-knospe}
 
@@ -23,14 +23,14 @@ services:
       APP_ENV: ${APP_ENV:-development}
       APP_DEBUG: ${APP_DEBUG:-true}
       APP_SECRET: ${APP_SECRET:-}
-      # Im Docker-Netz erreicht das Backend die Datenbank ueber den Servicenamen.
+      # Im Docker-Netz erreicht das Backend die Datenbank über den Servicenamen.
       DB_HOST: postgres
       DB_PORT: 5432
       DB_NAME: ${POSTGRES_DB:-knospe}
       DB_USER: ${POSTGRES_USER:-knospe}
       DB_PASSWORD: ${POSTGRES_PASSWORD:-knospe}
     extra_hosts:
-      # Fuer Xdebug unter Linux; unter macOS/Windows ohnehin vorhanden.
+      # Für Xdebug unter Linux; unter macOS/Windows ohnehin vorhanden.
       - "host.docker.internal:host-gateway"
     depends_on:
       postgres:
@@ -63,7 +63,7 @@ services:
     ports:
       - "${VITE_PORT:-5173}:5173"
     environment:
-      # Ziel des Vite-Dev-Proxys fuer /api (Servicename im Docker-Netz).
+      # Ziel des Vite-Dev-Proxys für /api (Servicename im Docker-Netz).
       API_PROXY_TARGET: http://php:8000
     depends_on:
       - php

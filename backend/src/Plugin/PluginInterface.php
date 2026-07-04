@@ -5,16 +5,16 @@ declare(strict_types=1);
 namespace Knospe\Plugin;
 
 /**
- * Der Vertrag, den jedes Plugin erfuellt.
+ * Der Vertrag, den jedes Plugin erfüllt.
  *
  * Lebenszyklus:
- *  - boot():   bei jeder Anfrage fuer aktivierte Plugins - hier Routes, Hooks
+ *  - boot():   bei jeder Anfrage für aktivierte Plugins - hier Routes, Hooks
  *              und Filter registrieren.
  *  - enable(): einmalig beim Aktivieren - z.B. Standard-Einstellungen setzen.
- *  - disable(): beim Deaktivieren - aufraeumen, aber KEINE Daten loeschen.
+ *  - disable(): beim Deaktivieren - aufräumen, aber KEINE Daten löschen.
  *
- * Fuer den Alltag gibt es AbstractPlugin mit leeren Standard-Umsetzungen,
- * sodass ein Plugin nur ueberschreibt, was es wirklich braucht.
+ * Für den Alltag gibt es AbstractPlugin mit leeren Standard-Umsetzungen,
+ * sodass ein Plugin nur überschreibt, was es wirklich braucht.
  *
  * Lern mehr: docs/05-plugins/02-plugin-struktur.md
  */

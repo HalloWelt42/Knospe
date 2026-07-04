@@ -1,6 +1,6 @@
 // Ein winziger Router auf Basis des URL-Fragments (#/...). Bewusst klein:
-// er liest den aktuellen Pfad, lauscht auf Aenderungen und bietet navigate().
-// Fuer eine SPA ohne SvelteKit reicht das voellig.
+// er liest den aktuellen Pfad, lauscht auf Änderungen und bietet navigate().
+// Für eine SPA ohne SvelteKit reicht das völlig.
 // Lern mehr: docs/04-frontend/07-routing-sveltekit.md
 
 export interface Route {

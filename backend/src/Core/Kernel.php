@@ -27,7 +27,7 @@ use Psr\Log\LoggerInterface;
 use Throwable;
 
 /**
- * Der Kernel haelt alles zusammen: Container einrichten, aktivierte Plugins
+ * Der Kernel hält alles zusammen: Container einrichten, aktivierte Plugins
  * booten (die dabei Routen und Hooks registrieren) und eine Anfrage durch die
  * Middleware-Pipeline zum Router leiten.
  *
@@ -76,7 +76,7 @@ final class Kernel
                 => new PostgresPostRepository($c->get(PDO::class)),
         );
 
-        // Hook-Bus: eine gemeinsame Instanz fuer Plugins UND Kern-Dienste.
+        // Hook-Bus: eine gemeinsame Instanz für Plugins UND Kern-Dienste.
         $this->container->instance(HookDispatcher::class, new HookDispatcher());
 
         // Plugin-Werkzeuge.
@@ -97,7 +97,7 @@ final class Kernel
         $router->addMany($coreRoutes);
 
         // Aktivierte Plugins booten - sie registrieren Routen und Hooks.
-        // Faellt die Datenbank aus, laeuft die App ohne Plugins weiter.
+        // Fällt die Datenbank aus, läuft die App ohne Plugins weiter.
         try {
             $routeRegistry = new RouteRegistry();
             $manager = new PluginManager(

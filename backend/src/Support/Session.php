@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace Knospe\Support;
 
 /**
- * Duenne Huelle um die nativen PHP-Sitzungen.
+ * Dünne Hülle um die nativen PHP-Sitzungen.
  *
- * Warum ueberhaupt eine Klasse? Damit der uebrige Code nicht direkt mit
+ * Warum überhaupt eine Klasse? Damit der übrige Code nicht direkt mit
  * $_SESSION und session_*() arbeitet, sondern mit klaren Methoden - das ist
- * leichter zu lesen und spaeter austauschbar.
+ * leichter zu lesen und später austauschbar.
  *
- * Die Anmeldung nutzt eine Sitzung mit HttpOnly-Cookie; zusaetzlich schuetzt
+ * Die Anmeldung nutzt eine Sitzung mit HttpOnly-Cookie; zusätzlich schützt
  * ein CSRF-Token vor ungewollten Anfragen.
  *
  * Lern mehr: docs/08-debugging-und-sicherheit/07-sicherheits-basics.md

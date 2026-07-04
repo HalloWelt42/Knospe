@@ -6,8 +6,8 @@ namespace Knospe\Domain\Post;
 
 /**
  * Ein Beitrag als reine Datenklasse. authorName ist optional und wird beim
- * Lesen aus einer Verknuepfung (JOIN mit users) mitgefuellt, damit die
- * Oberflaeche den Namen zeigen kann, ohne extra nachzufragen.
+ * Lesen aus einer Verknüpfung (JOIN mit users) mitgefüllt, damit die
+ * Oberfläche den Namen zeigen kann, ohne extra nachzufragen.
  *
  * Lern mehr: docs/01-grundlagen/01-oop-klassen-intro.md
  */

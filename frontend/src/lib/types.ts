@@ -1,4 +1,4 @@
-// Gemeinsame Datentypen fuer die Oberflaeche. Sie spiegeln die JSON-Antworten
+// Gemeinsame Datentypen für die Oberfläche. Sie spiegeln die JSON-Antworten
 // der PHP-API wider.
 // Lern mehr: docs/04-frontend/02-typescript-in-svelte.md
 

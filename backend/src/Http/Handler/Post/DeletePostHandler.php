@@ -12,7 +12,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
 /**
- * Beitrag loeschen. Erfordert Anmeldung; nur der Autor darf loeschen.
+ * Beitrag löschen. Erfordert Anmeldung; nur der Autor darf löschen.
  */
 final class DeletePostHandler implements RequestHandlerInterface
 {
@@ -29,6 +29,6 @@ final class DeletePostHandler implements RequestHandlerInterface
 
         $this->posts->delete($id, $user->id);
 
-        return Json::response(['status' => 'geloescht']);
+        return Json::response(['status' => 'gelöscht']);
     }
 }

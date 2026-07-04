@@ -10,11 +10,11 @@ use Knospe\Core\Exception\ValidationException;
 use Knospe\Plugin\Hook\HookDispatcher;
 
 /**
- * Geschaeftslogik fuer Beitraege: Validierung, Rechtepruefung (nur der Autor
- * darf aendern/loeschen) und das Zusammenspiel mit dem Repository.
+ * Geschäftslogik für Beiträge: Validierung, Rechteprüfung (nur der Autor
+ * darf ändern/löschen) und das Zusammenspiel mit dem Repository.
  *
- * Beim Anlegen und Loeschen werden Hooks ausgeloest, damit Plugins reagieren
- * koennen (z.B. das Kommentar-Plugin loescht die Kommentare eines Beitrags).
+ * Beim Anlegen und Löschen werden Hooks ausgelöst, damit Plugins reagieren
+ * können (z.B. das Kommentar-Plugin löscht die Kommentare eines Beitrags).
  *
  * Lern mehr: docs/02-architektur/05-services-pattern.md
  */
@@ -80,13 +80,13 @@ final class PostService
         if ($title === '') {
             $errors['title'] = 'Bitte einen Titel angeben.';
         } elseif (mb_strlen($title) > 255) {
-            $errors['title'] = 'Der Titel darf hoechstens 255 Zeichen haben.';
+            $errors['title'] = 'Der Titel darf höchstens 255 Zeichen haben.';
         }
         if ($body === '') {
             $errors['body'] = 'Bitte einen Text angeben.';
         }
         if ($errors !== []) {
-            throw new ValidationException('Eingabe ungueltig', $errors);
+            throw new ValidationException('Eingabe ungültig', $errors);
         }
 
         return [$title, $body];
@@ -95,7 +95,7 @@ final class PostService
     private function assertOwner(Post $post, int $currentUserId): void
     {
         if ($post->authorId !== $currentUserId) {
-            throw new ForbiddenException('Nur der Autor darf diesen Beitrag aendern.');
+            throw new ForbiddenException('Nur der Autor darf diesen Beitrag ändern.');
         }
     }
 }

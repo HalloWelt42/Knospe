@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 /*
- * Codestil nach PSR-12 (plus ein paar sinnvolle Ergaenzungen).
- * Pruefen:   composer lint
+ * Codestil nach PSR-12 (plus ein paar sinnvolle Ergänzungen).
+ * Prüfen:   composer lint
  * Anwenden:  composer lint:fix
  * Lern mehr: docs/09-entwicklung/01-code-style-psr-12.md
  */

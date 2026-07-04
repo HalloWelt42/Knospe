@@ -10,9 +10,9 @@ use PDO;
 use PHPUnit\Framework\TestCase as BaseTestCase;
 
 /**
- * Basis fuer Integrationstests. Jeder Test laeuft in einer Transaktion, die in
- * tearDown() zurueckgerollt wird - so bleibt die Datenbank sauber, ganz ohne
- * Aufraeum-SQL. Es wird nur die projekteigene Datenbank angefasst.
+ * Basis für Integrationstests. Jeder Test läuft in einer Transaktion, die in
+ * tearDown() zurückgerollt wird - so bleibt die Datenbank sauber, ganz ohne
+ * Aufräum-SQL. Es wird nur die projekteigene Datenbank angefasst.
  *
  * Lern mehr: docs/09-entwicklung/04-testing-kultur.md
  */

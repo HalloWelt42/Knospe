@@ -12,9 +12,9 @@ use Psr\Http\Server\RequestHandlerInterface;
 /**
  * Die Middleware-Pipeline (PSR-15).
  *
- * Idee: Eine Anfrage laeuft durch mehrere Middleware (z.B. Fehlerbehandlung,
- * spaeter Auth), erreicht am Ende den Kern-Handler (den Router) und die
- * Antwort laeuft denselben Weg zurueck. Die Kette wird von hinten nach vorne
+ * Idee: Eine Anfrage läuft durch mehrere Middleware (z.B. Fehlerbehandlung,
+ * später Auth), erreicht am Ende den Kern-Handler (den Router) und die
+ * Antwort läuft denselben Weg zurück. Die Kette wird von hinten nach vorne
  * gefaltet - so bleibt die Reihenfolge intuitiv (erste Middleware zuerst).
  *
  * Lern mehr: docs/02-architektur/06-middleware-pipeline.md
@@ -23,7 +23,7 @@ final class Pipeline implements RequestHandlerInterface
 {
     /**
      * @param RequestHandlerInterface $core       Der Kern-Handler am Ende (Router)
-     * @param list<MiddlewareInterface> $middleware In Ausfuehrungsreihenfolge
+     * @param list<MiddlewareInterface> $middleware In Ausführungsreihenfolge
      */
     public function __construct(
         private RequestHandlerInterface $core,

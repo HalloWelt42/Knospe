@@ -13,9 +13,9 @@ use ReflectionNamedType;
  * Ein kleiner Dependency-Injection-Container (PSR-11).
  *
  * Aufgaben:
- *  - Dienste ueber Fabriken registrieren (set)
+ *  - Dienste über Fabriken registrieren (set)
  *  - fertige Objekte hinterlegen (instance)
- *  - Abhaengigkeiten automatisch verkabeln (autowire per Reflection)
+ *  - Abhängigkeiten automatisch verkabeln (autowire per Reflection)
  *  - jeden Dienst genau einmal bauen (Singleton pro Container)
  *
  * Bewusst klein gehalten: kein magisches Framework, sondern nachvollziehbar.
@@ -30,7 +30,7 @@ final class Container implements ContainerInterface
     private array $instances = [];
 
     /**
-     * Registriert eine Fabrik. Sie wird erst beim ersten get() ausgefuehrt.
+     * Registriert eine Fabrik. Sie wird erst beim ersten get() ausgeführt.
      */
     public function set(string $id, Closure $factory): void
     {
@@ -71,9 +71,9 @@ final class Container implements ContainerInterface
     }
 
     /**
-     * Baut eine Klasse und loest ihre Konstruktor-Abhaengigkeiten selbst auf.
-     * Typ-Abhaengigkeiten werden rekursiv aus dem Container geholt,
-     * Standardwerte werden uebernommen.
+     * Baut eine Klasse und löst ihre Konstruktor-Abhängigkeiten selbst auf.
+     * Typ-Abhängigkeiten werden rekursiv aus dem Container geholt,
+     * Standardwerte werden übernommen.
      */
     private function autowire(string $class): object
     {
@@ -99,7 +99,7 @@ final class Container implements ContainerInterface
             }
 
             throw new ContainerException(
-                "Kann Parameter \${$parameter->getName()} von {$class} nicht aufloesen.",
+                "Kann Parameter \${$parameter->getName()} von {$class} nicht auflösen.",
             );
         }
 

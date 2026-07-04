@@ -8,8 +8,8 @@ use Psr\Container\NotFoundExceptionInterface;
 use RuntimeException;
 
 /**
- * Fehler des Containers, z.B. wenn ein Dienst nicht aufgeloest werden kann.
- * Erfuellt die PSR-11-Schnittstelle fuer "nicht gefunden".
+ * Fehler des Containers, z.B. wenn ein Dienst nicht aufgelöst werden kann.
+ * Erfüllt die PSR-11-Schnittstelle für "nicht gefunden".
  */
 final class ContainerException extends RuntimeException implements NotFoundExceptionInterface
 {

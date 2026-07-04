@@ -8,7 +8,7 @@ use RuntimeException;
 use Throwable;
 
 /**
- * Basis fuer erwartbare HTTP-Fehler. Traegt den passenden Statuscode,
+ * Basis für erwartbare HTTP-Fehler. Trägt den passenden Statuscode,
  * damit die zentrale Fehler-Middleware daraus eine saubere Antwort baut.
  *
  * Lern mehr: docs/02-architektur/07-exception-handling-zentral.md

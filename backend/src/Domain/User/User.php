@@ -7,7 +7,7 @@ namespace Knospe\Domain\User;
 /**
  * Ein Nutzer als reine Datenklasse (Entity/DTO).
  *
- * readonly: einmal erzeugt, nie mehr veraendert - das macht das Objekt
+ * readonly: einmal erzeugt, nie mehr verändert - das macht das Objekt
  * berechenbar. Der Passwort-Hash bleibt im Objekt, wird aber von toArray()
  * bewusst NICHT ausgegeben (er darf nie zum Client gelangen).
  *
@@ -39,7 +39,7 @@ final readonly class User
     }
 
     /**
-     * Oeffentliche Darstellung - ohne Passwort-Hash.
+     * Öffentliche Darstellung - ohne Passwort-Hash.
      *
      * @return array<string, mixed>
      */

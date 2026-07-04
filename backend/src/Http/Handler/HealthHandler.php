@@ -14,7 +14,7 @@ use Throwable;
 
 /**
  * Gesundheitscheck: meldet Anwendung, PHP-Version und ob die Datenbank
- * erreichbar ist. Nuetzlich fuer den ersten Verbindungstest und fuer
+ * erreichbar ist. Nützlich für den ersten Verbindungstest und für
  * Betriebs-Ueberwachung.
  *
  * Die Datenbankverbindung wird bewusst hier (und nicht im Konstruktor)

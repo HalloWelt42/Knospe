@@ -2,11 +2,11 @@
 # Knospe - PHP-8.5-Image (CLI) mit PostgreSQL-Anbindung und Xdebug
 # ============================================================
 # Bewusst schlank: eingebauter PHP-Server statt nginx/fpm, damit der Weg
-# einer Anfrage komplett sichtbar bleibt. Fuer Produktion siehe die Doku.
+# einer Anfrage komplett sichtbar bleibt. Für Produktion siehe die Doku.
 # Lern mehr: docs/06-deployment/01-docker-compose-detailliert.md
 FROM php:8.5-cli
 
-# Systempakete und PHP-Erweiterungen fuer PostgreSQL.
+# Systempakete und PHP-Erweiterungen für PostgreSQL.
 RUN apt-get update \
     && apt-get install -y --no-install-recommends libpq-dev git unzip \
     && docker-php-ext-install pdo pdo_pgsql \
@@ -24,7 +24,7 @@ RUN { \
       echo "xdebug.client_port=9003"; \
     } > /usr/local/etc/php/conf.d/knospe-xdebug.ini
 
-# Composer aus dem offiziellen Image uebernehmen (kein globaler Installer noetig).
+# Composer aus dem offiziellen Image übernehmen (kein globaler Installer nötig).
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /app/backend

@@ -1,5 +1,5 @@
 -- Seed 001: Demo-Nutzerin
--- Zugangsdaten fuer die lokale Entwicklung:
+-- Zugangsdaten für die lokale Entwicklung:
 --   E-Mail:   demo@knospe.local
 --   Passwort: passwort
 -- Der gespeicherte Wert ist ein Argon2id-Hash, kein Klartext.

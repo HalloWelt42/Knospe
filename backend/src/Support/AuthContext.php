@@ -11,7 +11,7 @@ use Knospe\Domain\User\UserRepositoryInterface;
 /**
  * Kennt den aktuell angemeldeten Nutzer (aus der Sitzung) und kapselt
  * An- und Abmelden. Handler fragen hier nach "wer ist das?" statt selbst in
- * der Sitzung zu wuehlen.
+ * der Sitzung zu wühlen.
  *
  * Lern mehr: docs/08-debugging-und-sicherheit/07-sicherheits-basics.md
  */

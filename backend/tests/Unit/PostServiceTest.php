@@ -13,7 +13,7 @@ use Knospe\Plugin\Hook\HookDispatcher;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Testet die Geschaeftslogik fuer Beitraege - ohne Datenbank, mit einem
+ * Testet die Geschäftslogik für Beiträge - ohne Datenbank, mit einem
  * einfachen Test-Repository. So bleibt der Test schnell und fokussiert.
  * Lern mehr: docs/02-architektur/05-services-pattern.md
  */

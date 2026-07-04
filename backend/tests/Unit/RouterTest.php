@@ -24,7 +24,7 @@ final class RouterTest extends TestCase
     private function container(): ContainerInterface
     {
         // Ein winziger Container, der immer denselben Handler liefert. Der
-        // Handler gibt den Pfad-Parameter "id" als Antwort-Text zurueck.
+        // Handler gibt den Pfad-Parameter "id" als Antwort-Text zurück.
         return new class () implements ContainerInterface {
             public function get(string $id): mixed
             {

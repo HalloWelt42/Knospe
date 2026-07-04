@@ -1,8 +1,8 @@
 <script lang="ts">
-  // Kommentar-Ansicht unter einem Beitrag. Bewusst eigenstaendig gehalten
-  // (eigene fetch-Aufrufe), damit das Plugin ohne Abhaengigkeit vom Kern-Code
-  // der Oberflaeche funktioniert. Die globalen CSS-Klassen (karte, btn, ...)
-  // stammen aus der App und sorgen fuer ein einheitliches Aussehen.
+  // Kommentar-Ansicht unter einem Beitrag. Bewusst eigenständig gehalten
+  // (eigene fetch-Aufrufe), damit das Plugin ohne Abhängigkeit vom Kern-Code
+  // der Oberfläche funktioniert. Die globalen CSS-Klassen (karte, btn, ...)
+  // stammen aus der App und sorgen für ein einheitliches Aussehen.
   // Lern mehr: docs/05-plugins/04-dein-erstes-plugin.md
   import { onMount } from 'svelte';
 
@@ -19,7 +19,7 @@
 
   let comments = $state<Comment[]>([]);
   let laden = $state(true);
-  let verfuegbar = $state(true);
+  let sichtbar = $state(true);
   let text = $state('');
   let sendet = $state(false);
   let fehler = $state<string | null>(null);
@@ -33,13 +33,13 @@
     try {
       const res = await fetch(`/api/comments?post_id=${postId}`, { credentials: 'same-origin' });
       if (res.status === 404) {
-        verfuegbar = false;
+        sichtbar = false;
         return;
       }
       const data = await res.json();
       comments = data.comments ?? [];
     } catch {
-      verfuegbar = false;
+      sichtbar = false;
     } finally {
       laden = false;
     }
@@ -75,11 +75,11 @@
   }
 </script>
 
-{#if verfuegbar}
+{#if sichtbar}
   <section class="karte kommentare">
     <h2>Kommentare</h2>
     {#if laden}
-      <p class="muted">Laedt ...</p>
+      <p class="muted">Lädt ...</p>
     {:else}
       {#if comments.length === 0}
         <p class="muted">Noch keine Kommentare.</p>
@@ -91,7 +91,7 @@
         </ul>
       {/if}
       <form onsubmit={senden}>
-        <textarea bind:value={text} rows="2" placeholder="Kommentar schreiben (Anmeldung noetig) ..."
+        <textarea bind:value={text} rows="2" placeholder="Kommentar schreiben (Anmeldung nötig) ..."
         ></textarea>
         {#if fehler}<p class="err">{fehler}</p>{/if}
         <button class="btn" type="submit" disabled={sendet}>

@@ -1,6 +1,6 @@
--- Migration 003: Tabellen fuer das Plugin-System
+-- Migration 003: Tabellen für das Plugin-System
 --   plugins            - welche Plugins bekannt und aktiviert sind
---   plugin_options     - Einstellungen je Plugin (Schluessel/Wert)
+--   plugin_options     - Einstellungen je Plugin (Schlüssel/Wert)
 --   plugin_migrations  - welche Plugin-Migrationen schon liefen (je Plugin)
 -- Lern mehr: docs/05-plugins/05-plugin-datenzugriff.md
 

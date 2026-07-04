@@ -1,5 +1,5 @@
 <script lang="ts">
-  // Anmeldeformular. Bei Erfolg zurueck zur Startseite.
+  // Anmeldeformular. Bei Erfolg zurück zur Startseite.
   // Lern mehr: docs/04-frontend/08-forms-und-validierung.md
   import { anmelden } from '../lib/auth.svelte';
   import { navigate } from '../lib/router.svelte';

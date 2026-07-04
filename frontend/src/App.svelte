@@ -1,5 +1,5 @@
 <script lang="ts">
-  // Wurzelkomponente: laedt Sitzung und CSRF-Token, richtet den Router ein
+  // Wurzelkomponente: lädt Sitzung und CSRF-Token, richtet den Router ein
   // und zeigt je nach Route die passende Ansicht.
   // Lern mehr: docs/04-frontend/01-svelte5-komponenten-intro.md
   import { onMount } from 'svelte';
@@ -27,7 +27,7 @@
 
 <main>
   {#if !bereit}
-    <p class="muted">Laedt ...</p>
+    <p class="muted">Lädt ...</p>
   {:else if route.name === 'login'}
     <LoginView />
   {:else if route.name === 'register'}

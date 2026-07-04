@@ -1,5 +1,5 @@
 -- Migration 001: Tabelle "users"
--- Legt die Nutzer-Tabelle an. Passwoerter werden NIE im Klartext, sondern
+-- Legt die Nutzer-Tabelle an. Passwörter werden NIE im Klartext, sondern
 -- nur als Hash gespeichert (siehe PasswordHasher / Argon2id).
 -- Lern mehr: docs/03-datenbank/05-erste-tabelle-anlegen.md
 

@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace Knospe\Support;
 
 /**
- * Zentrale, typisierte Konfiguration - gefuellt aus Umgebungsvariablen.
+ * Zentrale, typisierte Konfiguration - gefüllt aus Umgebungsvariablen.
  *
- * Statt ueberall verstreut getenv() aufzurufen, gibt es ein einziges
+ * Statt überall verstreut getenv() aufzurufen, gibt es ein einziges
  * Objekt mit klar benannten, typsicheren Werten. Das ist leichter zu
- * lesen, zu testen und zu aendern.
+ * lesen, zu testen und zu ändern.
  *
  * Lern mehr: docs/02-architektur/10-konfiguration-und-umgebung.md
  */

@@ -1,12 +1,12 @@
 # Plugin: Kommentare (knospe-comments)
 
-Ein vollstaendiges Beispiel-Plugin fuer Knospe. Es fuegt Beitraegen Kommentare hinzu und zeigt dabei alle Bausteine, die ein Plugin nutzen kann.
+Ein vollständiges Beispiel-Plugin für Knospe. Es fügt Beiträgen Kommentare hinzu und zeigt dabei alle Bausteine, die ein Plugin nutzen kann.
 
 ## Was es demonstriert
 
 - **Eigene Routen**: `GET/POST /api/comments`, `DELETE /api/comments/{id}`
-- **Eigene Migration**: Tabelle `comments` (laeuft beim Aktivieren)
-- **Aktion (Hook)**: reagiert auf `post.deleted` und raeumt Kommentare weg
+- **Eigene Migration**: Tabelle `comments` (läuft beim Aktivieren)
+- **Aktion (Hook)**: reagiert auf `post.deleted` und räumt Kommentare weg
 - **Filter (Hook)**: `comment.content` bereinigt den Text
 - **Frontend-Teil**: `CommentsPanel.svelte` erscheint unter jedem Beitrag
 
@@ -22,7 +22,7 @@ knospe-comments/
 │   └── 001_create_comments_table.sql
 ├── frontend/
 │   ├── comments.plugin.ts          # meldet die Komponente an einen Slot
-│   └── CommentsPanel.svelte        # die Oberflaeche
+│   └── CommentsPanel.svelte        # die Oberfläche
 └── README.md
 ```
 
@@ -32,6 +32,6 @@ In der App unter **Plugins** auf "Aktivieren" klicken. Dabei laufen die Migratio
 
 ## Eigenes Plugin daraus machen
 
-Diesen Ordner kopieren, in `manifest.json` `id`, `namespace` und `bootClass` anpassen, die Klassen im neuen Namensraum umbenennen - fertig ist das Geruest.
+Diesen Ordner kopieren, in `manifest.json` `id`, `namespace` und `bootClass` anpassen, die Klassen im neuen Namensraum umbenennen - fertig ist das Gerüst.
 
 Mehr dazu im Handbuch: `docs/05-plugins/`.

@@ -1,6 +1,6 @@
 <script lang="ts">
   // Einzelansicht eines Beitrags. Unterhalb gibt es einen Bereich, den
-  // Plugins fuellen koennen (ab Meilenstein M5/M6, z.B. Kommentare).
+  // Plugins füllen können (ab Meilenstein M5/M6, z.B. Kommentare).
   import { onMount } from 'svelte';
   import { api } from '../lib/api';
   import type { Post } from '../lib/types';
@@ -28,10 +28,10 @@
   );
 </script>
 
-<p><a href="#/">&larr; Zurueck</a></p>
+<p><a href="#/">&larr; Zurück</a></p>
 
 {#if laden}
-  <p class="muted">Laedt ...</p>
+  <p class="muted">Lädt ...</p>
 {:else if fehler}
   <p class="err">{fehler}</p>
 {:else if post}
@@ -41,7 +41,7 @@
     <p class="text">{post.body}</p>
   </article>
 
-  <!-- Plugin-Bereich: registrierte Komponenten fuer diese Stelle. -->
+  <!-- Plugin-Bereich: registrierte Komponenten für diese Stelle. -->
   <PluginSlot name="post.detail.below" props={{ postId: post.id }} />
 {/if}
 

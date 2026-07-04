@@ -39,7 +39,7 @@ return [
     ['POST', '/api/auth/logout', LogoutHandler::class],
     ['GET', '/api/auth/me', MeHandler::class],
 
-    // Beitraege
+    // Beiträge
     ['GET', '/api/posts', ListPostsHandler::class],
     ['GET', '/api/posts/{id}', ShowPostHandler::class],
     ['POST', '/api/posts', CreatePostHandler::class],

@@ -2,7 +2,7 @@
 /.env
 backend/.env
 
-# Abhaengigkeiten
+# Abhängigkeiten
 /vendor/
 backend/vendor/
 node_modules/
@@ -15,7 +15,7 @@ frontend/dist/
 /backups/*
 !/backups/.gitkeep
 
-# JetBrains IDE (persoenlicher Zustand)
+# JetBrains IDE (persönlicher Zustand)
 /.idea/
 
 # Betriebssystem

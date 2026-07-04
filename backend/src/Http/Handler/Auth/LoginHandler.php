@@ -13,7 +13,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
 /**
- * Anmeldung: prueft E-Mail und Passwort und startet die Sitzung.
+ * Anmeldung: prüft E-Mail und Passwort und startet die Sitzung.
  * Lern mehr: docs/08-debugging-und-sicherheit/08-passwort-sicherheit.md
  */
 final class LoginHandler implements RequestHandlerInterface

@@ -5,14 +5,14 @@ declare(strict_types=1);
 namespace Knospe\Plugin\Hook;
 
 /**
- * Der Hook-Bus. Zwei Arten von Einhaengepunkten:
+ * Der Hook-Bus. Zwei Arten von Einhängepunkten:
  *
- *  - Aktionen (doAction): "etwas ist passiert" - alle registrierten Rueckrufe
+ *  - Aktionen (doAction): "etwas ist passiert" - alle registrierten Rückrufe
  *    werden aufgerufen (z.B. post.created).
- *  - Filter (applyFilter): "veraendere diesen Wert" - der Wert wird durch alle
- *    Rueckrufe gereicht und veraendert zurueckgegeben (z.B. comment.content).
+ *  - Filter (applyFilter): "verändere diesen Wert" - der Wert wird durch alle
+ *    Rückrufe gereicht und verändert zurückgegeben (z.B. comment.content).
  *
- * Kleinere Prioritaetszahl = frueher dran.
+ * Kleinere Prioritätszahl = früher dran.
  *
  * Lern mehr: docs/05-plugins/03-hooks-und-events.md
  */

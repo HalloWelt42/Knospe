@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Knospe\Domain\Post;
 
 /**
- * Vertrag fuer den Beitrags-Datenzugriff.
+ * Vertrag für den Beitrags-Datenzugriff.
  * Lern mehr: docs/03-datenbank/09-repository-pattern.md
  */
 interface PostRepositoryInterface

@@ -6,7 +6,7 @@ namespace Knospe\Plugin;
 
 /**
  * Sammelt Routen, die Plugins beisteuern. Der Kernel liest sie nach dem
- * Booten der Plugins aus und ergaenzt damit die Routentabelle des Routers.
+ * Booten der Plugins aus und ergänzt damit die Routentabelle des Routers.
  *
  * Lern mehr: docs/05-plugins/01-plugin-system-konzept.md
  */

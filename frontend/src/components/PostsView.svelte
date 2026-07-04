@@ -1,5 +1,5 @@
 <script lang="ts">
-  // Startseite: Liste der Beitraege und (bei Anmeldung) ein Formular zum Anlegen.
+  // Startseite: Liste der Beiträge und (bei Anmeldung) ein Formular zum Anlegen.
   // Lern mehr: docs/04-frontend/08-forms-und-validierung.md
   import { onMount } from 'svelte';
   import { api, ApiError } from '../lib/api';
@@ -63,7 +63,7 @@
   }
 </script>
 
-<h1>Beitraege</h1>
+<h1>Beiträge</h1>
 
 {#if auth.user}
   <form class="karte anlegen" onsubmit={anlegen}>
@@ -80,7 +80,7 @@
     </div>
     {#if formfehler}<p class="err">{formfehler}</p>{/if}
     <button class="btn" type="submit" disabled={sendet}>
-      {sendet ? 'Speichert ...' : 'Veroeffentlichen'}
+      {sendet ? 'Speichert ...' : 'Veröffentlichen'}
     </button>
   </form>
 {:else}
@@ -91,11 +91,11 @@
 {/if}
 
 {#if laden}
-  <p class="muted">Laedt ...</p>
+  <p class="muted">Lädt ...</p>
 {:else if ladefehler}
   <p class="err">{ladefehler}</p>
 {:else if posts.length === 0}
-  <p class="muted">Noch keine Beitraege.</p>
+  <p class="muted">Noch keine Beiträge.</p>
 {:else}
   <ul class="liste">
     {#each posts as post (post.id)}

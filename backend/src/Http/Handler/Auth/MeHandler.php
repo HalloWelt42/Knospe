@@ -11,7 +11,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
 /**
- * Gibt den aktuell angemeldeten Nutzer zurueck (oder null). Die Oberflaeche
+ * Gibt den aktuell angemeldeten Nutzer zurück (oder null). Die Oberfläche
  * fragt das beim Start, um zu wissen, ob jemand angemeldet ist.
  */
 final class MeHandler implements RequestHandlerInterface

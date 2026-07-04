@@ -2,7 +2,7 @@
 <!--
   PHPUnit-Konfiguration.
   Zwei Testreihen: Unit (ohne Datenbank) und Integration (gegen die Datenbank,
-  jeder Test in einer Transaktion, die danach zurueckgerollt wird).
+  jeder Test in einer Transaktion, die danach zurückgerollt wird).
   Lern mehr: docs/07-werkzeuge/03-phpunit-in-phpstorm.md
 -->
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

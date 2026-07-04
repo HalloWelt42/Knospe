@@ -16,8 +16,8 @@ use Throwable;
  *  - Jede Datei hat einen UP-Teil und optional einen DOWN-Teil, getrennt
  *    durch die Zeile "-- DOWN:".
  *  - Die Tabelle schema_migrations merkt sich, was schon gelaufen ist.
- *  - PostgreSQL kann Schema-Aenderungen in Transaktionen zuruecknehmen,
- *    darum laeuft jede Migration in einer eigenen Transaktion.
+ *  - PostgreSQL kann Schema-Änderungen in Transaktionen zurücknehmen,
+ *    darum läuft jede Migration in einer eigenen Transaktion.
  *
  * Keine Magie, kein ORM - alles ist als SQL sichtbar und nachvollziehbar.
  * Lern mehr: docs/03-datenbank/04-migrationen-system.md
@@ -43,7 +43,7 @@ final class MigrationRunner
     }
 
     /**
-     * Fuehrt alle noch nicht ausgefuehrten Migrationen aus.
+     * Führt alle noch nicht ausgeführten Migrationen aus.
      */
     public function migrate(): void
     {
@@ -80,7 +80,7 @@ final class MigrationRunner
     }
 
     /**
-     * Nimmt die letzten $steps Migrationen zurueck (DOWN-Teil).
+     * Nimmt die letzten $steps Migrationen zurück (DOWN-Teil).
      */
     public function rollback(int $steps = 1): void
     {
@@ -88,7 +88,7 @@ final class MigrationRunner
         $todo = array_slice($executed, 0, max(1, $steps));
 
         if ($todo === []) {
-            echo "Nichts zum Zuruecknehmen.\n";
+            echo "Nichts zum Zurücknehmen.\n";
 
             return;
         }
@@ -96,7 +96,7 @@ final class MigrationRunner
         foreach ($todo as $version) {
             $file = $this->fileForVersion($version);
             if ($file === null) {
-                echo "  ! Keine Datei fuer Version {$version}\n";
+                echo "  ! Keine Datei für Version {$version}\n";
                 continue;
             }
 
@@ -124,7 +124,7 @@ final class MigrationRunner
     }
 
     /**
-     * Zeigt, welche Migrationen ausgefuehrt sind und welche fehlen.
+     * Zeigt, welche Migrationen ausgeführt sind und welche fehlen.
      */
     public function status(): void
     {

@@ -1,9 +1,9 @@
-// Typisierter API-Client fuer die PHP-JSON-API.
+// Typisierter API-Client für die PHP-JSON-API.
 //
 // Besonderheiten:
 //  - Cookies (Sitzung) werden dank same-origin automatisch mitgeschickt.
-//  - Bei veraendernden Methoden wird das CSRF-Token als Header gesetzt; es
-//    wird einmal ueber /api/csrf geholt und dann zwischengespeichert.
+//  - Bei verändernden Methoden wird das CSRF-Token als Header gesetzt; es
+//    wird einmal über /api/csrf geholt und dann zwischengespeichert.
 //  - Fehlerantworten der API werden zu einem ApiError mit Meldung und
 //    optionalen Feldfehlern.
 //

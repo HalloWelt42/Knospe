@@ -1,6 +1,6 @@
 <script lang="ts">
-  // Ein Beitrag in der Liste. Der Autor sieht Bearbeiten und Loeschen.
-  // Statt eines Browser-Dialogs gibt es eine eigene Inline-Rueckfrage.
+  // Ein Beitrag in der Liste. Der Autor sieht Bearbeiten und Löschen.
+  // Statt eines Browser-Dialogs gibt es eine eigene Inline-Rückfrage.
   // Lern mehr: docs/04-frontend/02-typescript-in-svelte.md
   import { api, ApiError } from '../lib/api';
   import type { Post } from '../lib/types';
@@ -47,13 +47,13 @@
     }
   }
 
-  async function loeschen() {
+  async function entfernen() {
     sendet = true;
     try {
       await api.deletePost(post.id);
       onDeleted(post.id);
     } catch (e) {
-      fehler = e instanceof ApiError ? e.message : 'Fehler beim Loeschen';
+      fehler = e instanceof ApiError ? e.message : 'Fehler beim Löschen';
       loeschfrage = false;
     } finally {
       sendet = false;
@@ -96,11 +96,11 @@
       <div class="aktionen">
         <button class="btn-ghost" onclick={starteBearbeiten}>Bearbeiten</button>
         {#if loeschfrage}
-          <span class="muted">Wirklich loeschen?</span>
-          <button class="btn-danger" onclick={loeschen} disabled={sendet}>Ja, loeschen</button>
+          <span class="muted">Wirklich löschen?</span>
+          <button class="btn-danger" onclick={entfernen} disabled={sendet}>Ja, löschen</button>
           <button class="btn-ghost" onclick={() => (loeschfrage = false)}>Nein</button>
         {:else}
-          <button class="btn-danger" onclick={() => (loeschfrage = true)}>Loeschen</button>
+          <button class="btn-danger" onclick={() => (loeschfrage = true)}>Löschen</button>
         {/if}
       </div>
     {/if}

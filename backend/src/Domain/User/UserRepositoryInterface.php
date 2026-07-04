@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Knospe\Domain\User;
 
 /**
- * Vertrag fuer den Nutzer-Datenzugriff. Der uebrige Code kennt nur dieses
+ * Vertrag für den Nutzer-Datenzugriff. Der übrige Code kennt nur dieses
  * Interface, nicht die konkrete Datenbank - so bleibt die Umsetzung
  * austauschbar und testbar.
  *

@@ -15,7 +15,7 @@ use Psr\Log\LoggerInterface;
 use Throwable;
 
 /**
- * Faengt alle Fehler zentral ab und macht daraus saubere JSON-Antworten.
+ * Fängt alle Fehler zentral ab und macht daraus saubere JSON-Antworten.
  *
  *  - ValidationException -> 422 mit Feldfehlern
  *  - HttpException       -> passender Statuscode (404, 405, ...)

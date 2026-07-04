@@ -11,7 +11,7 @@ use Throwable;
 /**
  * Spielt Startdaten (Seeds) ein. Seeds sind nummerierte SQL-Dateien und
  * sollten idempotent sein (z.B. mit ON CONFLICT DO NOTHING), damit ein
- * erneutes Ausfuehren keine Duplikate erzeugt.
+ * erneutes Ausführen keine Duplikate erzeugt.
  *
  * Lern mehr: docs/03-datenbank/05-erste-tabelle-anlegen.md
  */

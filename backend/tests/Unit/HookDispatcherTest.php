@@ -8,7 +8,7 @@ use Knospe\Plugin\Hook\HookDispatcher;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Testet den Hook-Bus: Aktionen laufen nach Prioritaet, Filter veraendern Werte.
+ * Testet den Hook-Bus: Aktionen laufen nach Priorität, Filter verändern Werte.
  * Lern mehr: docs/05-plugins/03-hooks-und-events.md
  */
 final class HookDispatcherTest extends TestCase
@@ -19,15 +19,15 @@ final class HookDispatcherTest extends TestCase
         $reihenfolge = [];
 
         $dispatcher->addAction('x', static function () use (&$reihenfolge): void {
-            $reihenfolge[] = 'spaeter';
+            $reihenfolge[] = 'später';
         }, 20);
         $dispatcher->addAction('x', static function () use (&$reihenfolge): void {
-            $reihenfolge[] = 'frueher';
+            $reihenfolge[] = 'früher';
         }, 10);
 
         $dispatcher->doAction('x');
 
-        self::assertSame(['frueher', 'spaeter'], $reihenfolge);
+        self::assertSame(['früher', 'später'], $reihenfolge);
     }
 
     public function testActionReceivesArguments(): void

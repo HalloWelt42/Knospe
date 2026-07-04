@@ -13,8 +13,8 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
 /**
- * Beitrag aendern. Erfordert Anmeldung; nur der Autor darf aendern
- * (die Rechtepruefung passiert im PostService).
+ * Beitrag ändern. Erfordert Anmeldung; nur der Autor darf ändern
+ * (die Rechteprüfung passiert im PostService).
  */
 final class UpdatePostHandler implements RequestHandlerInterface
 {

@@ -12,7 +12,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
 /**
- * Aktiviert ein Plugin (fuehrt dessen Migrationen aus). Erfordert Anmeldung.
+ * Aktiviert ein Plugin (führt dessen Migrationen aus). Erfordert Anmeldung.
  */
 final class PluginEnableHandler implements RequestHandlerInterface
 {

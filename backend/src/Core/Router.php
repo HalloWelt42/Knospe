@@ -33,7 +33,7 @@ final class Router implements RequestHandlerInterface
     }
 
     /**
-     * Fuegt eine Route hinzu. Der Handler ist entweder eine Klasse, die
+     * Fügt eine Route hinzu. Der Handler ist entweder eine Klasse, die
      * RequestHandlerInterface implementiert, oder die Form "Klasse@methode".
      */
     public function add(string $method, string $path, string $handler): void
@@ -87,7 +87,7 @@ final class Router implements RequestHandlerInterface
             );
         }
 
-        throw new NotFoundException('Keine Route fuer ' . $method . ' ' . $path);
+        throw new NotFoundException('Keine Route für ' . $method . ' ' . $path);
     }
 
     private function normalize(string $path): string
@@ -99,7 +99,7 @@ final class Router implements RequestHandlerInterface
 
     /**
      * Vergleicht ein Muster mit einem Pfad. Bei Treffer werden die
-     * benannten Platzhalter als Map zurueckgegeben, sonst null.
+     * benannten Platzhalter als Map zurückgegeben, sonst null.
      *
      * @return array<string, string>|null
      */

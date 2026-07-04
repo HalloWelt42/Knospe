@@ -14,9 +14,9 @@ use Psr\Http\Server\RequestHandlerInterface;
 /**
  * Schutz vor Cross-Site-Request-Forgery.
  *
- * Bei veraendernden Methoden (POST/PUT/PATCH/DELETE) muss der Header
- * "X-CSRF-Token" mit dem Token der Sitzung uebereinstimmen. Die Oberflaeche
- * holt das Token einmal ueber GET /api/csrf und schickt es danach mit.
+ * Bei verändernden Methoden (POST/PUT/PATCH/DELETE) muss der Header
+ * "X-CSRF-Token" mit dem Token der Sitzung übereinstimmen. Die Oberfläche
+ * holt das Token einmal über GET /api/csrf und schickt es danach mit.
  * Lesende Anfragen (GET) sind ausgenommen.
  *
  * Lern mehr: docs/08-debugging-und-sicherheit/10-cors-verstehen.md
@@ -36,7 +36,7 @@ final class CsrfMiddleware implements MiddlewareInterface
             $expected = $this->session->csrfToken();
 
             if ($sent === '' || !hash_equals($expected, $sent)) {
-                throw new HttpException(403, 'Ungueltiges oder fehlendes CSRF-Token.');
+                throw new HttpException(403, 'Ungültiges oder fehlendes CSRF-Token.');
             }
         }
 

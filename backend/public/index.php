@@ -5,11 +5,11 @@ declare(strict_types=1);
 /*
  * Knospe - Front-Controller
  * -------------------------
- * Der einzige Einstiegspunkt fuer alle HTTP-Anfragen. Der Ablauf ist
+ * Der einzige Einstiegspunkt für alle HTTP-Anfragen. Der Ablauf ist
  * bewusst offen sichtbar:
  *   1. Statische Dateien (beim eingebauten Server) direkt ausliefern
  *   2. Composer-Autoloader laden
- *   3. .env laden (fuer Bare-Metal; im Container kommen Werte aus Compose)
+ *   3. .env laden (für Bare-Metal; im Container kommen Werte aus Compose)
  *   4. Konfiguration bauen
  *   5. Kernel erzeugen
  *   6. Anfrage aus den PHP-Globals erzeugen (PSR-7)
@@ -30,7 +30,7 @@ if (PHP_SAPI === 'cli-server') {
 // 2. Autoloader.
 require dirname(__DIR__) . '/vendor/autoload.php';
 
-// 3. .env laden, falls vorhanden (ueberschreibt keine bereits gesetzten Werte).
+// 3. .env laden, falls vorhanden (überschreibt keine bereits gesetzten Werte).
 if (is_file(dirname(__DIR__, 2) . '/.env')) {
     Dotenv\Dotenv::createImmutable(dirname(__DIR__, 2))->safeLoad();
 }

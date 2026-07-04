@@ -4,9 +4,9 @@
 # ============================================================
 # Leitet Compose-Projektname und freie Host-Ports aus dem absoluten
 # Projektpfad ab (portabel per cksum), damit sich zwei Installationen
-# desselben Projekts nie stoeren. Eine vorhandene .env wird NIE
-# ueberschrieben. Nutzt nur POSIX-Werkzeuge, laeuft daher auf allen
-# gaengigen Systemen.
+# desselben Projekts nie stören. Eine vorhandene .env wird NIE
+# überschrieben. Nutzt nur POSIX-Werkzeuge, läuft daher auf allen
+# gängigen Systemen.
 # Lern mehr: docs/06-deployment/06-environment-verwaltung.md
 set -eu
 
@@ -14,11 +14,11 @@ ROOT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)"
 ENV_FILE="$ROOT_DIR/.env"
 
 if [ -f "$ENV_FILE" ]; then
-  echo "[setup-env] .env existiert bereits - unveraendert gelassen."
+  echo "[setup-env] .env existiert bereits - unverändert gelassen."
   exit 0
 fi
 
-# Pfad-Hash als Grundlage fuer eindeutige Namen und Ports.
+# Pfad-Hash als Grundlage für eindeutige Namen und Ports.
 HASH=$(printf '%s' "$ROOT_DIR" | cksum | awk '{print $1}')
 OFFSET=$(( HASH % 400 ))
 
@@ -37,11 +37,11 @@ gen_secret() {
 APP_SECRET=$(gen_secret)
 DB_PASSWORD=$(gen_secret)
 
-# Datei mit restriktiven Rechten anlegen (enthaelt Geheimnisse).
+# Datei mit restriktiven Rechten anlegen (enthält Geheimnisse).
 umask 077
 cat > "$ENV_FILE" <<EOF
 # Automatisch erzeugt von tools/setup-env.sh - pfad-eindeutig.
-# Nicht einchecken. Eine vorhandene Datei wird nie ueberschrieben.
+# Nicht einchecken. Eine vorhandene Datei wird nie überschrieben.
 COMPOSE_PROJECT_NAME=$PROJECT
 
 PHP_PORT=$PHP_PORT
