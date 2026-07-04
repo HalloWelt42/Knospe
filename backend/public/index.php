@@ -3,66 +3,57 @@
 declare(strict_types=1);
 
 /*
- * Knospe - Front-Controller (Platzhalter im Meilenstein M0)
- * ---------------------------------------------------------
- * Dies ist der einzige Einstiegspunkt fuer alle HTTP-Anfragen. Aktuell
- * beantwortet er nur einen Gesundheitscheck und prueft die Datenbank.
- * Ab Meilenstein M1 uebernimmt hier der richtige Kern: Autoloader,
- * Konfiguration, DI-Container, Router und die Middleware-Pipeline.
+ * Knospe - Front-Controller
+ * -------------------------
+ * Der einzige Einstiegspunkt fuer alle HTTP-Anfragen. Der Ablauf ist
+ * bewusst offen sichtbar:
+ *   1. Statische Dateien (beim eingebauten Server) direkt ausliefern
+ *   2. Composer-Autoloader laden
+ *   3. .env laden (fuer Bare-Metal; im Container kommen Werte aus Compose)
+ *   4. Konfiguration bauen
+ *   5. Kernel erzeugen
+ *   6. Anfrage aus den PHP-Globals erzeugen (PSR-7)
+ *   7. Anfrage vom Kernel verarbeiten lassen
+ *   8. Antwort senden
  *
  * Lern mehr: docs/02-architektur/03-request-flow-diagramm.md
  */
 
-// Beim eingebauten PHP-Server existierende Dateien direkt ausliefern.
+// 1. Beim eingebauten PHP-Server existierende Dateien direkt ausliefern.
 if (PHP_SAPI === 'cli-server') {
     $requested = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?? '/';
-    $file = __DIR__ . $requested;
-    if ($requested !== '/' && is_file($file)) {
+    if ($requested !== '/' && is_file(__DIR__ . $requested)) {
         return false;
     }
 }
 
-header('Content-Type: application/json; charset=utf-8');
+// 2. Autoloader.
+require dirname(__DIR__) . '/vendor/autoload.php';
 
-$path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
-
-if ($path === '/api/health') {
-    $datenbank = ['verbunden' => false, 'fehler' => null];
-
-    try {
-        $dsn = sprintf(
-            'pgsql:host=%s;port=%s;dbname=%s',
-            getenv('DB_HOST') ?: 'postgres',
-            getenv('DB_PORT') ?: '5432',
-            getenv('DB_NAME') ?: 'knospe',
-        );
-        $pdo = new PDO(
-            $dsn,
-            getenv('DB_USER') ?: 'knospe',
-            getenv('DB_PASSWORD') ?: '',
-            [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_TIMEOUT => 3],
-        );
-        $pdo->query('SELECT 1');
-        $datenbank['verbunden'] = true;
-    } catch (Throwable $e) {
-        // Im Gesundheitscheck ist die Meldung hilfreich; im echten Kern
-        // werden interne Fehler spaeter nicht mehr nach aussen gegeben.
-        $datenbank['fehler'] = $e->getMessage();
-    }
-
-    echo json_encode([
-        'status' => 'ok',
-        'anwendung' => 'Knospe',
-        'php' => PHP_VERSION,
-        'zeit' => date('c'),
-        'datenbank' => $datenbank,
-    ], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
-
-    return;
+// 3. .env laden, falls vorhanden (ueberschreibt keine bereits gesetzten Werte).
+if (is_file(dirname(__DIR__, 2) . '/.env')) {
+    Dotenv\Dotenv::createImmutable(dirname(__DIR__, 2))->safeLoad();
 }
 
-http_response_code(404);
-echo json_encode(
-    ['status' => 'fehler', 'meldung' => 'Nicht gefunden', 'pfad' => $path],
-    JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES,
-);
+// 4. Konfiguration.
+$config = require dirname(__DIR__) . '/config/config.php';
+
+// 5. Kernel.
+$kernel = new Knospe\Core\Kernel($config);
+
+// 6. Anfrage aus den Globals (PSR-7).
+$factory = new Nyholm\Psr7\Factory\Psr17Factory();
+$creator = new Nyholm\Psr7Server\ServerRequestCreator($factory, $factory, $factory, $factory);
+$request = $creator->fromGlobals();
+
+// 7. Verarbeiten.
+$response = $kernel->handle($request);
+
+// 8. Antwort senden.
+http_response_code($response->getStatusCode());
+foreach ($response->getHeaders() as $name => $values) {
+    foreach ($values as $value) {
+        header($name . ': ' . $value, false);
+    }
+}
+echo $response->getBody();
