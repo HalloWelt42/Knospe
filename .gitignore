@@ -1,0 +1,26 @@
+# Umgebungsdatei mit Zugangsdaten und abgeleiteten Ports - nie einchecken
+/.env
+backend/.env
+
+# Abhaengigkeiten
+/vendor/
+backend/vendor/
+node_modules/
+frontend/node_modules/
+
+# Build-Ausgaben
+frontend/dist/
+
+# Datenbank-Sicherungen (liegen bewusst im Projekt, aber nicht im Repo)
+/backups/*
+!/backups/.gitkeep
+
+# JetBrains IDE (persoenlicher Zustand)
+/.idea/
+
+# Betriebssystem
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

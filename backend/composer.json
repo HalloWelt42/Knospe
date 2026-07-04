@@ -1,0 +1,23 @@
+{
+    "name": "hallowelt42/knospe",
+    "description": "Lehr-Boilerplate: PHP 8.5 Mini-Kern mit Plugin-System",
+    "type": "project",
+    "license": "LicenseRef-Knospe-NC-1.0",
+    "require": {
+        "php": ">=8.5"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "Knospe\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Knospe\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
