@@ -1,3 +1,5 @@
+<p align="center"><img src="knospe-logo.svg" alt="Knospe" width="88" height="88" /></p>
+
 # Knospe - Handbuch
 
 Willkommen. Dieses Handbuch begleitet dich Schritt für Schritt: vom ersten Start über die Grundlagen von PHP und der Projektarchitektur bis zu Datenbank, Frontend, eigenen Plugins, Betrieb, Werkzeugen und Sicherheit. Unten ist jedes Dokument einzeln verlinkt.
