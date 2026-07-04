@@ -2,7 +2,7 @@
 
 Git verwaltet die Versionsgeschichte deines Codes: Wer hat wann was geändert, und wie kommst du bei Bedarf zurück. PhpStorm bringt Git direkt in die IDE, sodass du nicht ständig ins Terminal wechseln musst. Für Einsteiger ist die grafische Ansicht oft leichter zu überblicken.
 
-## Aenderungen sehen und committen
+## Änderungen sehen und committen
 
 Geänderte Dateien zeigt PhpStorm im Fenster "Commit" (links). Dort siehst du pro Datei die konkreten Zeilenänderungen. Ein Commit ist ein gespeicherter Stand mit Beschreibung.
 

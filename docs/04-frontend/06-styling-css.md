@@ -34,10 +34,10 @@ Was überall gleich sein soll - Farben, Schrift, wiederkehrende Klassen wie `.bt
 }
 ```
 
-Komponenten greifen überall auf diese Variablen zu, etwa `background: var(--panel)`. Das hält das Bild einheitlich und macht Umfärben trivial. Geladen wird `app.css` einmal zentral in `frontend/src/main.ts`, zusammen mit der Schrift Chakra Petch und den Font-Awesome-Icons - beide als npm-Pakete, kein CDN.
+Komponenten greifen überall auf diese Variablen zu, etwa `background: var(--panel)`. Das hält das Bild einheitlich und macht Umfärben trivial. Geladen wird `app.css` einmal zentral in `frontend/src/main.ts`, zusammen mit der Schrift Barlow und den Font-Awesome-Icons - beide als npm-Pakete, kein CDN.
 
 ## Akzente ohne Randstreifen
 
-Eine bewusste Gestaltungsregel: Akzente werden über Flächen, volle Rahmen oder Farbe gesetzt, nicht über einen blossen Streifen links oder rechts an einem Element. Ein linker Farbbalken als Deko wirkt schnell unruhig und bricht bei schmalen Ansichten. Stattdessen nutzt Knospe abgerundete Karten (`.karte` mit `background` und `border-radius`) und einen dezenten Rahmen unten an der Kopfleiste.
+Eine bewusste Gestaltungsregel: Akzente werden über Flächen, volle Rahmen oder Farbe gesetzt, nicht über einen bloßen Streifen links oder rechts an einem Element. Ein linker Farbbalken als Deko wirkt schnell unruhig und bricht bei schmalen Ansichten. Stattdessen nutzt Knospe abgerundete Karten (`.karte` mit `background` und `border-radius`) und einen dezenten Rahmen unten an der Kopfleiste.
 
 Wie Stile zur fertigen CSS-Datei werden, übernimmt der Build (siehe [Vite und Werkzeuge](05-vite-und-tooling.md)). Zum Aufbau einer Komponente siehe [Svelte-5-Komponenten](01-svelte5-komponenten-intro.md). Begriffe im [Glossar: Frontend](glossar-frontend.md).

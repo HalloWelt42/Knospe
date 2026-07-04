@@ -48,7 +48,7 @@
 <h1>Plugins</h1>
 
 {#if !auth.user}
-  <p class="muted">Bitte zuerst <a href="#/login">anmelden</a>.</p>
+  <p class="muted">Bitte zuerst <a href="/login">anmelden</a>.</p>
 {:else if laden}
   <p class="muted">Lädt ...</p>
 {:else if fehler}

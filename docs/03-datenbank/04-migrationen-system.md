@@ -4,7 +4,7 @@ Eine Datenbank hat ein Schema: welche Tabellen es gibt, welche Spalten. Dieses S
 
 ## Nummerierte SQL-Dateien
 
-Die Migrationen liegen in `backend/database/migrations` und heissen `001_...`, `002_..., 003_...`. Die Nummer bestimmt die Reihenfolge. Jede Datei ist reines SQL, mit einem UP-Teil (was passieren soll) und optional einem DOWN-Teil (wie man es rückgängig macht), getrennt durch die Zeile `-- DOWN:`:
+Die Migrationen liegen in `backend/database/migrations` und heißen `001_...`, `002_..., 003_...`. Die Nummer bestimmt die Reihenfolge. Jede Datei ist reines SQL, mit einem UP-Teil (was passieren soll) und optional einem DOWN-Teil (wie man es rückgängig macht), getrennt durch die Zeile `-- DOWN:`:
 
 ```sql
 CREATE TABLE IF NOT EXISTS users (
@@ -23,7 +23,7 @@ Der `MigrationRunner` (`backend/src/Database/Migration/MigrationRunner.php`) mer
 
 ## Transaktion je Migration
 
-PostgreSQL kann Schema-Aenderungen zurücknehmen. Darum läuft jede Migration in einer eigenen Transaktion: Klappt der UP-Teil, wird der Eintrag in `schema_migrations` geschrieben und alles bestätigt (`commit`). Bricht etwas ab, wird alles zurückgerollt (`rollBack`) - keine halben Zustände. Mehr dazu unter [PDO und sichere Abfragen](03-pdo-und-sql.md).
+PostgreSQL kann Schema-Änderungen zurücknehmen. Darum läuft jede Migration in einer eigenen Transaktion: Klappt der UP-Teil, wird der Eintrag in `schema_migrations` geschrieben und alles bestätigt (`commit`). Bricht etwas ab, wird alles zurückgerollt (`rollBack`) - keine halben Zustände. Mehr dazu unter [PDO und sichere Abfragen](03-pdo-und-sql.md).
 
 ## Ausführen
 

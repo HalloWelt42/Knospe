@@ -42,6 +42,6 @@ final class RequestLogMiddleware implements MiddlewareInterface
 }
 ```
 
-Der Aufruf `$handler->handle($request)` reicht an die nächste Stufe weiter. Alles davor passiert auf dem Hinweg, alles danach auf dem Rückweg. Willst du frueh abbrechen (etwa bei fehlender Anmeldung), gibst du einfach eine eigene Antwort zurück oder wirfst eine Exception, ohne `handle` aufzurufen.
+Der Aufruf `$handler->handle($request)` reicht an die nächste Stufe weiter. Alles davor passiert auf dem Hinweg, alles danach auf dem Rückweg. Willst du früh abbrechen (etwa bei fehlender Anmeldung), gibst du einfach eine eigene Antwort zurück oder wirfst eine Exception, ohne `handle` aufzurufen.
 
 Ein Blick auf die konkrete Fehler-Middleware: [Zentrale Fehlerbehandlung](07-exception-handling-zentral.md). Der Router als Kette-Ende: [Der Weg einer Anfrage](03-request-flow-diagramm.md).

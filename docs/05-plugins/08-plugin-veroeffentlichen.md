@@ -8,7 +8,7 @@ Jedes Plugin bekommt eine eigene `README.md` (wie `plugins/knospe-comments/READM
 
 ## Versionierung
 
-Die Version steht an zwei Stellen konsistent: im `manifest.json` und in `metadata()`. Erhöhe sie bei jeder Aenderung - eine Fehlerbehebung als Patch (`1.0.0` zu `1.0.1`), eine neue Fähigkeit als Feature (`1.0.0` zu `1.1.0`). So erkennt jeder, ob eine neuere Fassung vorliegt.
+Die Version steht an zwei Stellen konsistent: im `manifest.json` und in `metadata()`. Erhöhe sie bei jeder Änderung - eine Fehlerbehebung als Patch (`1.0.0` zu `1.0.1`), eine neue Fähigkeit als Feature (`1.0.0` zu `1.1.0`). So erkennt jeder, ob eine neuere Fassung vorliegt.
 
 ## Sicherheit
 

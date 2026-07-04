@@ -1,6 +1,6 @@
 # Formulare und Validierung
 
-Ueber Formulare gelangen Eingaben in die Anwendung: anmelden, registrieren, einen Beitrag schreiben. Zwei Fragen stellen sich immer: Wie schickt man die Eingaben ab? Und wie zeigt man dem Nutzer, wenn etwas nicht stimmt? Wichtig zu verstehen: Prüfungen im Browser sind bequem, aber niemals verlässlich - die letzte Instanz ist das Backend.
+Über Formulare gelangen Eingaben in die Anwendung: anmelden, registrieren, einen Beitrag schreiben. Zwei Fragen stellen sich immer: Wie schickt man die Eingaben ab? Und wie zeigt man dem Nutzer, wenn etwas nicht stimmt? Wichtig zu verstehen: Prüfungen im Browser sind bequem, aber niemals verlässlich - die letzte Instanz ist das Backend.
 
 ## Absenden mit onsubmit
 

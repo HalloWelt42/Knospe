@@ -26,7 +26,7 @@ VALUES (1, 'Mein erster Beitrag', 'Hallo Welt');
 
 Du nennst die Spalten und die Werte. `id`, `created_at` und `updated_at` füllt die Datenbank selbst (siehe die `DEFAULT`-Regeln in der Migration).
 
-## Aendern: UPDATE
+## Ändern: UPDATE
 
 ```sql
 UPDATE posts

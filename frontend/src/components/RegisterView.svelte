@@ -57,4 +57,4 @@
   </button>
 </form>
 
-<p class="muted">Schon ein Konto? <a href="#/login">Anmelden</a>.</p>
+<p class="muted">Schon ein Konto? <a href="/login">Anmelden</a>.</p>

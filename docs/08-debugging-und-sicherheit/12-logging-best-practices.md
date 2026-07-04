@@ -8,7 +8,7 @@ Nützlich sind Ereignisse, die man später verstehen oder zählen will: eingehen
 
 ## Was niemals ins Log gehört
 
-Hier liegt die grösste Gefahr. Niemals ins Log kommen:
+Hier liegt die größte Gefahr. Niemals ins Log kommen:
 
 - Passwörter, auch nicht gehasht.
 - Sitzungs-Token, CSRF-Token, API-Schlüssel.

@@ -25,7 +25,7 @@ Die echte `.env` erzeugt `./knospe setup` einmalig - mit einem pfad-eindeutigen 
 ## Welche Variable wofür
 
 - `COMPOSE_PROJECT_NAME` - trennt Container, Netz und Datenvolume von jeder anderen Installation.
-- `PHP_PORT`, `VITE_PORT`, `DB_PORT` - die Host-Ports, die von aussen sichtbar sind. `./knospe status` zeigt die echten Werte.
+- `PHP_PORT`, `VITE_PORT`, `DB_PORT` - die Host-Ports, die von außen sichtbar sind. `./knospe status` zeigt die echten Werte.
 - `APP_SECRET` - Geheimnis für Sitzungen und CSRF-Schutz.
 - `POSTGRES_DB`, `POSTGRES_USER`, `POSTGRES_PASSWORD` - Datenbankname und Zugang. Diese liest sowohl der Postgres-Container als auch das Backend (siehe `backend/src/Support/Config.php`).
 

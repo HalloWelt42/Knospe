@@ -1,9 +1,9 @@
 import { mount } from 'svelte';
 import App from './App.svelte';
 
-// Schrift (Chakra Petch) und Icons (Font Awesome) über npm-Pakete, kein CDN.
-import '@fontsource/chakra-petch/400.css';
-import '@fontsource/chakra-petch/600.css';
+// Schrift (Barlow) und Icons (Font Awesome) über npm-Pakete, kein CDN.
+import '@fontsource/barlow/400.css';
+import '@fontsource/barlow/600.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 // Globale Gestaltung.

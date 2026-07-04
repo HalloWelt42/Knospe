@@ -4,7 +4,7 @@ DataGrip ist ein Werkzeug, mit dem du direkt in die Datenbank schaust: Tabellen 
 
 ## Den richtigen Port herausfinden
 
-Die Datenbank läuft im Docker-Container und ist von aussen nur über einen pfad-eindeutigen Host-Port erreichbar. Frag ihn zuerst ab:
+Die Datenbank läuft im Docker-Container und ist von außen nur über einen pfad-eindeutigen Host-Port erreichbar. Frag ihn zuerst ab:
 
 ```
 ./knospe status

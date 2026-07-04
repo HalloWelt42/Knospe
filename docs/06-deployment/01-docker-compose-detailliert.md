@@ -10,7 +10,7 @@ Der ganze Stack von Knospe steckt in einer einzigen Datei: `docker-compose.yml`.
 
 ## Ports und Name aus der .env
 
-Container-intern sind die Ports fest (8000, 5432, 5173). Nach aussen werden sie über die `.env` gemappt:
+Container-intern sind die Ports fest (8000, 5432, 5173). Nach außen werden sie über die `.env` gemappt:
 
 ```yaml
 ports:

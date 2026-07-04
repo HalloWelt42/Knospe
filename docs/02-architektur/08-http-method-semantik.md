@@ -11,7 +11,7 @@ Die vier wichtigsten in Knospe, direkt aus `backend/config/routes.php`:
 
 Ein zentraler Begriff dabei ist **Idempotenz**: Eine Methode ist idempotent, wenn dieselbe Anfrage mehrfach ausgeführt dasselbe Ergebnis liefert wie einmal. GET, PUT und DELETE sind idempotent - ein Beitrag zweimal löschen ändert nichts am Endzustand (er ist weg). POST ist **nicht** idempotent: Zweimal `POST /api/posts` erzeugt zwei Beiträge. Deshalb sollte man POST-Anfragen nicht blind wiederholen.
 
-Es gibt noch **PATCH** für teilweise Aenderungen - man schickt nur die geänderten Felder statt der ganzen Ressource. Knospe nutzt PATCH aktuell nicht, aber die `CsrfMiddleware` behandelt es bereits als verändernde Methode:
+Es gibt noch **PATCH** für teilweise Änderungen - man schickt nur die geänderten Felder statt der ganzen Ressource. Knospe nutzt PATCH aktuell nicht, aber die `CsrfMiddleware` behandelt es bereits als verändernde Methode:
 
 ```php
 private const UNSAFE = ['POST', 'PUT', 'PATCH', 'DELETE'];

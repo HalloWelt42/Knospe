@@ -4,7 +4,7 @@ Der Debugger ist das mächtigste Werkzeug zur Fehlersuche, weil er dein Programm
 
 ## Einmalige Einrichtung
 
-Xdebug lauscht auf **Port 9003** (nicht 9000, das ist die häufigste Stolperfalle). In PhpStorm richtest du den Interpreter über den Docker-Compose-Interpreter ein und legst ein **Path-Mapping** an: dein lokaler Projektordner entspricht `/app` im Container. Ohne dieses Mapping findet der Debugger deine Dateien nicht. Die vollständige Einrichtung steht in `docs/07-werkzeuge/` (PhpStorm, Xdebug). Wichtig sind ausserdem `xdebug.start_with_request` und `client_host=host.docker.internal`, damit der Container den Debugger auf deinem Rechner erreicht.
+Xdebug lauscht auf **Port 9003** (nicht 9000, das ist die häufigste Stolperfalle). In PhpStorm richtest du den Interpreter über den Docker-Compose-Interpreter ein und legst ein **Path-Mapping** an: dein lokaler Projektordner entspricht `/app` im Container. Ohne dieses Mapping findet der Debugger deine Dateien nicht. Die vollständige Einrichtung steht in `docs/07-werkzeuge/` (PhpStorm, Xdebug). Wichtig sind außerdem `xdebug.start_with_request` und `client_host=host.docker.internal`, damit der Container den Debugger auf deinem Rechner erreicht.
 
 ## Ein Breakpoint
 

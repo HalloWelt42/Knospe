@@ -22,7 +22,7 @@
 
 body {
   margin: 0;
-  font-family: 'Chakra Petch', system-ui, sans-serif;
+  font-family: 'Barlow', system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.5;

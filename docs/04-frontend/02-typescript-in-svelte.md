@@ -47,7 +47,7 @@ let {
 } = $props();
 ```
 
-Damit weiss die Komponente genau, dass `post` ein `Post` ist, und dass `onDeleted` eine Funktion ist, die eine Nummer entgegennimmt. Uebergibt die Elternkomponente etwas Falsches, meldet der Build es.
+Damit weiß die Komponente genau, dass `post` ein `Post` ist, und dass `onDeleted` eine Funktion ist, die eine Nummer entgegennimmt. Uebergibt die Elternkomponente etwas Falsches, meldet der Build es.
 
 ## Der Nutzen im Alltag
 

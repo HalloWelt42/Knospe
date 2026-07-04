@@ -85,8 +85,8 @@
   </form>
 {:else}
   <p class="muted">
-    Zum Schreiben bitte <a href="#/login">anmelden</a> oder
-    <a href="#/register">registrieren</a>.
+    Zum Schreiben bitte <a href="/login">anmelden</a> oder
+    <a href="/register">registrieren</a>.
   </p>
 {/if}
 

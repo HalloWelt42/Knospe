@@ -36,7 +36,7 @@ docker compose logs | grep error
 Dateien können ausführbar sein. Das Projekt-Skript braucht dieses Recht:
 
 ```bash
-chmod +x knospe    # ausfuehrbar machen
+chmod +x knospe    # ausführbar machen
 ./knospe status    # ausführen
 ```
 

@@ -20,7 +20,7 @@ Beim Bind-Mount wird ein echter Ordner deines Rechners in den Container gespiege
 
 ## Netzwerk
 
-Compose legt für das Projekt ein eigenes Netzwerk an. Darin erreichen sich die Container über ihren Dienstnamen: Das Backend spricht die Datenbank schlicht als `postgres:5432` an, ohne Host-Port. Die Host-Ports aus der `.env` sind nur für den Zugriff von aussen (siehe [Umgebungen verwalten](06-environment-verwaltung.md)).
+Compose legt für das Projekt ein eigenes Netzwerk an. Darin erreichen sich die Container über ihren Dienstnamen: Das Backend spricht die Datenbank schlicht als `postgres:5432` an, ohne Host-Port. Die Host-Ports aus der `.env` sind nur für den Zugriff von außen (siehe [Umgebungen verwalten](06-environment-verwaltung.md)).
 
 ## Healthcheck
 

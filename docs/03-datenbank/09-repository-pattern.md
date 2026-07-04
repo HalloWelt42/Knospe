@@ -18,7 +18,7 @@ interface PostRepositoryInterface
 }
 ```
 
-Der Service arbeitet nur gegen dieses Interface. Er weiss nicht, ob dahinter PostgreSQL, ein Testspeicher oder etwas anderes steckt.
+Der Service arbeitet nur gegen dieses Interface. Er weiß nicht, ob dahinter PostgreSQL, ein Testspeicher oder etwas anderes steckt.
 
 ## Die Umsetzung für PostgreSQL
 

@@ -1,6 +1,6 @@
 # Sicherheits-Grundlagen
 
-Sicherheit ist kein einzelnes Feature, sondern eine Haltung, die durch den ganzen Code zieht. Die gute Nachricht: Die meisten Angriffe zielen auf immer dieselben Schwachstellen. Wer diese kennt, deckt den Grossteil ab. Hier ein Überblick, jeweils mit dem Ort in Knospe, an dem es gelöst ist.
+Sicherheit ist kein einzelnes Feature, sondern eine Haltung, die durch den ganzen Code zieht. Die gute Nachricht: Die meisten Angriffe zielen auf immer dieselben Schwachstellen. Wer diese kennt, deckt den Großteil ab. Hier ein Überblick, jeweils mit dem Ort in Knospe, an dem es gelöst ist.
 
 ## Injection
 

@@ -31,8 +31,8 @@ Unten öffnet sich eine Tabelle mit dem Ergebnis. Du kannst Spalten sortieren, f
 
 ## Exportieren
 
-Ueber das Kontextmenü des Ergebnisses ("Export Data") speicherst du die Ausgabe als CSV oder als SQL-Insert. Das ist praktisch, um Testdaten festzuhalten oder Ergebnisse weiterzugeben.
+Über das Kontextmenü des Ergebnisses ("Export Data") speicherst du die Ausgabe als CSV oder als SQL-Insert. Das ist praktisch, um Testdaten festzuhalten oder Ergebnisse weiterzugeben.
 
-## Vorsicht bei Aenderungen
+## Vorsicht bei Änderungen
 
-`SELECT` liest nur und ist ungefährlich. Anweisungen wie `UPDATE` oder `DELETE` verändern Daten. Für strukturierte, wiederholbare Aenderungen sind in Knospe die Migrationen unter `database/migrations` und der Seed unter `database/seeds` gedacht (ausgeführt per `./knospe migrate` und `./knospe seed`). Nutze die SQL-Konsole zum Nachschauen und Experimentieren, nicht als Ersatz für Migrationen.
+`SELECT` liest nur und ist ungefährlich. Anweisungen wie `UPDATE` oder `DELETE` verändern Daten. Für strukturierte, wiederholbare Änderungen sind in Knospe die Migrationen unter `database/migrations` und der Seed unter `database/seeds` gedacht (ausgeführt per `./knospe migrate` und `./knospe seed`). Nutze die SQL-Konsole zum Nachschauen und Experimentieren, nicht als Ersatz für Migrationen.

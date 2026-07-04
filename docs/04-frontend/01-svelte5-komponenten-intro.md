@@ -26,7 +26,7 @@ Jede Komponente hat bis zu drei Bereiche:
 
 Svelte 5 steuert Reaktivität über sogenannte Runes, kleine Sonderfunktionen mit `$`-Präfix. `$state(...)` markiert einen Wert als reaktiv: ändert er sich, rendert die Komponente die betroffenen Stellen neu. In `PostsView.svelte` ist das etwa `let posts = $state<Post[]>([])`.
 
-Werte, die eine Komponente von aussen bekommt, heissen Props. Sie werden mit `$props()` entpackt. So nimmt `PostItem.svelte` seinen Beitrag entgegen:
+Werte, die eine Komponente von außen bekommt, heißen Props. Sie werden mit `$props()` entpackt. So nimmt `PostItem.svelte` seinen Beitrag entgegen:
 
 ```svelte
 let { post, onDeleted }: { post: Post; onDeleted: (id: number) => void } = $props();

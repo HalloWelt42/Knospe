@@ -22,4 +22,4 @@ Oeffne eine Testklasse unter `backend/tests/`, zum Beispiel einen Test im Ordner
 
 Die Integrationstests nutzen eine Basisklasse, die jeden Test in einer Transaktion kapselt und danach zurückrollt. So bleibt die Datenbank sauber, egal wie oft du einen Test startest.
 
-Unten öffnet sich das Test-Fenster mit Baumansicht. Gruen bedeutet bestanden, rot zeigt die Zeile mit der fehlgeschlagenen Zusicherung - ein Klick springt dorthin. Damit wird Testen zu einem schnellen Werkzeug beim Verstehen und Aendern des Codes.
+Unten öffnet sich das Test-Fenster mit Baumansicht. Grün bedeutet bestanden, rot zeigt die Zeile mit der fehlgeschlagenen Zusicherung - ein Klick springt dorthin. Damit wird Testen zu einem schnellen Werkzeug beim Verstehen und Ändern des Codes.

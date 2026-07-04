@@ -12,7 +12,7 @@ Der letzte Punkt ist der Grund für Zertifikate. Ein Zertifikat bindet einen Dom
 
 ## Lokal: selbstsigniert
 
-In der Entwicklung reicht oft einfaches HTTP über localhost, denn der Verkehr verlässt den eigenen Rechner nicht. Braucht man lokal doch HTTPS (etwa um Cookie-Flags wie `Secure` realistisch zu testen), erzeugt man ein selbstsigniertes Zertifikat. Der Browser warnt dann, weil niemand ausser einem selbst dafür bürgt - lokal ist das in Ordnung, man fügt das eigene Zertifikat einmalig als vertrauenswürdig hinzu.
+In der Entwicklung reicht oft einfaches HTTP über localhost, denn der Verkehr verlässt den eigenen Rechner nicht. Braucht man lokal doch HTTPS (etwa um Cookie-Flags wie `Secure` realistisch zu testen), erzeugt man ein selbstsigniertes Zertifikat. Der Browser warnt dann, weil niemand außer einem selbst dafür bürgt - lokal ist das in Ordnung, man fügt das eigene Zertifikat einmalig als vertrauenswürdig hinzu.
 
 ## Produktion: echte Zertifikate
 

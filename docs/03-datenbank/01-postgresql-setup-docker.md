@@ -34,4 +34,4 @@ Die Zeile `pgdata:/var/lib/postgresql/data` legt die Daten in ein von Docker ver
 
 ## Der Host-Port
 
-`${DB_PORT:-15432}:5432` bedeutet: Container-intern spricht Postgres immer auf `5432`, nach aussen wird ein pfad-eindeutiger Port aus der `.env` gemappt. Den echten Wert zeigt dir `./knospe status`. Diesen Port brauchst du für [DataGrip](08-datagrip-einrichtung.md).
+`${DB_PORT:-15432}:5432` bedeutet: Container-intern spricht Postgres immer auf `5432`, nach außen wird ein pfad-eindeutiger Port aus der `.env` gemappt. Den echten Wert zeigt dir `./knospe status`. Diesen Port brauchst du für [DataGrip](08-datagrip-einrichtung.md).

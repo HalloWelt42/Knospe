@@ -1,6 +1,6 @@
 # Code-Inspektion
 
-PhpStorm liest deinen Code mit und meldet Auffälligkeiten, noch bevor du das Programm startest. Diese Prüfungen heissen Inspektionen. Sie reichen von echten Fehlern (Tippfehler in einem Methodennamen) bis zu Hinweisen (eine Variable wird nie benutzt). Für Einsteiger sind sie ein Sicherheitsnetz, das viele Fehler frueh sichtbar macht.
+PhpStorm liest deinen Code mit und meldet Auffälligkeiten, noch bevor du das Programm startest. Diese Prüfungen heißen Inspektionen. Sie reichen von echten Fehlern (Tippfehler in einem Methodennamen) bis zu Hinweisen (eine Variable wird nie benutzt). Für Einsteiger sind sie ein Sicherheitsnetz, das viele Fehler früh sichtbar macht.
 
 ## Wo die Hinweise erscheinen
 

@@ -37,7 +37,7 @@ Beim Zuweisen wird der Wert erst aufbereitet, dann abgelegt.
 
 ## Unterschied zu Magic Methods
 
-PHP kennt schon länger die Magic Methods `__get()` und `__set()`. Die greifen aber nur bei Eigenschaften, die gar nicht deklariert sind, und gelten für alle auf einmal. Property Hooks sind das Gegenteil: Sie gehören zu einer klar benannten, deklarierten Eigenschaft. Dadurch weiss die Entwicklungsumgebung genau, was existiert, die statische Analyse (siehe [Klassen und Objekte](01-oop-klassen-intro.md) für den Klassenkontext) kann prüfen, und der Code bleibt lesbar.
+PHP kennt schon länger die Magic Methods `__get()` und `__set()`. Die greifen aber nur bei Eigenschaften, die gar nicht deklariert sind, und gelten für alle auf einmal. Property Hooks sind das Gegenteil: Sie gehören zu einer klar benannten, deklarierten Eigenschaft. Dadurch weiß die Entwicklungsumgebung genau, was existiert, die statische Analyse (siehe [Klassen und Objekte](01-oop-klassen-intro.md) für den Klassenkontext) kann prüfen, und der Code bleibt lesbar.
 
 ## Wann sinnvoll
 

@@ -1,6 +1,6 @@
 # Fehlerprotokolle lesen
 
-Wenn eine Anfrage im Browser nur "Interner Serverfehler" zeigt, steckt der eigentliche Grund im Protokoll. Denn `ErrorHandlingMiddleware` gibt aus gutem Grund keine internen Details nach aussen - sie schreibt sie ins Log. Dort schaust du nach.
+Wenn eine Anfrage im Browser nur "Interner Serverfehler" zeigt, steckt der eigentliche Grund im Protokoll. Denn `ErrorHandlingMiddleware` gibt aus gutem Grund keine internen Details nach außen - sie schreibt sie ins Log. Dort schaust du nach.
 
 ## Das Log ansehen
 

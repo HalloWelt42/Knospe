@@ -34,6 +34,6 @@ try {
 }
 ```
 
-Wichtig ist der letzte Fall: Ein unerwarteter Fehler wird protokolliert, aber nach aussen gibt es nur eine neutrale 500 ohne interne Details. Kein Stacktrace, kein Dateipfad, kein SQL - solche Informationen gehören nicht in eine öffentliche Antwort. Nur wenn `APP_DEBUG=true` gesetzt ist, kommen Details für die Entwicklung mit. Das steuert die Konfiguration, siehe [Konfiguration und Umgebung](10-konfiguration-und-umgebung.md).
+Wichtig ist der letzte Fall: Ein unerwarteter Fehler wird protokolliert, aber nach außen gibt es nur eine neutrale 500 ohne interne Details. Kein Stacktrace, kein Dateipfad, kein SQL - solche Informationen gehören nicht in eine öffentliche Antwort. Nur wenn `APP_DEBUG=true` gesetzt ist, kommen Details für die Entwicklung mit. Das steuert die Konfiguration, siehe [Konfiguration und Umgebung](10-konfiguration-und-umgebung.md).
 
 Der Effekt: Handler und Services bleiben kurz und ehrlich. Sie beschreiben nur, was schieflief - der Rest passiert an einer Stelle.

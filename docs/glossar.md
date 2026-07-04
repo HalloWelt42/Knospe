@@ -13,7 +13,7 @@ Diese Sammlung erklärt die wichtigsten Begriffe, die dir in Knospe immer wieder
 - **Service**: Bündelt Geschäftslogik über Repositories, etwa `PostService`.
 - **Hook**: Erweiterungspunkt via `doAction`/`applyFilter`, verwaltet vom `HookDispatcher`.
 - **Plugin**: Optionales Zusatzmodul mit `manifest.json`, siehe `plugins/knospe-comments`.
-- **DI (Dependency Injection)**: Abhängigkeiten werden von aussen hineingereicht, hier vom `Container` mit Autowiring.
+- **DI (Dependency Injection)**: Abhängigkeiten werden von außen hineingereicht, hier vom `Container` mit Autowiring.
 - **PSR-4**: Standard, der Namensraum `Knospe\` auf `backend/src` abbildet.
 - **REST**: Stil für HTTP-APIs mit klaren Ressourcen und Methoden, siehe [Endpoint-Übersicht](02-architektur/09-restful-apis-kurz.md).
 - **Endpoint**: Konkrete Adresse plus Methode, etwa `GET /api/posts`.
@@ -24,7 +24,7 @@ Diese Sammlung erklärt die wichtigsten Begriffe, die dir in Knospe immer wieder
 
 - **Komponente**: Wiederverwendbarer UI-Baustein in `frontend/src/components/`, etwa `PostItem.svelte`.
 - **Rune**: Reaktives Sprachmittel in Svelte 5, zum Beispiel `$state`, `$derived`, `$effect`.
-- **Prop**: Von aussen übergebener Wert einer Komponente, deklariert mit `$props()`.
+- **Prop**: Von außen übergebener Wert einer Komponente, deklariert mit `$props()`.
 - **Slot**: Platzhalter für eingesetzten Inhalt, hier für Plugins in `PluginSlot.svelte`.
 
 ## Werkzeuge

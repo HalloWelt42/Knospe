@@ -11,7 +11,7 @@ Der Backend-Code liegt unter `backend/src` und ist nach Verantwortung sortiert. 
 - **`src/Database/`** - `Connection.php` (PDO/pgsql) und `Migration/` (`MigrationRunner`, `SeedRunner`).
 - **`src/Plugin/`** - das Erweiterungssystem: `PluginManager`, `PluginLoader`, `PluginService`, `RouteRegistry`, `Hook/HookDispatcher` und die Verträge.
 
-Ausserhalb von `src`:
+Außerhalb von `src`:
 
 - **`backend/config/`** - `config.php` (baut das Config-Objekt) und `routes.php` (die deklarative Routentabelle).
 - **`backend/public/index.php`** - der Front-Controller, der einzige Einstiegspunkt.

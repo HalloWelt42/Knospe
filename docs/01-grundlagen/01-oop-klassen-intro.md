@@ -13,7 +13,7 @@ Zwei Bausteine bilden eine Klasse:
 
 ## Sichtbarkeit
 
-Jede Eigenschaft und Methode hat eine Sichtbarkeit. `public` ist von aussen zugreifbar, `private` nur innerhalb der Klasse selbst. Der Sinn: Wir kapseln interne Details, damit anderer Code sich nicht darauf verlässt.
+Jede Eigenschaft und Methode hat eine Sichtbarkeit. `public` ist von außen zugreifbar, `private` nur innerhalb der Klasse selbst. Der Sinn: Wir kapseln interne Details, damit anderer Code sich nicht darauf verlässt.
 
 ## Konstruktor
 

@@ -44,7 +44,7 @@ final class CommentControllerTest extends TestCase
 }
 ```
 
-Weil jeder Test seine Aenderungen zuruckrollt, können viele Tests dieselbe Datenbank teilen, ohne sich zu stören. Die Test-Datenbank läuft im Docker-Verbund, nichts berührt den Rest des Rechners.
+Weil jeder Test seine Änderungen zuruckrollt, können viele Tests dieselbe Datenbank teilen, ohne sich zu stören. Die Test-Datenbank läuft im Docker-Verbund, nichts berührt den Rest des Rechners.
 
 ## Ausführen
 

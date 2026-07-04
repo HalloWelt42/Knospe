@@ -4,7 +4,7 @@ DataGrip ist ein Werkzeug für Datenbanken. Damit siehst du direkt, welche Tabel
 
 ## Den richtigen Port herausfinden
 
-Die Postgres-Datenbank läuft im Container. Nach aussen ist sie über einen Host-Port erreichbar. Dieser Port ist nicht fest: Das Skript `tools/setup-env.sh` leitet ihn pfad-eindeutig ab (per `cksum` in die `.env`), damit sich zwei Installationen von Knospe nie in die Quere kommen.
+Die Postgres-Datenbank läuft im Container. Nach außen ist sie über einen Host-Port erreichbar. Dieser Port ist nicht fest: Das Skript `tools/setup-env.sh` leitet ihn pfad-eindeutig ab (per `cksum` in die `.env`), damit sich zwei Installationen von Knospe nie in die Quere kommen.
 
 Den tatsächlich vergebenen Port zeigt dir:
 
@@ -21,7 +21,7 @@ Merke dir den dort genannten PostgreSQL-Port. Genau diesen brauchst du gleich.
 3. Trage bei "Port" den Port aus `./knospe status` ein.
 4. Fülle "User", "Password" und "Database" mit den Werten aus der `.env` (`POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_DB`).
 
-Warum `localhost` und ein gemappter Port? Weil DataGrip auf deinem Mac läuft und dort die Datenbank über die nach aussen gereichte Portnummer sichtbar ist, nicht über den internen Container-Namen.
+Warum `localhost` und ein gemappter Port? Weil DataGrip auf deinem Mac läuft und dort die Datenbank über die nach außen gereichte Portnummer sichtbar ist, nicht über den internen Container-Namen.
 
 ## Verbindung testen
 

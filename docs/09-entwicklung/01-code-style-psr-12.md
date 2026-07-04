@@ -1,6 +1,6 @@
 # Codestil (PSR-12)
 
-Ein einheitlicher Codestil sorgt dafür, dass alle Dateien gleich aussehen. Das klingt nach einer Kleinigkeit, ist aber wichtig: Wer Code liest, soll über Inhalt nachdenken, nicht über Formatierung. In Knospe folgt der PHP-Code dem Standard PSR-12. Das WARUM dahinter ist die gemeinsame Sprache: Jeder im Team schreibt so, wie es die Werkzeuge erwarten, und Aenderungen im Verlauf bleiben klein und lesbar.
+Ein einheitlicher Codestil sorgt dafür, dass alle Dateien gleich aussehen. Das klingt nach einer Kleinigkeit, ist aber wichtig: Wer Code liest, soll über Inhalt nachdenken, nicht über Formatierung. In Knospe folgt der PHP-Code dem Standard PSR-12. Das WARUM dahinter ist die gemeinsame Sprache: Jeder im Team schreibt so, wie es die Werkzeuge erwarten, und Änderungen im Verlauf bleiben klein und lesbar.
 
 ## Die wichtigsten Regeln
 

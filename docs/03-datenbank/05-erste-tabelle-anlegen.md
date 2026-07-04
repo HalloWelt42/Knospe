@@ -1,6 +1,6 @@
 # Erste Tabelle anlegen
 
-Jetzt legst du selbst eine Tabelle an - als Migration, damit die Aenderung versioniert und wiederholbar ist. Wir bauen als Beispiel eine Tabelle `tags` für Schlagwörter.
+Jetzt legst du selbst eine Tabelle an - als Migration, damit die Änderung versioniert und wiederholbar ist. Wir bauen als Beispiel eine Tabelle `tags` für Schlagwörter.
 
 ## Die Migration schreiben
 
@@ -37,6 +37,6 @@ DROP TABLE IF EXISTS tags CASCADE;
 ./knospe migrate
 ```
 
-Der `MigrationRunner` führt nur die neue `004` aus, in einer eigenen Transaktion (siehe [Migrationen](04-migrationen-system.md)). Mit `php bin/console status` im Container siehst du, dass sie als erledigt vermerkt ist. Verschauen? `./knospe migrate` und rückwärts `php bin/console rollback 1` helfen beim Ueben.
+Der `MigrationRunner` führt nur die neue `004` aus, in einer eigenen Transaktion (siehe [Migrationen](04-migrationen-system.md)). Mit `php bin/console status` im Container siehst du, dass sie als erledigt vermerkt ist. Vertan? `./knospe migrate` und rückwärts `php bin/console rollback 1` helfen beim Üben.
 
 Wie du die Tabelle jetzt abfragst, zeigt [SQL-Grundlagen](06-sql-basics.md).

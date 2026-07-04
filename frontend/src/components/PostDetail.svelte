@@ -28,7 +28,7 @@
   );
 </script>
 
-<p><a href="#/">&larr; Zurück</a></p>
+<p><a href="/">&larr; Zurück</a></p>
 
 {#if laden}
   <p class="muted">Lädt ...</p>

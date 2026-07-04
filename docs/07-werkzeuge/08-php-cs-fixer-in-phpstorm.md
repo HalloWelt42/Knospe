@@ -1,6 +1,6 @@
 # PHP-CS-Fixer nutzen
 
-Einheitlich formatierter Code ist leichter zu lesen und erzeugt saubere Aenderungen in Git. Damit nicht jede Person eigene Einrückungen und Klammerstile pflegt, legt PHP-CS-Fixer eine feste Norm fest und stellt Code automatisch darauf um. Knospe folgt dem verbreiteten Standard PSR-12.
+Einheitlich formatierter Code ist leichter zu lesen und erzeugt saubere Änderungen in Git. Damit nicht jede Person eigene Einrückungen und Klammerstile pflegt, legt PHP-CS-Fixer eine feste Norm fest und stellt Code automatisch darauf um. Knospe folgt dem verbreiteten Standard PSR-12.
 
 ## Die Konfiguration
 
@@ -28,4 +28,4 @@ Du kannst den Fixer auch in der IDE hinterlegen: Unter "Settings > PHP > Quality
 
 ## Format bei Bedarf, nicht dauernd
 
-Formatiere bewusst, typischerweise vor dem Commit oder wenn eine Datei unruhig aussieht. So trennst du inhaltliche Aenderungen von reinen Formatierungen und die Reviews bleiben verständlich. Wie du die eigentlichen Warnungen zum Codeverhalten liest, steht in [Code-Inspektion](07-phpstorm-code-inspection.md).
+Formatiere bewusst, typischerweise vor dem Commit oder wenn eine Datei unruhig aussieht. So trennst du inhaltliche Änderungen von reinen Formatierungen und die Reviews bleiben verständlich. Wie du die eigentlichen Warnungen zum Codeverhalten liest, steht in [Code-Inspektion](07-phpstorm-code-inspection.md).

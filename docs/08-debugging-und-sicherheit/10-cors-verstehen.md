@@ -1,6 +1,6 @@
 # CORS verstehen
 
-CORS steht für Cross-Origin Resource Sharing. Es klingt kompliziert, ist aber eine einzige Idee: Der Browser erlaubt einer Webseite standardmässig nur Anfragen an dieselbe Herkunft (Origin), von der sie geladen wurde. Eine Origin ist die Kombination aus Schema, Host und Port, also zum Beispiel http://localhost:5173. Ruft JavaScript von dort etwas unter einer anderen Origin ab, greift die Same-Origin-Regel und der Browser blockiert die Antwort - es sei denn, der Server erlaubt die fremde Herkunft ausdrücklich per CORS-Header.
+CORS steht für Cross-Origin Resource Sharing. Es klingt kompliziert, ist aber eine einzige Idee: Der Browser erlaubt einer Webseite standardmäßig nur Anfragen an dieselbe Herkunft (Origin), von der sie geladen wurde. Eine Origin ist die Kombination aus Schema, Host und Port, also zum Beispiel http://localhost:5173. Ruft JavaScript von dort etwas unter einer anderen Origin ab, greift die Same-Origin-Regel und der Browser blockiert die Antwort - es sei denn, der Server erlaubt die fremde Herkunft ausdrücklich per CORS-Header.
 
 ## Warum unser Dev-Proxy CORS vermeidet
 

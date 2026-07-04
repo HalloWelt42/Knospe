@@ -15,9 +15,9 @@ export const auth = $state<{ user: User | null; bereit: boolean }>({
 
 `auth` ist ein reaktives Objekt. Jede Komponente, die `auth.user` liest, aktualisiert sich automatisch, sobald sich das Feld ändert. Kein Abonnieren, kein manuelles Benachrichtigen.
 
-## Aendern über Funktionen
+## Ändern über Funktionen
 
-Damit der Zustand geordnet bleibt, wird er nicht wild von aussen überschrieben, sondern über Funktionen im selben Modul verändert:
+Damit der Zustand geordnet bleibt, wird er nicht wild von außen überschrieben, sondern über Funktionen im selben Modul verändert:
 
 ```ts
 export async function anmelden(email: string, password: string): Promise<void> {

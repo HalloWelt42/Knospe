@@ -1,6 +1,6 @@
 # Glossar: Entwicklung
 
-Dieses Glossar erklärt die Fachbegriffe, die in der Entwicklungs-Dokumentation von Knospe vorkommen. Es ist zum Nachschlagen gedacht: kurze Definitionen, kein Fliesstext zum Durchlesen. Wo es passt, verweist ein Eintrag auf die ausführliche Seite.
+Dieses Glossar erklärt die Fachbegriffe, die in der Entwicklungs-Dokumentation von Knospe vorkommen. Es ist zum Nachschlagen gedacht: kurze Definitionen, kein Fließtext zum Durchlesen. Wo es passt, verweist ein Eintrag auf die ausführliche Seite.
 
 ## Lint / Linting
 
@@ -20,7 +20,7 @@ Ein Schema für Versionsnummern der Form MAJOR.MINOR.PATCH, zum Beispiel `1.4.2`
 
 - PATCH (letzte Zahl): Fehlerbehebung, nichts ändert sich am Verhalten.
 - MINOR (mittlere Zahl): neue Funktion, die alte weiter funktioniert.
-- MAJOR (erste Zahl): Aenderung, die bestehenden Code brechen kann.
+- MAJOR (erste Zahl): Änderung, die bestehenden Code brechen kann.
 
 So sieht man an der Nummer sofort, wie riskant ein Update ist. Auch die `version` im `manifest.json` eines Plugins folgt diesem Schema.
 

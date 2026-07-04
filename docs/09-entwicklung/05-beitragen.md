@@ -1,6 +1,6 @@
 # Beitragen
 
-Wer an Knospe mitarbeitet, folgt einem einfachen Ablauf. Er sorgt dafür, dass der Hauptzweig `main` jederzeit funktioniert und dass Aenderungen nachvollziehbar bleiben. Das Ziel ist nicht Bürokratie, sondern Vertrauen: Jeder soll sich darauf verlassen können, dass ausgecheckter Code läuft.
+Wer an Knospe mitarbeitet, folgt einem einfachen Ablauf. Er sorgt dafür, dass der Hauptzweig `main` jederzeit funktioniert und dass Änderungen nachvollziehbar bleiben. Das Ziel ist nicht Bürokratie, sondern Vertrauen: Jeder soll sich darauf verlassen können, dass ausgecheckter Code läuft.
 
 ## 1. Zweig von main
 
@@ -14,7 +14,7 @@ So bleibt deine Arbeit gebündelt und lässt sich einzeln prüfen.
 
 ## 2. Aussagekräftige Commits
 
-Ein Commit beschreibt eine abgeschlossene Aenderung. Die Nachricht sagt, WAS und WARUM, nicht jede einzelne Zeile:
+Ein Commit beschreibt eine abgeschlossene Änderung. Die Nachricht sagt, WAS und WARUM, nicht jede einzelne Zeile:
 
 ```
 Kommentar-Plugin: Filter comment.content aktiviert
@@ -25,7 +25,7 @@ damit Plugins den Inhalt anpassen können.
 
 Lieber mehrere kleine, thematisch klare Commits als ein großer Sammel-Commit.
 
-## 3. Gruen vor dem Einreichen
+## 3. Grün vor dem Einreichen
 
 Bevor du deinen Zweig zur Uebernahme vorschlägst, müssen drei Werkzeuge zufrieden sein:
 

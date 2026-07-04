@@ -8,11 +8,11 @@ Ein wiederverwendbarer Baustein der Oberfläche in einer `.svelte`-Datei: Markup
 
 ## Rune
 
-Eine Sonderfunktion mit `$`-Präfix, mit der Svelte 5 Reaktivität steuert. `$state` markiert einen Wert als reaktiv, `$derived` berechnet abgeleitete Werte, `$props` entpackt hereingegebene Werte, `$effect` reagiert auf Aenderungen. Siehe [Svelte-5-Komponenten](01-svelte5-komponenten-intro.md) und den Fallstrick in [API-Aufrufe mit fetch](03-api-aufrufe-fetch.md).
+Eine Sonderfunktion mit `$`-Präfix, mit der Svelte 5 Reaktivität steuert. `$state` markiert einen Wert als reaktiv, `$derived` berechnet abgeleitete Werte, `$props` entpackt hereingegebene Werte, `$effect` reagiert auf Änderungen. Siehe [Svelte-5-Komponenten](01-svelte5-komponenten-intro.md) und den Fallstrick in [API-Aufrufe mit fetch](03-api-aufrufe-fetch.md).
 
 ## Prop
 
-Ein Wert, den eine Komponente von aussen (von ihrer Elternkomponente) bekommt. In Svelte 5 über `$props()` entpackt und in TypeScript typisiert, etwa `let { post }: { post: Post } = $props()` in `PostItem.svelte`. Mehr in [TypeScript in Svelte](02-typescript-in-svelte.md).
+Ein Wert, den eine Komponente von außen (von ihrer Elternkomponente) bekommt. In Svelte 5 über `$props()` entpackt und in TypeScript typisiert, etwa `let { post }: { post: Post } = $props()` in `PostItem.svelte`. Mehr in [TypeScript in Svelte](02-typescript-in-svelte.md).
 
 ## SPA
 

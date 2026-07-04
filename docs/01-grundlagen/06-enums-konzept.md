@@ -32,7 +32,7 @@ echo $status->value; // published
 
 ## Entscheidungsbaum
 
-- Feste, überschaubare Menge von Fällen, die zusammengehören, und du willst Fehler frueh fangen? Nimm ein Enum. Muss der Wert in die Datenbank oder API? Backed Enum. Sonst Pure Enum.
+- Feste, überschaubare Menge von Fällen, die zusammengehören, und du willst Fehler früh fangen? Nimm ein Enum. Muss der Wert in die Datenbank oder API? Backed Enum. Sonst Pure Enum.
 - Ein einzelner unveränderlicher Wert, der nicht zu einer Gruppe gehört (etwa eine Standardgröße)? Nimm eine Konstante mit `const`.
 - Freier Text ohne feste Auswahl (etwa ein Beitragstitel)? Bleib bei `string`.
 

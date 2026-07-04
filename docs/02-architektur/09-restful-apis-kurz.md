@@ -33,6 +33,6 @@ return new Response(
 );
 ```
 
-Damit hat ein Client eine verlässliche Erwartung: Er kennt die Ressourcen, weiss welche Methode was tut, liest den Statuscode und bekommt immer JSON zurück. Diese Vorhersehbarkeit ist der eigentliche Wert von REST - man muss die API nicht auswendig lernen, man kann sie erraten.
+Damit hat ein Client eine verlässliche Erwartung: Er kennt die Ressourcen, weiß welche Methode was tut, liest den Statuscode und bekommt immer JSON zurück. Diese Vorhersehbarkeit ist der eigentliche Wert von REST - man muss die API nicht auswendig lernen, man kann sie erraten.
 
 Wie die Fehler-Codes zustande kommen, steht in [Zentrale Fehlerbehandlung](07-exception-handling-zentral.md).

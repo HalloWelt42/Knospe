@@ -1,6 +1,7 @@
-// Ein winziger Router auf Basis des URL-Fragments (#/...). Bewusst klein:
-// er liest den aktuellen Pfad, lauscht auf Änderungen und bietet navigate().
-// Für eine SPA ohne SvelteKit reicht das völlig.
+// Ein winziger Router auf Basis der Pfad-URL (History API). Bewusst klein:
+// er liest den aktuellen Pfad, faengt interne Link-Klicks ab (kein volles
+// Neuladen) und bietet navigate(). So sehen die Adressen sauber aus
+// (z.B. /register statt /#/register).
 // Lern mehr: docs/04-frontend/07-routing-sveltekit.md
 
 export interface Route {
@@ -9,13 +10,13 @@ export interface Route {
 }
 
 function parse(): Route {
-  const hash = location.hash.replace(/^#/, '') || '/';
+  const path = location.pathname || '/';
 
-  if (hash === '/login') return { name: 'login' };
-  if (hash === '/register') return { name: 'register' };
-  if (hash === '/plugins') return { name: 'plugins' };
+  if (path === '/login') return { name: 'login' };
+  if (path === '/register') return { name: 'register' };
+  if (path === '/plugins') return { name: 'plugins' };
 
-  const match = hash.match(/^\/posts\/(\d+)$/);
+  const match = path.match(/^\/posts\/(\d+)$/);
   if (match) return { name: 'post', id: Number(match[1]) };
 
   return { name: 'home' };
@@ -23,16 +24,46 @@ function parse(): Route {
 
 export const route = $state<Route>(parse());
 
-export function initRouter(): void {
-  const update = () => {
-    const next = parse();
-    route.name = next.name;
-    route.id = next.id;
-  };
-  window.addEventListener('hashchange', update);
-  update();
+function aktualisieren(): void {
+  const next = parse();
+  route.name = next.name;
+  route.id = next.id;
 }
 
 export function navigate(path: string): void {
-  location.hash = path;
+  if (path !== location.pathname) {
+    history.pushState({}, '', path);
+  }
+  aktualisieren();
+}
+
+export function initRouter(): void {
+  // Vor- und Zuruecknavigieren im Browser.
+  window.addEventListener('popstate', aktualisieren);
+
+  // Interne Links (beginnend mit /) client-seitig behandeln, damit die Seite
+  // nicht komplett neu laedt.
+  document.addEventListener('click', (event) => {
+    if (
+      event.defaultPrevented ||
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.altKey
+    ) {
+      return;
+    }
+
+    const link = (event.target as HTMLElement).closest('a');
+    if (!link) return;
+
+    const href = link.getAttribute('href');
+    if (!href || !href.startsWith('/') || link.target === '_blank') return;
+
+    event.preventDefault();
+    navigate(href);
+  });
+
+  aktualisieren();
 }

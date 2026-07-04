@@ -1,6 +1,6 @@
 # Skalierung und Leistung
 
-Solange Knospe auf deinem Rechner läuft, ist Leistung selten ein Thema. Sobald viele Nutzer gleichzeitig zugreifen, wird sie es. Dieser Ueberblick zeigt die wichtigsten Stellschrauben - nicht als Rezept, sondern damit du weisst, wo man ansetzt, wenn es langsam wird.
+Solange Knospe auf deinem Rechner läuft, ist Leistung selten ein Thema. Sobald viele Nutzer gleichzeitig zugreifen, wird sie es. Dieser Überblick zeigt die wichtigsten Stellschrauben - nicht als Rezept, sondern damit du weißt, wo man ansetzt, wenn es langsam wird.
 
 ## Zuerst messen, dann optimieren
 

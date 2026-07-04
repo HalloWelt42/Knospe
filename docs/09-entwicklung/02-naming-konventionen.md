@@ -1,8 +1,8 @@
 # Namensregeln
 
-Ein guter Name erklärt sich selbst. Wer `PostRepositoryInterface` liest, weiss sofort, worum es geht - ohne in die Datei zu schauen. Deshalb lohnt es sich, bei Namen sorgfältig zu sein. In Knospe gelten dafür feste Regeln, damit sich der ganze Code gleich anfühlt.
+Ein guter Name erklärt sich selbst. Wer `PostRepositoryInterface` liest, weiß sofort, worum es geht - ohne in die Datei zu schauen. Deshalb lohnt es sich, bei Namen sorgfältig zu sein. In Knospe gelten dafür feste Regeln, damit sich der ganze Code gleich anfühlt.
 
-## Gross- und Kleinschreibung
+## Groß- und Kleinschreibung
 
 - Klassen, Interfaces und Enums in PascalCase: `PostService`, `PluginManager`, `HttpException`.
 - Methoden und Variablen in camelCase: `findAll()`, `$authContext`, `$currentUser`.

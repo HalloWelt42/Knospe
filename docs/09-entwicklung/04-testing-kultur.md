@@ -25,7 +25,7 @@ public function test_hashed_password_matches_original(): void
 
 Der Methodenname soll das erwartete Verhalten beschreiben, nicht die Technik. `test_login_fails_with_wrong_password` sagt sofort, was gilt. `test_login_2` sagt nichts.
 
-## Mock und Fake statt echter Aussenwelt
+## Mock und Fake statt echter Außenwelt
 
 Ein Unit-Test soll schnell und unabhängig sein. Wo eine Klasse etwa das Repository braucht, gibt man ihr statt der echten Datenbank einen Ersatz: ein Mock prüft, dass eine Methode aufgerufen wurde, ein Fake ist eine einfache funktionierende Attrappe. So testet der Test genau eine Sache.
 

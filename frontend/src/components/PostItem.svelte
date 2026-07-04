@@ -87,7 +87,7 @@
     </div>
   {:else}
     <header class="kopf">
-      <h3><a href={`#/posts/${post.id}`}>{post.title}</a></h3>
+      <h3><a href={`/posts/${post.id}`}>{post.title}</a></h3>
       <span class="meta">von {post.authorName ?? 'Unbekannt'} - {datum}</span>
     </header>
     <p class="text">{post.body}</p>

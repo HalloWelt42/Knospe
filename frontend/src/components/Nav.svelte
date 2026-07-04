@@ -10,15 +10,15 @@
 </script>
 
 <header class="nav">
-  <a class="marke" href="#/"><i class="fa-solid fa-seedling"></i> Knospe</a>
+  <a class="marke" href="/"><i class="fa-solid fa-seedling"></i> Knospe</a>
   <nav>
     {#if auth.user}
-      <a href="#/plugins">Plugins</a>
+      <a href="/plugins">Plugins</a>
       <span class="muted">Hallo, <strong>{auth.user.displayName}</strong></span>
       <button class="btn-ghost" onclick={raus}>Abmelden</button>
     {:else}
-      <a href="#/login">Anmelden</a>
-      <a href="#/register">Registrieren</a>
+      <a href="/login">Anmelden</a>
+      <a href="/register">Registrieren</a>
     {/if}
   </nav>
 </header>

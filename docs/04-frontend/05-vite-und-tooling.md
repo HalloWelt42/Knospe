@@ -10,7 +10,7 @@ Während der Entwicklung startet man den Server mit:
 npm run dev
 ```
 
-Er liefert die Oberfläche aus und beobachtet die Dateien. Aendert man eine Komponente, tauscht Vite nur diesen Baustein im laufenden Browser aus, ohne die ganze Seite neu zu laden - das nennt sich Hot Module Replacement (HMR). Der Zustand der Seite bleibt dabei meist erhalten, was das Ausprobieren sehr schnell macht.
+Er liefert die Oberfläche aus und beobachtet die Dateien. Ändert man eine Komponente, tauscht Vite nur diesen Baustein im laufenden Browser aus, ohne die ganze Seite neu zu laden - das nennt sich Hot Module Replacement (HMR). Der Zustand der Seite bleibt dabei meist erhalten, was das Ausprobieren sehr schnell macht.
 
 ## Proxy für /api
 
@@ -29,7 +29,7 @@ Für den Browser sieht so alles wie derselbe Ursprung aus. Das ist wichtig, weil
 
 ## fs.allow für Plugins
 
-Plugin-Frontends liegen ausserhalb der Frontend-Wurzel, nämlich unter `plugins/<id>/frontend/`. Damit Vite dort lesen darf, ist der Zugriff freigegeben:
+Plugin-Frontends liegen außerhalb der Frontend-Wurzel, nämlich unter `plugins/<id>/frontend/`. Damit Vite dort lesen darf, ist der Zugriff freigegeben:
 
 ```ts
 fs: {

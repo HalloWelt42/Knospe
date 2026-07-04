@@ -8,7 +8,7 @@ Vier Eigenschaften, die eine verlässliche Datenbank garantiert: Atomicity (eine
 
 ## Normalisierung
 
-Daten so aufteilen, dass jede Information nur an einer Stelle steht. Statt den Autorennamen in jeden Beitrag zu kopieren, steht er einmal in `users` und wird per Fremdschlüssel verknüpft. Das WARUM: keine Widersprüche, einfache Aenderungen. Siehe [Beziehungen und Fremdschlüssel](07-beziehungen-foreign-keys.md).
+Daten so aufteilen, dass jede Information nur an einer Stelle steht. Statt den Autorennamen in jeden Beitrag zu kopieren, steht er einmal in `users` und wird per Fremdschlüssel verknüpft. Das WARUM: keine Widersprüche, einfache Änderungen. Siehe [Beziehungen und Fremdschlüssel](07-beziehungen-foreign-keys.md).
 
 ## Index
 

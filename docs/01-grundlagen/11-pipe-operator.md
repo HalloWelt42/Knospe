@@ -1,6 +1,6 @@
 # Der Pipe-Operator
 
-Verschachtelte Funktionsaufrufe liest man verkehrt herum: Der Aufruf, der zuletzt wirkt, steht ganz aussen. Der Pipe-Operator `|>` dreht das um und legt eine Kette an, die man von links nach rechts liest - in genau der Reihenfolge, in der die Daten durchlaufen. Das WARUM: Lesbarkeit. Der Weg des Wertes wird zur Leserichtung.
+Verschachtelte Funktionsaufrufe liest man verkehrt herum: Der Aufruf, der zuletzt wirkt, steht ganz außen. Der Pipe-Operator `|>` dreht das um und legt eine Kette an, die man von links nach rechts liest - in genau der Reihenfolge, in der die Daten durchlaufen. Das WARUM: Lesbarkeit. Der Weg des Wertes wird zur Leserichtung.
 
 ## Verschachtelt versus Kette
 
@@ -10,7 +10,7 @@ Klassisch schachtelt man Aufruf um Aufruf:
 $slug = strtolower(trim(str_replace(' ', '-', $title)));
 ```
 
-Um zu verstehen, was zuerst passiert, muss das Auge nach innen zur Mitte springen und dann nach aussen zurück. Mit dem Pipe-Operator liest sich derselbe Ablauf als Kette:
+Um zu verstehen, was zuerst passiert, muss das Auge nach innen zur Mitte springen und dann nach außen zurück. Mit dem Pipe-Operator liest sich derselbe Ablauf als Kette:
 
 ```php
 $slug = $title
@@ -19,7 +19,7 @@ $slug = $title
     |> strtolower(...);
 ```
 
-Der Wert links wird in die Funktion rechts als Argument gegeben, das Ergebnis fliesst weiter. Reihenfolge und Leserichtung stimmen jetzt überein: erst ersetzen, dann trimmen, dann kleinschreiben.
+Der Wert links wird in die Funktion rechts als Argument gegeben, das Ergebnis fließt weiter. Reihenfolge und Leserichtung stimmen jetzt überein: erst ersetzen, dann trimmen, dann kleinschreiben.
 
 Gut kombinierbar ist das mit den [First-Class-Callables](10-first-class-callables.md): `trim(...)` ist der typsichere Verweis auf die Funktion. Auch eigene Methoden lassen sich einreihen, etwa wenn ein `Post` aus `backend/src/Domain/Post/Post.php` weiterverarbeitet wird.
 

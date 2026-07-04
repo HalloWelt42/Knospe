@@ -43,7 +43,7 @@
 </form>
 
 <p class="muted">
-  Noch kein Konto? <a href="#/register">Jetzt registrieren</a>.
+  Noch kein Konto? <a href="/register">Jetzt registrieren</a>.
   <br />
   Zum Ausprobieren: demo@knospe.local / passwort
 </p>

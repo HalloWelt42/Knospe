@@ -36,7 +36,7 @@ public function create(int $authorId, string $title, string $body): Post
 }
 ```
 
-Der Service validiert, schreibt über das Repository und löst einen Hook aus, damit Plugins reagieren können. Beim Aendern und Löschen prüft er zusätzlich, ob der aktuelle Nutzer der Autor ist - sonst wirft er eine `ForbiddenException`.
+Der Service validiert, schreibt über das Repository und löst einen Hook aus, damit Plugins reagieren können. Beim Ändern und Löschen prüft er zusätzlich, ob der aktuelle Nutzer der Autor ist - sonst wirft er eine `ForbiddenException`.
 
 Der Gewinn: Jede Schicht ist für sich testbar. Den Service testest du ohne HTTP, das Repository gegen eine echte Testdatenbank, den Handler kaum, weil er fast nichts tut. Und wenn später eine CLI dieselbe Logik braucht, ruft sie einfach denselben Service.
 
