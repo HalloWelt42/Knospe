@@ -2,7 +2,7 @@
 
 Eine HTTP-Anfrage hat immer eine Methode - auch "Verb" genannt. Sie sagt, was mit einer Ressource geschehen soll. Die Methode ist kein Zierrat: Server, Zwischenspeicher und Browser verlassen sich auf ihre Bedeutung. Wer sie richtig einsetzt, bekommt vorhersehbares Verhalten geschenkt.
 
-Die vier wichtigsten in Knospe, direkt aus `backend/config/routes.php`:
+Die vier wichtigsten in Knospe, direkt aus [`backend/config/routes.php`](../../backend/config/routes.php):
 
 - **GET** - lesen, nichts verändern. `GET /api/posts` listet Beiträge, `GET /api/posts/{id}` zeigt einen. GET-Anfragen brauchen kein CSRF-Token und dürfen zwischengespeichert werden.
 - **POST** - etwas Neues anlegen oder eine Aktion auslösen. `POST /api/posts` erstellt einen Beitrag, `POST /api/auth/login` meldet an.

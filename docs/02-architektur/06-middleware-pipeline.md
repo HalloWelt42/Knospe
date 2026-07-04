@@ -13,7 +13,7 @@ $pipeline = new Pipeline($router, [
 
 Die **Reihenfolge** ist entscheidend. Die `ErrorHandlingMiddleware` steht ganz vorne, damit sie wirklich jeden Fehler dahinter einfangen kann - auch einen aus der CSRF-Prüfung. Danach kommt die `CsrfMiddleware`, ganz am Ende der `Router` als Kern-Handler.
 
-Wie wird aus der Liste eine Kette? In `backend/src/Core/Pipeline.php` wird sie von hinten nach vorne gefaltet:
+Wie wird aus der Liste eine Kette? In [`backend/src/Core/Pipeline.php`](../../backend/src/Core/Pipeline.php) wird sie von hinten nach vorne gefaltet:
 
 ```php
 $handler = array_reduce(

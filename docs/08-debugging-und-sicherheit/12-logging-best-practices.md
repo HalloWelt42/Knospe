@@ -29,7 +29,7 @@ $logger->warning('Login fehlgeschlagen', ['email' => $email, 'ip' => $ip]);
 $logger->info("Login {$email} pw {$password}");
 ```
 
-In Knospe wird geworfene Fehler zentral in `src/Http/Middleware/ErrorHandlingMiddleware.php` behandelt und dort geloggt - ein guter Ort, weil er jede Anfrage sieht.
+In Knospe wird geworfene Fehler zentral in [`src/Http/Middleware/ErrorHandlingMiddleware.php`](../../backend/src/Http/Middleware/ErrorHandlingMiddleware.php) behandelt und dort geloggt - ein guter Ort, weil er jede Anfrage sieht.
 
 ## Level bewusst wählen
 

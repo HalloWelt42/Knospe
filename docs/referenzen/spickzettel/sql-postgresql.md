@@ -1,6 +1,6 @@
 # Spickzettel: SQL/PostgreSQL
 
-PostgreSQL 16 speichert alle Daten von Knospe. Das Backend spricht per PDO mit der Datenbank (`backend/src/Database/Connection.php`). Wer die Abfragen versteht, versteht auch, was die Repositories tun.
+PostgreSQL 16 speichert alle Daten von Knospe. Das Backend spricht per PDO mit der Datenbank ([`backend/src/Database/Connection.php`](../../../backend/src/Database/Connection.php)). Wer die Abfragen versteht, versteht auch, was die Repositories tun.
 
 ## Die vier Grundbefehle
 

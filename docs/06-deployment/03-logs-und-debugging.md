@@ -8,7 +8,7 @@ Wenn etwas nicht funktioniert, ist die erste Frage immer: Was sagen die Logs? In
 ./knospe logs php
 ```
 
-Das folgt der Ausgabe des php-Dienstes. Unser Kern nutzt Monolog und schreibt nach `stderr`. Docker sammelt `stderr` ein, deshalb landen PHP-Fehler und geloggte Ereignisse direkt in diesem Strom. Bei `APP_DEBUG=true` liefert die `ErrorHandlingMiddleware` (`backend/src/Http/Middleware/ErrorHandlingMiddleware.php`) zusätzlich eine ausführliche JSON-Fehlermeldung an den Client. In Produktion steht dort nur eine knappe Meldung, die Details bleiben im Log (siehe [Produktions-Checkliste](05-produktions-checkliste.md)).
+Das folgt der Ausgabe des php-Dienstes. Unser Kern nutzt Monolog und schreibt nach `stderr`. Docker sammelt `stderr` ein, deshalb landen PHP-Fehler und geloggte Ereignisse direkt in diesem Strom. Bei `APP_DEBUG=true` liefert die `ErrorHandlingMiddleware` ([`backend/src/Http/Middleware/ErrorHandlingMiddleware.php`](../../backend/src/Http/Middleware/ErrorHandlingMiddleware.php)) zusätzlich eine ausführliche JSON-Fehlermeldung an den Client. In Produktion steht dort nur eine knappe Meldung, die Details bleiben im Log (siehe [Produktions-Checkliste](05-produktions-checkliste.md)).
 
 ## Datenbank-Logs (PostgreSQL)
 

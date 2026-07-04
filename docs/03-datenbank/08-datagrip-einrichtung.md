@@ -10,7 +10,7 @@ Die Datenbank läuft im Docker-Container und ist von außen nur über einen pfad
 ./knospe status
 ```
 
-Dort steht der aktuelle Wert von `DB_PORT` (in der Vorlage `15432`, bei dir wahrscheinlich anders). Denselben Wert findest du in deiner `.env`.
+Dort steht der aktuelle Wert von `DB_PORT` (in der Vorlage `15432`, bei dir wahrscheinlich anders). Denselben Wert findest du in deiner [`.env`](../../.env).
 
 ## Neue PostgreSQL-Datenquelle anlegen
 
@@ -20,7 +20,7 @@ In DataGrip: Datenquelle hinzufügen und PostgreSQL wählen. Dann eintragen:
 - Port: der Wert aus `./knospe status` (zum Beispiel `15432`)
 - Datenbank: der Wert von `POSTGRES_DB` (Standard `knospe`)
 - Benutzer: `POSTGRES_USER` (Standard `knospe`)
-- Passwort: `POSTGRES_PASSWORD` aus deiner `.env`
+- Passwort: `POSTGRES_PASSWORD` aus deiner [`.env`](../../.env)
 
 Warum `localhost` und nicht `postgres`? Der Servicename `postgres` gilt nur im Docker-Netz. Von deinem Mac aus gehst du über den gemappten Host-Port auf `localhost`. Mehr dazu unter [Zugangsdaten verwalten](02-zugangsdaten-verwalten.md).
 

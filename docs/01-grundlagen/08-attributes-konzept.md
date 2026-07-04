@@ -24,9 +24,9 @@ Es wird beim Kompilieren geprüft, der Editor kennt es, und es lässt sich saube
 
 ## Typische Einsatzfelder
 
-- **Routing:** Statt einer zentralen Routen-Liste hängt der Pfad am Handler. In Knospe stehen Routen bewusst gebündelt in `backend/config/routes.php`. Ein attribut-basierter Ansatz wäre eine Alternative - beides ist gängig.
+- **Routing:** Statt einer zentralen Routen-Liste hängt der Pfad am Handler. In Knospe stehen Routen bewusst gebündelt in [`backend/config/routes.php`](../../backend/config/routes.php). Ein attribut-basierter Ansatz wäre eine Alternative - beides ist gängig.
 - **Validierung:** Ein Attribut an einer Eigenschaft sagt, welche Regel gilt, etwa `#[NotBlank]` oder `#[MaxLength(200)]`. Der Validierer liest die Attribute und prüft die Werte. Vergleiche die `ValidationException` in `backend/src/Core/Exception`.
-- **Rechte:** `#[RequiresRole('admin')]` an einer Methode macht die Zugriffsregel sichtbar. Eine Middleware wertet sie aus, bevor der Handler läuft - passend zur Auth-Idee in `backend/src/Support/AuthContext.php`.
+- **Rechte:** `#[RequiresRole('admin')]` an einer Methode macht die Zugriffsregel sichtbar. Eine Middleware wertet sie aus, bevor der Handler läuft - passend zur Auth-Idee in [`backend/src/Support/AuthContext.php`](../../backend/src/Support/AuthContext.php).
 
 Der rote Faden: Das WAS (die Regel) steht deklarativ am Code, das WIE (die Auswertung) liegt an einer zentralen Stelle. So bleibt der Handler lesbar.
 

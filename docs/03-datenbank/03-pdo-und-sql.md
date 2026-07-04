@@ -1,6 +1,6 @@
 # PDO und sichere Abfragen
 
-PDO (PHP Data Objects) ist die eingebaute Brücke zwischen PHP und der Datenbank. Knospe nutzt kein großes Datenbank-Werkzeug, sondern PDO direkt - sichtbar und nachvollziehbar. Die zentrale Stelle ist `backend/src/Database/Connection.php`.
+PDO (PHP Data Objects) ist die eingebaute Brücke zwischen PHP und der Datenbank. Knospe nutzt kein großes Datenbank-Werkzeug, sondern PDO direkt - sichtbar und nachvollziehbar. Die zentrale Stelle ist [`backend/src/Database/Connection.php`](../../backend/src/Database/Connection.php).
 
 ## Sichere Voreinstellungen
 

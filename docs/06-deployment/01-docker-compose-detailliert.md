@@ -1,23 +1,23 @@
 # Docker Compose im Detail
 
-Der ganze Stack von Knospe steckt in einer einzigen Datei: `docker-compose.yml`. Sie beschreibt drei Dienste, die zusammen die Anwendung ausmachen. Warum Compose? Weil man so mit einem Befehl (`./knospe up`) alles startet, ohne PHP, PostgreSQL und Node von Hand installieren zu müssen.
+Der ganze Stack von Knospe steckt in einer einzigen Datei: [`docker-compose.yml`](../../docker-compose.yml). Sie beschreibt drei Dienste, die zusammen die Anwendung ausmachen. Warum Compose? Weil man so mit einem Befehl (`./knospe up`) alles startet, ohne PHP, PostgreSQL und Node von Hand installieren zu müssen.
 
 ## Die drei Dienste
 
-- **php** baut aus `docker/php/Dockerfile` ein eigenes Image und startet den eingebauten PHP-Server: `php -S 0.0.0.0:8000 -t public public/index.php`. Der Front-Controller `backend/public/index.php` fängt jede Anfrage ab und leitet sie durch Router und Pipeline.
+- **php** baut aus [`docker/php/Dockerfile`](../../docker/php/Dockerfile) ein eigenes Image und startet den eingebauten PHP-Server: `php -S 0.0.0.0:8000 -t public public/index.php`. Der Front-Controller [`backend/public/index.php`](../../backend/public/index.php) fängt jede Anfrage ab und leitet sie durch Router und Pipeline.
 - **postgres** nutzt das fertige Image `postgres:16-alpine` - unsere Datenbank.
 - **node** nutzt `node:20-alpine` und startet Vite (`npm run dev`) für das Svelte-Frontend.
 
 ## Ports und Name aus der .env
 
-Container-intern sind die Ports fest (8000, 5432, 5173). Nach außen werden sie über die `.env` gemappt:
+Container-intern sind die Ports fest (8000, 5432, 5173). Nach außen werden sie über die [`.env`](../../.env) gemappt:
 
 ```yaml
 ports:
   - "${PHP_PORT:-8000}:8000"
 ```
 
-`COMPOSE_PROJECT_NAME`, `PHP_PORT`, `VITE_PORT` und `DB_PORT` erzeugt `tools/setup-env.sh` pfad-eindeutig. So stören sich zwei Installationen nie. Mehr dazu in [Umgebungen verwalten](06-environment-verwaltung.md).
+`COMPOSE_PROJECT_NAME`, `PHP_PORT`, `VITE_PORT` und `DB_PORT` erzeugt [`tools/setup-env.sh`](../../tools/setup-env.sh) pfad-eindeutig. So stören sich zwei Installationen nie. Mehr dazu in [Umgebungen verwalten](06-environment-verwaltung.md).
 
 ## Benanntes Volume
 

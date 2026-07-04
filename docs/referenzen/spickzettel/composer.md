@@ -11,11 +11,11 @@ Composer ist der Paketverwalter für PHP. Er lädt die Abhängigkeiten von Knosp
 | `composer require paket/name` | neues Paket hinzufügen |
 | `composer require --dev paket` | nur für Entwicklung/Tests |
 
-`install` folgt der Datei `composer.lock` und liefert exakt reproduzierbare Versionen. `update` verschiebt diese Grenzen und schreibt die Sperrdatei neu.
+`install` folgt der Datei [`composer.lock`](../../../backend/composer.lock) und liefert exakt reproduzierbare Versionen. `update` verschiebt diese Grenzen und schreibt die Sperrdatei neu.
 
 ## Autoloading (PSR-4)
 
-Knospe bildet den Namensraum `Knospe\` auf `backend/src` ab. Das steht in `backend/composer.json`:
+Knospe bildet den Namensraum `Knospe\` auf `backend/src` ab. Das steht in [`backend/composer.json`](../../../backend/composer.json):
 
 ```json
 "autoload": {
@@ -23,7 +23,7 @@ Knospe bildet den Namensraum `Knospe\` auf `backend/src` ab. Das steht in `backe
 }
 ```
 
-Damit wird `Knospe\Domain\Post\Post` automatisch aus `src/Domain/Post/Post.php` geladen. Nach Änderungen an dieser Zuordnung hilft:
+Damit wird `Knospe\Domain\Post\Post` automatisch aus [`src/Domain/Post/Post.php`](../../../backend/src/Domain/Post/Post.php) geladen. Nach Änderungen an dieser Zuordnung hilft:
 
 ```bash
 composer dump-autoload
@@ -31,7 +31,7 @@ composer dump-autoload
 
 ## Skripte
 
-Die wiederkehrenden Aufgaben stehen als Skripte in `composer.json`, sodass alle denselben Befehl nutzen:
+Die wiederkehrenden Aufgaben stehen als Skripte in [`composer.json`](../../../backend/composer.json), sodass alle denselben Befehl nutzen:
 
 | Befehl | Wirkung |
 | --- | --- |

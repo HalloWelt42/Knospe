@@ -61,6 +61,6 @@ function validate(object $target): array
 
 `getAttributes(MaxLength::class)` filtert auf unser Attribut, `newInstance()` baut die Klasse mit den angegebenen Parametern. Der Rest ist gewöhnliche Logik.
 
-In Knospe passt so ein Muster gut in die Http-Schicht: Der Handler nimmt Eingaben entgegen (siehe `backend/src/Http/Input.php`), der Validierer prüft sie, und bei Fehlern fliegt eine `ValidationException` aus `backend/src/Core/Exception`. So bleibt die Regel am Feld, die Prüfung an einer Stelle.
+In Knospe passt so ein Muster gut in die Http-Schicht: Der Handler nimmt Eingaben entgegen (siehe [`backend/src/Http/Input.php`](../../backend/src/Http/Input.php)), der Validierer prüft sie, und bei Fehlern fliegt eine `ValidationException` aus `backend/src/Core/Exception`. So bleibt die Regel am Feld, die Prüfung an einer Stelle.
 
 Zurück zum Konzept: [Wann Attribute?](08-attributes-konzept.md).

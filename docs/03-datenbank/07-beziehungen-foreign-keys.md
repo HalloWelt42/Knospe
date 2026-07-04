@@ -4,7 +4,7 @@ Daten hängen zusammen: Ein Beitrag gehört zu einer Nutzerin, ein Kommentar zu 
 
 ## Ein Fremdschlüssel mit REFERENCES
 
-In `backend/database/migrations/002_create_posts_table.sql` steht:
+In [`backend/database/migrations/002_create_posts_table.sql`](../../backend/database/migrations/002_create_posts_table.sql) steht:
 
 ```sql
 CREATE TABLE IF NOT EXISTS posts (
@@ -23,7 +23,7 @@ Was passiert mit den Beiträgen, wenn die Nutzerin gelöscht wird? `ON DELETE CA
 
 ## Die Kette users -> posts -> comments
 
-Das Kommentar-Plugin (`plugins/knospe-comments/migrations/001_create_comments_table.sql`) hängt eine dritte Ebene an:
+Das Kommentar-Plugin ([`plugins/knospe-comments/migrations/001_create_comments_table.sql`](../../plugins/knospe-comments/migrations/001_create_comments_table.sql)) hängt eine dritte Ebene an:
 
 ```sql
 CREATE TABLE IF NOT EXISTS comments (

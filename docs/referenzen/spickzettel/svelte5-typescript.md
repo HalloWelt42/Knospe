@@ -56,7 +56,7 @@ $effect(() => { if (!loaded) { load(); loaded = true; } });
 
 ## App starten
 
-Die SPA hängt sich per `mount()` an das DOM (`frontend/src/main.ts`):
+Die SPA hängt sich per `mount()` an das DOM ([`frontend/src/main.ts`](../../../frontend/src/main.ts)):
 
 ```ts
 import { mount } from 'svelte';

@@ -17,7 +17,7 @@ final class PostService
 
 Der Service verlangt ein `PostRepositoryInterface` - also einen Vertrag, keine konkrete Klasse. Wer den Vertrag erfüllt, ist ihm egal. Im echten Betrieb bekommt er das `PostgresPostRepository`, im Test eine In-Memory-Attrappe. So wird Code testbar und flexibel.
 
-Jetzt fehlt nur noch jemand, der all diese Objekte zusammensteckt. Das ist der Container in `backend/src/Core/Container.php`. Er kann per Autowiring den Konstruktor einer Klasse lesen und ihre Abhängigkeiten selbst auflösen:
+Jetzt fehlt nur noch jemand, der all diese Objekte zusammensteckt. Das ist der Container in [`backend/src/Core/Container.php`](../../backend/src/Core/Container.php). Er kann per Autowiring den Konstruktor einer Klasse lesen und ihre Abhängigkeiten selbst auflösen:
 
 ```php
 if ($type instanceof ReflectionNamedType && !$type->isBuiltin()) {

@@ -11,7 +11,7 @@ Für den täglichen Betrieb gibt es das Skript `./knospe`. Es ist ein einziger E
 ./knospe logs php  # Logs eines Dienstes folgen
 ```
 
-`./knospe status` ist der wichtigste Blick: Es liest die `.env` und zeigt die tatsächlichen Host-Ports (PHP-API, Frontend, Postgres). Weil die Ports pfad-eindeutig sind (siehe [Umgebungen verwalten](06-environment-verwaltung.md)), musst du nicht raten.
+`./knospe status` ist der wichtigste Blick: Es liest die [`.env`](../../.env) und zeigt die tatsächlichen Host-Ports (PHP-API, Frontend, Postgres). Weil die Ports pfad-eindeutig sind (siehe [Umgebungen verwalten](06-environment-verwaltung.md)), musst du nicht raten.
 
 ## Was darunter passiert
 

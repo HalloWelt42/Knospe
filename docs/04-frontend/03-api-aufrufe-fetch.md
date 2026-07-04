@@ -1,6 +1,6 @@
 # API-Aufrufe mit fetch
 
-Die Oberfläche holt sich ihre Daten vom PHP-Backend über HTTP. Das Werkzeug im Browser dafür ist `fetch`. Statt aber an vielen Stellen einzeln `fetch` zu rufen, bündelt Knospe alle Aufrufe in einem typisierten Client: `frontend/src/lib/api.ts`. Warum? So steht die Fehlerbehandlung, das CSRF-Handling und die Rückgabetypisierung an genau einer Stelle - jede Ansicht ruft nur noch `api.listPosts()` oder `api.login(...)`.
+Die Oberfläche holt sich ihre Daten vom PHP-Backend über HTTP. Das Werkzeug im Browser dafür ist `fetch`. Statt aber an vielen Stellen einzeln `fetch` zu rufen, bündelt Knospe alle Aufrufe in einem typisierten Client: [`frontend/src/lib/api.ts`](../../frontend/src/lib/api.ts). Warum? So steht die Fehlerbehandlung, das CSRF-Handling und die Rückgabetypisierung an genau einer Stelle - jede Ansicht ruft nur noch `api.listPosts()` oder `api.login(...)`.
 
 ## async und await
 

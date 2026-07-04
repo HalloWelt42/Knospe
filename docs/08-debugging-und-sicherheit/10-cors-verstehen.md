@@ -28,7 +28,7 @@ Access-Control-Allow-Credentials: true
 
 ## Bezug zum CSRF-Schutz
 
-CORS und CSRF werden gern verwechselt. CORS ist eine Browser-Regel, die Antworten fremder Origins verbirgt - sie schützt nicht davor, dass eine fremde Seite eine verändernde Anfrage abschickt. Genau dafür ist unser Token-Schutz in `src/Http/Middleware/CsrfMiddleware.php` da: Bei POST/PUT/PATCH/DELETE muss der Header `X-CSRF-Token` stimmen. Erst beide zusammen ergeben ein sauberes Bild, siehe [Sicherheits-Grundlagen](07-sicherheits-basics.md).
+CORS und CSRF werden gern verwechselt. CORS ist eine Browser-Regel, die Antworten fremder Origins verbirgt - sie schützt nicht davor, dass eine fremde Seite eine verändernde Anfrage abschickt. Genau dafür ist unser Token-Schutz in [`src/Http/Middleware/CsrfMiddleware.php`](../../backend/src/Http/Middleware/CsrfMiddleware.php) da: Bei POST/PUT/PATCH/DELETE muss der Header `X-CSRF-Token` stimmen. Erst beide zusammen ergeben ein sauberes Bild, siehe [Sicherheits-Grundlagen](07-sicherheits-basics.md).
 
 ## Faustregeln
 

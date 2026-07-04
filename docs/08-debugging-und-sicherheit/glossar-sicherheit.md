@@ -12,11 +12,11 @@ Fremdes JavaScript landet in der Ausgabe und läuft im Browser des Opfers. Gegen
 
 ## CSRF (Cross-Site-Request-Forgery)
 
-Eine fremde Seite löst im Namen des eingeloggten Nutzers eine verändernde Anfrage aus. Gegenmittel: ein geheimes Token, das nur die echte Oberfläche kennt und bei POST/PUT/PATCH/DELETE mitschickt. Siehe `src/Http/Middleware/CsrfMiddleware.php` und [CORS verstehen](10-cors-verstehen.md).
+Eine fremde Seite löst im Namen des eingeloggten Nutzers eine verändernde Anfrage aus. Gegenmittel: ein geheimes Token, das nur die echte Oberfläche kennt und bei POST/PUT/PATCH/DELETE mitschickt. Siehe [`src/Http/Middleware/CsrfMiddleware.php`](../../backend/src/Http/Middleware/CsrfMiddleware.php) und [CORS verstehen](10-cors-verstehen.md).
 
 ## Authentifizierung
 
-Die Frage "Wer bist du". Belegt wird sie in Knospe über den Login und ein Sitzungs-Cookie (`HttpOnly`, `SameSite=Lax`). Siehe `src/Support/Session.php`.
+Die Frage "Wer bist du". Belegt wird sie in Knospe über den Login und ein Sitzungs-Cookie (`HttpOnly`, `SameSite=Lax`). Siehe [`src/Support/Session.php`](../../backend/src/Support/Session.php).
 
 ## Autorisierung
 
@@ -24,7 +24,7 @@ Die Frage "Was darfst du". Kommt nach der Authentifizierung und prüft Rechte, e
 
 ## Hash
 
-Eine Einweg-Funktion: Aus der Eingabe entsteht ein Fingerabdruck, der sich nicht zurückrechnen lässt. Für Passwörter braucht es einen absichtlich langsamen Hash (Argon2id), niemals md5 oder sha256. Siehe `src/Support/PasswordHasher.php` und [Passwörter sicher speichern](08-passwort-sicherheit.md).
+Eine Einweg-Funktion: Aus der Eingabe entsteht ein Fingerabdruck, der sich nicht zurückrechnen lässt. Für Passwörter braucht es einen absichtlich langsamen Hash (Argon2id), niemals md5 oder sha256. Siehe [`src/Support/PasswordHasher.php`](../../backend/src/Support/PasswordHasher.php) und [Passwörter sicher speichern](08-passwort-sicherheit.md).
 
 ## Salt
 
@@ -44,4 +44,4 @@ Begrenzt die Zahl der Anfragen je Absender im Zeitfenster und wehrt so Brute-For
 
 ## Secrets
 
-Geheimnisse wie Schlüssel und Datenbank-Zugänge. Gehören in die Umgebung (`.env` via `src/Support/Config.php`), nie in den Code und nie ins Log. Siehe [Logging richtig](12-logging-best-practices.md).
+Geheimnisse wie Schlüssel und Datenbank-Zugänge. Gehören in die Umgebung ([`.env`](../../.env) via [`src/Support/Config.php`](../../backend/src/Support/Config.php)), nie in den Code und nie ins Log. Siehe [Logging richtig](12-logging-best-practices.md).

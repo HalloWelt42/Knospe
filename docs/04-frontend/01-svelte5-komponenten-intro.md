@@ -34,7 +34,7 @@ let { post, onDeleted }: { post: Post; onDeleted: (id: number) => void } = $prop
 
 ## Wie alles startet: mount()
 
-Es gibt eine Wurzelkomponente, `src/App.svelte`. Sie wird in `src/main.ts` mit `mount()` in die Seite eingehängt:
+Es gibt eine Wurzelkomponente, [`src/App.svelte`](../../frontend/src/App.svelte). Sie wird in [`src/main.ts`](../../frontend/src/main.ts) mit `mount()` in die Seite eingehängt:
 
 ```ts
 import { mount } from 'svelte';

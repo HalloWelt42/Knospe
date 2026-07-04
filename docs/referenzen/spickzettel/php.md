@@ -28,7 +28,7 @@ final class Post
 }
 ```
 
-`readonly` heißt: nach dem Setzen unveränderbar. Damit ist eine Entity ein sicherer Wert, den du gefahrlos herumreichst. Siehe `backend/src/Domain/Post/Post.php`.
+`readonly` heißt: nach dem Setzen unveränderbar. Damit ist eine Entity ein sicherer Wert, den du gefahrlos herumreichst. Siehe [`backend/src/Domain/Post/Post.php`](../../../backend/src/Domain/Post/Post.php).
 
 ## Enums und Attribute
 

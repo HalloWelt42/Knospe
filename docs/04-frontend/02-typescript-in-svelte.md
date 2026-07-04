@@ -16,7 +16,7 @@ Ohne dieses Attribut wäre der Block normales JavaScript. Alle Komponenten in `f
 
 ## Interfaces als gemeinsame Datentypen
 
-Die Datenstrukturen, die vom PHP-Backend kommen, sind einmal zentral beschrieben - in `frontend/src/lib/types.ts`. Ein Interface ist eine Beschreibung der Form eines Objekts:
+Die Datenstrukturen, die vom PHP-Backend kommen, sind einmal zentral beschrieben - in [`frontend/src/lib/types.ts`](../../frontend/src/lib/types.ts). Ein Interface ist eine Beschreibung der Form eines Objekts:
 
 ```ts
 export interface Post {

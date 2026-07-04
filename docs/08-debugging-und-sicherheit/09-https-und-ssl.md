@@ -20,7 +20,7 @@ Auf einem echten Server nimmt man ein Zertifikat einer anerkannten Stelle. Koste
 
 ## Bezug zu Cookies
 
-Erst mit HTTPS ergibt das Cookie-Flag `Secure` Sinn: Damit wird das Sitzungs-Cookie nur noch über verschlüsselte Verbindungen gesendet. Zusammen mit `HttpOnly` und `SameSite=Lax` (siehe `src/Support/Session.php`) ist die Sitzung dann gut geschützt.
+Erst mit HTTPS ergibt das Cookie-Flag `Secure` Sinn: Damit wird das Sitzungs-Cookie nur noch über verschlüsselte Verbindungen gesendet. Zusammen mit `HttpOnly` und `SameSite=Lax` (siehe [`src/Support/Session.php`](../../backend/src/Support/Session.php)) ist die Sitzung dann gut geschützt.
 
 ## Faustregeln
 

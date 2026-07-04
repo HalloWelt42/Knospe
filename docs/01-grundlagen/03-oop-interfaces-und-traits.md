@@ -4,7 +4,7 @@ Ein Interface ist ein Versprechen. Es legt fest, welche Methoden eine Klasse hab
 
 ## Interface als Versprechen
 
-In Knospe beschreibt `PostRepositoryInterface` in `backend/src/Domain/Post/PostRepositoryInterface.php`, wie Beiträge gespeichert und geladen werden - ohne zu verraten, dass dahinter PostgreSQL steckt.
+In Knospe beschreibt `PostRepositoryInterface` in [`backend/src/Domain/Post/PostRepositoryInterface.php`](../../backend/src/Domain/Post/PostRepositoryInterface.php), wie Beiträge gespeichert und geladen werden - ohne zu verraten, dass dahinter PostgreSQL steckt.
 
 ```php
 interface PostRepositoryInterface
@@ -14,7 +14,7 @@ interface PostRepositoryInterface
 }
 ```
 
-Die echte Umsetzung liefert `PostgresRepository`. Der `PostService` kennt aber nur das Interface. Warum das gut ist: Im Test kannst du eine einfache Attrappe einsetzen, die dieselben Methoden hat, aber im Speicher arbeitet - ohne echte Datenbank. Der Service merkt den Unterschied nicht. Genauso funktioniert `PluginInterface` in `backend/src/Plugin/PluginInterface.php`: Der Kern arbeitet mit jedem Plugin, das dieses Versprechen einlöst.
+Die echte Umsetzung liefert `PostgresRepository`. Der `PostService` kennt aber nur das Interface. Warum das gut ist: Im Test kannst du eine einfache Attrappe einsetzen, die dieselben Methoden hat, aber im Speicher arbeitet - ohne echte Datenbank. Der Service merkt den Unterschied nicht. Genauso funktioniert `PluginInterface` in [`backend/src/Plugin/PluginInterface.php`](../../backend/src/Plugin/PluginInterface.php): Der Kern arbeitet mit jedem Plugin, das dieses Versprechen einlöst.
 
 Eine Klasse gibt mit `implements` an, dass sie ein Interface erfüllt:
 

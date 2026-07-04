@@ -22,7 +22,7 @@ Die Klasse `.nav` beeinflusst also keine andere `.nav` woanders. Das macht Kompo
 
 ## Globale Stile mit CSS-Variablen
 
-Was überall gleich sein soll - Farben, Schrift, wiederkehrende Klassen wie `.btn`, `.karte`, `.field` -, steht in `frontend/src/app.css`. Farben liegen als CSS-Variablen im `:root`, sodass ein Wert an einer Stelle den ganzen Look ändert:
+Was überall gleich sein soll - Farben, Schrift, wiederkehrende Klassen wie `.btn`, `.karte`, `.field` -, steht in [`frontend/src/app.css`](../../frontend/src/app.css). Farben liegen als CSS-Variablen im `:root`, sodass ein Wert an einer Stelle den ganzen Look ändert:
 
 ```css
 :root {
@@ -34,7 +34,7 @@ Was überall gleich sein soll - Farben, Schrift, wiederkehrende Klassen wie `.bt
 }
 ```
 
-Komponenten greifen überall auf diese Variablen zu, etwa `background: var(--panel)`. Das hält das Bild einheitlich und macht Umfärben trivial. Geladen wird `app.css` einmal zentral in `frontend/src/main.ts`, zusammen mit der Schrift Barlow und den Font-Awesome-Icons - beide als npm-Pakete, kein CDN.
+Komponenten greifen überall auf diese Variablen zu, etwa `background: var(--panel)`. Das hält das Bild einheitlich und macht Umfärben trivial. Geladen wird `app.css` einmal zentral in [`frontend/src/main.ts`](../../frontend/src/main.ts), zusammen mit der Schrift Barlow und den Font-Awesome-Icons - beide als npm-Pakete, kein CDN.
 
 ## Akzente ohne Randstreifen
 

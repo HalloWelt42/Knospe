@@ -8,7 +8,7 @@ Diese Verfahren sind für Geschwindigkeit gebaut. Genau das ist bei Passwörtern
 
 ## Argon2id in Knospe
 
-PHP bringt alles Nötige mit. Unser dünner Wrapper ist `src/Support/PasswordHasher.php`:
+PHP bringt alles Nötige mit. Unser dünner Wrapper ist [`src/Support/PasswordHasher.php`](../../backend/src/Support/PasswordHasher.php):
 
 ```php
 public static function hash(string $plain): string
@@ -26,7 +26,7 @@ public static function verify(string $plain, string $hash): bool
 
 ## verify immer aufrufen (Timing)
 
-Ein feiner, aber wichtiger Punkt beim Login: Auch wenn es den Nutzer gar nicht gibt, sollte `password_verify` gegen einen Dummy-Hash laufen. Sonst antwortet der Server bei unbekannten E-Mails messbar schneller als bei bekannten, und ein Angreifer könnte daran gültige Konten erkennen. Diesen Timing-Ausgleich macht `src/Domain/User/UserService.php` in `authenticate()`.
+Ein feiner, aber wichtiger Punkt beim Login: Auch wenn es den Nutzer gar nicht gibt, sollte `password_verify` gegen einen Dummy-Hash laufen. Sonst antwortet der Server bei unbekannten E-Mails messbar schneller als bei bekannten, und ein Angreifer könnte daran gültige Konten erkennen. Diesen Timing-Ausgleich macht [`src/Domain/User/UserService.php`](../../backend/src/Domain/User/UserService.php) in `authenticate()`.
 
 ```php
 // niemals früh mit "return false" abbrechen, nur weil der Nutzer fehlt

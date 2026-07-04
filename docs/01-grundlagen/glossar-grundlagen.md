@@ -4,11 +4,11 @@ Kurze Nachschlage-Erklärungen zu den Begriffen aus diesem Kapitel. Jeder Eintra
 
 ## Objektorientierung
 
-- **Klasse** - Bauplan für Objekte, bündelt Daten und die dazu passenden Methoden. Beispiel: `backend/src/Domain/Post/Post.php`.
+- **Klasse** - Bauplan für Objekte, bündelt Daten und die dazu passenden Methoden. Beispiel: [`backend/src/Domain/Post/Post.php`](../../backend/src/Domain/Post/Post.php).
 - **Objekt** - eine konkrete Ausprägung einer Klasse, mit eigenen Werten.
-- **Interface** - ein Vertrag, der nur festlegt, welche Methoden es geben muss, nicht wie sie arbeiten. So kann Knospe die Datenzugriffe hinter `PostRepositoryInterface` austauschen. Siehe `backend/src/Domain/Post/PostRepositoryInterface.php`.
+- **Interface** - ein Vertrag, der nur festlegt, welche Methoden es geben muss, nicht wie sie arbeiten. So kann Knospe die Datenzugriffe hinter `PostRepositoryInterface` austauschen. Siehe [`backend/src/Domain/Post/PostRepositoryInterface.php`](../../backend/src/Domain/Post/PostRepositoryInterface.php).
 - **Trait** - wiederverwendbarer Block aus Methoden, den mehrere Klassen einmischen können, ohne zu erben. Nützlich gegen Doppelung, wo Vererbung nicht passt.
-- **Polymorphismus** - "Vielgestaltigkeit": Derselbe Aufruf verhält sich je nach konkretem Objekt unterschiedlich. Der Router in `backend/src/Core/Router.php` ruft `handle()` auf, ohne den genauen Handler zu kennen - jeder Handler antwortet auf seine Weise.
+- **Polymorphismus** - "Vielgestaltigkeit": Derselbe Aufruf verhält sich je nach konkretem Objekt unterschiedlich. Der Router in [`backend/src/Core/Router.php`](../../backend/src/Core/Router.php) ruft `handle()` auf, ohne den genauen Handler zu kennen - jeder Handler antwortet auf seine Weise.
 
 ## Sprachbausteine
 

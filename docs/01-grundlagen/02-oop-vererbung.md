@@ -2,7 +2,7 @@
 
 Vererbung heißt: Eine Klasse baut auf einer anderen auf und übernimmt deren Eigenschaften und Methoden. Die Grundklasse nennt man Elternklasse (parent), die neue Klasse Kindklasse. Das WARUM: Gemeinsames Verhalten wird einmal an einer Stelle geschrieben, statt es in jeder ähnlichen Klasse zu wiederholen. Weniger Wiederholung bedeutet weniger Fehlerquellen.
 
-In Knospe siehst du das schön beim Plugin-System. Die Klasse `AbstractPlugin` in `backend/src/Plugin/AbstractPlugin.php` liefert fertiges Grundverhalten, das jedes Plugin gebrauchen kann. Ein konkretes Plugin erbt davon und ergänzt nur seine Besonderheiten.
+In Knospe siehst du das schön beim Plugin-System. Die Klasse `AbstractPlugin` in [`backend/src/Plugin/AbstractPlugin.php`](../../backend/src/Plugin/AbstractPlugin.php) liefert fertiges Grundverhalten, das jedes Plugin gebrauchen kann. Ein konkretes Plugin erbt davon und ergänzt nur seine Besonderheiten.
 
 ## extends
 

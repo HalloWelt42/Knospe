@@ -21,7 +21,7 @@ $slug = $title
 
 Der Wert links wird in die Funktion rechts als Argument gegeben, das Ergebnis fließt weiter. Reihenfolge und Leserichtung stimmen jetzt überein: erst ersetzen, dann trimmen, dann kleinschreiben.
 
-Gut kombinierbar ist das mit den [First-Class-Callables](10-first-class-callables.md): `trim(...)` ist der typsichere Verweis auf die Funktion. Auch eigene Methoden lassen sich einreihen, etwa wenn ein `Post` aus `backend/src/Domain/Post/Post.php` weiterverarbeitet wird.
+Gut kombinierbar ist das mit den [First-Class-Callables](10-first-class-callables.md): `trim(...)` ist der typsichere Verweis auf die Funktion. Auch eigene Methoden lassen sich einreihen, etwa wenn ein `Post` aus [`backend/src/Domain/Post/Post.php`](../../backend/src/Domain/Post/Post.php) weiterverarbeitet wird.
 
 ## Abgrenzung zum Bitwise-Oder
 

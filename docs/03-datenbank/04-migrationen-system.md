@@ -19,7 +19,7 @@ DROP TABLE IF EXISTS users CASCADE;
 
 ## Was schon lief: schema_migrations
 
-Der `MigrationRunner` (`backend/src/Database/Migration/MigrationRunner.php`) merkt sich in einer eigenen Tabelle `schema_migrations`, welche Versionen schon ausgeführt wurden. Beim nächsten Lauf werden nur die neuen ausgeführt - vorhandene nicht doppelt.
+Der `MigrationRunner` ([`backend/src/Database/Migration/MigrationRunner.php`](../../backend/src/Database/Migration/MigrationRunner.php)) merkt sich in einer eigenen Tabelle `schema_migrations`, welche Versionen schon ausgeführt wurden. Beim nächsten Lauf werden nur die neuen ausgeführt - vorhandene nicht doppelt.
 
 ## Transaktion je Migration
 
@@ -33,7 +33,7 @@ Am bequemsten über das Verwaltungsskript:
 ./knospe migrate
 ```
 
-Dahinter steckt die CLI `backend/bin/console`, die du auch direkt im Container aufrufen kannst:
+Dahinter steckt die CLI [`backend/bin/console`](../../backend/bin/console), die du auch direkt im Container aufrufen kannst:
 
 ```
 php bin/console migrate       Ausstehende Migrationen ausführen

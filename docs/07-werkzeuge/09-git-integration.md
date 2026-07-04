@@ -27,4 +27,4 @@ git config user.email "my@jobmagnetix.de"
 
 So werden Commits der richtigen Person zugeordnet. Diese Einstellung gilt pro Repository; du kannst sie also je Projekt unterschiedlich setzen.
 
-Ein Hinweis zu Knospe: Der Ordner `.idea/` mit den persönlichen IDE-Einstellungen ist per `.gitignore` ausgeschlossen und taucht daher gar nicht erst im Commit-Fenster auf.
+Ein Hinweis zu Knospe: Der Ordner `.idea/` mit den persönlichen IDE-Einstellungen ist per [`.gitignore`](../../.gitignore) ausgeschlossen und taucht daher gar nicht erst im Commit-Fenster auf.

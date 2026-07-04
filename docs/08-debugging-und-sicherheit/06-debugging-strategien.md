@@ -8,7 +8,7 @@ Der erste Schritt ist immer: Was soll passieren, und was passiert wirklich? Form
 
 ## Halbierung
 
-Läuft der Fehler durch viele Schritte - Frontend ruft `src/lib/api.ts`, das trifft den Router, der einen Handler, der einen Service, der das Repository - dann teile die Strecke. Prüfe in der Mitte: Kommt die Anfrage überhaupt im Handler an? Ist die Datenbankabfrage schuld oder schon der Aufruf davor? Mit jeder Halbierung verwirfst du die halbe Suchfläche. Das ist der schnellste Weg durch eine lange Kette.
+Läuft der Fehler durch viele Schritte - Frontend ruft [`src/lib/api.ts`](../../frontend/src/lib/api.ts), das trifft den Router, der einen Handler, der einen Service, der das Repository - dann teile die Strecke. Prüfe in der Mitte: Kommt die Anfrage überhaupt im Handler an? Ist die Datenbankabfrage schuld oder schon der Aufruf davor? Mit jeder Halbierung verwirfst du die halbe Suchfläche. Das ist der schnellste Weg durch eine lange Kette.
 
 ## Minimaler Reproduktionsfall
 

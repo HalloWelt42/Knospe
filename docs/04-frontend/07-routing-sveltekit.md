@@ -4,7 +4,7 @@ Knospe ist eine Single Page Application (SPA): der Browser lädt einmal eine Sei
 
 ## Echte Pfade über die History-API
 
-Der Router in `frontend/src/lib/router.svelte.ts` nutzt die History-API des Browsers. Dadurch sehen die Adressen sauber aus - `/register` statt `/#/register`. Aus dem Pfad (`location.pathname`) leitet `parse()` eine Route ab:
+Der Router in [`frontend/src/lib/router.svelte.ts`](../../frontend/src/lib/router.svelte.ts) nutzt die History-API des Browsers. Dadurch sehen die Adressen sauber aus - `/register` statt `/#/register`. Aus dem Pfad (`location.pathname`) leitet `parse()` eine Route ab:
 
 ```ts
 function parse(): Route {
@@ -20,7 +20,7 @@ Die aktuelle Route liegt als reaktiver Zustand vor (`export const route = $state
 
 ## Ansichten wählen
 
-`src/App.svelte` liest `route` und zeigt die passende Komponente:
+[`src/App.svelte`](../../frontend/src/App.svelte) liest `route` und zeigt die passende Komponente:
 
 ```svelte
 {#if route.name === 'login'}
@@ -51,6 +51,6 @@ export function navigate(path: string): void {
 
 Damit gewöhnliche Links wie `href="/login"` nicht die ganze Seite neu laden, fängt `initRouter()` Klicks auf interne Links zentral ab und ruft `navigate()` auf. Der Zurück-Knopf des Browsers löst `popstate` aus und aktualisiert die Ansicht ebenfalls.
 
-Wichtig bei echten Pfaden: Der Server muss unbekannte Pfade auf `index.html` zurückfallen lassen, damit ein direkter Aufruf von `/register` funktioniert. Der Vite-Server erledigt das im SPA-Modus von selbst; für den Produktivbetrieb steht der passende Hinweis in [Docker Compose im Detail](../06-deployment/01-docker-compose-detailliert.md).
+Wichtig bei echten Pfaden: Der Server muss unbekannte Pfade auf [`index.html`](../../frontend/index.html) zurückfallen lassen, damit ein direkter Aufruf von `/register` funktioniert. Der Vite-Server erledigt das im SPA-Modus von selbst; für den Produktivbetrieb steht der passende Hinweis in [Docker Compose im Detail](../06-deployment/01-docker-compose-detailliert.md).
 
 Begriffe wie SPA im [Glossar: Frontend](glossar-frontend.md).

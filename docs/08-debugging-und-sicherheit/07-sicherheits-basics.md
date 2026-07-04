@@ -20,7 +20,7 @@ Fremder HTML/JS-Code landet in der Ausgabe und läuft im Browser des Opfers. Geg
 
 ## CSRF (Cross-Site-Request-Forgery)
 
-Eine fremde Seite löst im Namen des eingeloggten Nutzers eine verändernde Anfrage aus. Gegenmittel: ein Token, das nur die echte Oberfläche kennt. Siehe `src/Http/Middleware/CsrfMiddleware.php` und [CORS verstehen](10-cors-verstehen.md).
+Eine fremde Seite löst im Namen des eingeloggten Nutzers eine verändernde Anfrage aus. Gegenmittel: ein Token, das nur die echte Oberfläche kennt. Siehe [`src/Http/Middleware/CsrfMiddleware.php`](../../backend/src/Http/Middleware/CsrfMiddleware.php) und [CORS verstehen](10-cors-verstehen.md).
 
 ## Auth und Autorisierung
 
@@ -28,7 +28,7 @@ Zwei Fragen: Wer bist du (Authentifizierung, Session-Cookie) und was darfst du (
 
 ## Secrets
 
-Passwörter, Schlüssel und Datenbank-Zugänge kommen aus der Umgebung (`.env` via `src/Support/Config.php`), niemals fest in den Code.
+Passwörter, Schlüssel und Datenbank-Zugänge kommen aus der Umgebung ([`.env`](../../.env) via [`src/Support/Config.php`](../../backend/src/Support/Config.php)), niemals fest in den Code.
 
 ## Faustregeln
 

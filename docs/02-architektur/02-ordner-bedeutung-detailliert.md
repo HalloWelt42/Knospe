@@ -14,7 +14,7 @@ Der Backend-Code liegt unter `backend/src` und ist nach Verantwortung sortiert. 
 Außerhalb von `src`:
 
 - **`backend/config/`** - `config.php` (baut das Config-Objekt) und `routes.php` (die deklarative Routentabelle).
-- **`backend/public/index.php`** - der Front-Controller, der einzige Einstiegspunkt.
+- **[`backend/public/index.php`](../../backend/public/index.php)** - der Front-Controller, der einzige Einstiegspunkt.
 - **`database/migrations`** und **`database/seeds`** - Schemastand und Beispieldaten.
 - **`tests/`** - `Unit/` (einzelne Klassen) und `Integration/` (mit echter Datenbank, jeweils in einer Transaktion mit Rollback).
 

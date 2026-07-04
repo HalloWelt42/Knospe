@@ -2,7 +2,7 @@
 
 REST ist eine Art, eine Web-API zu entwerfen. Die Grundidee ist einfach und angenehm: Man denkt in **Ressourcen** (Dingen), nicht in Aktionen. Statt für jede Operation einen eigenen Befehlspfad zu erfinden, gibt es wenige klare Adressen für die Dinge - und die HTTP-Methode sagt, was damit geschehen soll.
 
-Das sieht man in Knospe gut an den Beiträgen (`backend/config/routes.php`):
+Das sieht man in Knospe gut an den Beiträgen ([`backend/config/routes.php`](../../backend/config/routes.php)):
 
 ```
 GET    /api/posts        alle Beiträge lesen
@@ -23,7 +23,7 @@ Der zweite Baustein sind **Statuscodes**. Die Antwort trägt nicht nur Daten, so
 - 404 - nicht gefunden
 - 500 - unerwarteter Serverfehler
 
-Der dritte Baustein ist ein einheitliches **Format**: Knospe spricht durchgehend JSON. Der Helfer `backend/src/Http/Json.php` sorgt für den richtigen Content-Type und echte Umlaute:
+Der dritte Baustein ist ein einheitliches **Format**: Knospe spricht durchgehend JSON. Der Helfer [`backend/src/Http/Json.php`](../../backend/src/Http/Json.php) sorgt für den richtigen Content-Type und echte Umlaute:
 
 ```php
 return new Response(

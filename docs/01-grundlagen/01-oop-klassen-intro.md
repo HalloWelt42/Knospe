@@ -2,7 +2,7 @@
 
 Eine Klasse ist eine Schablone. Sie beschreibt, welche Daten ein Ding hat und was es kann - aber sie ist noch nicht das Ding selbst. Ein konkretes Ding, das nach dieser Schablone gebaut wird, heißt Objekt (oder Instanz). Das WARUM dahinter: Statt einzelne Variablen wild durch den Code zu reichen, bündeln wir zusammengehörige Daten und ihr Verhalten an einer Stelle. Das macht den Code lesbarer und änderbar.
 
-In Knospe findest du das an vielen Stellen. Ein Beitrag wird durch die Klasse `Post` in `backend/src/Domain/Post/Post.php` beschrieben, ein Nutzer durch `User` in `backend/src/Domain/User/User.php`.
+In Knospe findest du das an vielen Stellen. Ein Beitrag wird durch die Klasse `Post` in [`backend/src/Domain/Post/Post.php`](../../backend/src/Domain/Post/Post.php) beschrieben, ein Nutzer durch `User` in [`backend/src/Domain/User/User.php`](../../backend/src/Domain/User/User.php).
 
 ## Eigenschaften und Methoden
 

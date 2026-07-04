@@ -13,7 +13,7 @@ Starte die Umgebung zuerst mit `./knospe up`, damit der Container läuft.
 1. Oeffne "Settings > Sprachen & Frameworks > PHP" (englisch: "Languages & Frameworks > PHP").
 2. Klicke bei "CLI Interpreter" auf das Zahnrad-Symbol und dann auf das Plus.
 3. Wähle "From Docker, Vagrant, VM, WSL, Remote..." und darin den Typ "Docker Compose".
-4. Wähle als Configuration file die `docker-compose.yml` von Knospe und als Service den PHP-Dienst (in Knospe der Dienst `php`).
+4. Wähle als Configuration file die [`docker-compose.yml`](../../docker-compose.yml) von Knospe und als Service den PHP-Dienst (in Knospe der Dienst `php`).
 5. Setze den Lifecycle auf "Connect to existing container" - so nutzt PhpStorm den bereits laufenden Container, statt bei jedem Aufruf einen neuen zu starten.
 
 ## Path-Mapping prüfen

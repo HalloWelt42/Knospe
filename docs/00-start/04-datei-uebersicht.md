@@ -17,7 +17,7 @@ Knospe/
 
 ## backend/
 
-- `public/index.php` - der Front-Controller, hier kommt jede Anfrage an.
+- [`public/index.php`](../../backend/public/index.php) - der Front-Controller, hier kommt jede Anfrage an.
 - `src/Core/` - der kleine Kern: Container, Router, Pipeline, Kernel, Ausnahmen.
 - `src/Http/` - HTTP-Bausteine: JSON-Antworten, Eingaben, Middleware, Handler.
 - `src/Domain/` - die Fachlogik zu `Post` und `User` (Entity, Repository, Service).
@@ -26,15 +26,15 @@ Knospe/
 - `src/Plugin/` - das Plugin-System mit Hooks und Registry.
 - `config/` - `config.php` und `routes.php`, die zentralen Einstellungen.
 - `database/` - `migrations` (Schema-Schritte) und `seeds` (Startdaten).
-- `bin/console` - das Kommandozeilenwerkzeug (`migrate`, `rollback`, `status`, `seed`).
+- [`bin/console`](../../backend/bin/console) - das Kommandozeilenwerkzeug (`migrate`, `rollback`, `status`, `seed`).
 - `tests/` - `Unit` und `Integration` für PHPUnit.
 
 ## frontend/
 
-- `src/main.ts` - der Startpunkt der Oberfläche.
+- [`src/main.ts`](../../frontend/src/main.ts) - der Startpunkt der Oberfläche.
 - `src/lib/` - Bausteine: `api.ts` (API-Client), `auth.svelte.ts` (Anmeldezustand), `router.svelte.ts` (kleiner Hash-Router), `plugins.ts` (Plugin-Registry).
 - `src/components/` - die Ansichten wie `PostsView.svelte`, `LoginView.svelte`, `PluginsView.svelte`.
-- `vite.config.ts` - Vite-Konfiguration mit dem Proxy von `/api` zum Backend.
+- [`vite.config.ts`](../../frontend/vite.config.ts) - Vite-Konfiguration mit dem Proxy von `/api` zum Backend.
 
 ## plugins/
 
@@ -42,7 +42,7 @@ Knospe/
 
 ## docker/, tools/
 
-- `docker/php/Dockerfile` - Bauanleitung für den PHP-Container.
-- `tools/setup-env.sh` - erzeugt die `.env` mit pfad-eindeutigen Ports.
+- [`docker/php/Dockerfile`](../../docker/php/Dockerfile) - Bauanleitung für den PHP-Container.
+- [`tools/setup-env.sh`](../../tools/setup-env.sh) - erzeugt die [`.env`](../../.env) mit pfad-eindeutigen Ports.
 
 Wie diese Teile zusammenspielen, erklärt [Projektstruktur verstehen](05-projektstruktur-bedeutung.md).

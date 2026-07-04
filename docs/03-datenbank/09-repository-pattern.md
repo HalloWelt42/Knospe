@@ -4,7 +4,7 @@ Der restliche Code soll sich nicht darum kümmern müssen, wie Daten gespeichert
 
 ## Der Vertrag: das Interface
 
-`backend/src/Domain/Post/PostRepositoryInterface.php` beschreibt nur die Methoden, ohne SQL:
+[`backend/src/Domain/Post/PostRepositoryInterface.php`](../../backend/src/Domain/Post/PostRepositoryInterface.php) beschreibt nur die Methoden, ohne SQL:
 
 ```php
 interface PostRepositoryInterface
@@ -22,7 +22,7 @@ Der Service arbeitet nur gegen dieses Interface. Er weiß nicht, ob dahinter Pos
 
 ## Die Umsetzung für PostgreSQL
 
-`backend/src/Domain/Post/PostgresPostRepository.php` erfüllt den Vertrag mit echten Prepared Statements:
+[`backend/src/Domain/Post/PostgresPostRepository.php`](../../backend/src/Domain/Post/PostgresPostRepository.php) erfüllt den Vertrag mit echten Prepared Statements:
 
 ```php
 public function findById(int $id): ?Post

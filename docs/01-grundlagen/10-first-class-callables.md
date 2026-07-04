@@ -22,7 +22,7 @@ $laengen = array_map(strlen(...), $woerter);
 
 ## Nutzen bei array_map und array_filter
 
-Besonders schön wird es mit eigenen Methoden. Angenommen, ein Repository liefert `Post`-Objekte (siehe `backend/src/Domain/Post/Post.php`), und wir wollen daraus die Titel ziehen:
+Besonders schön wird es mit eigenen Methoden. Angenommen, ein Repository liefert `Post`-Objekte (siehe [`backend/src/Domain/Post/Post.php`](../../backend/src/Domain/Post/Post.php)), und wir wollen daraus die Titel ziehen:
 
 ```php
 $titel = array_map(

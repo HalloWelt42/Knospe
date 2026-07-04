@@ -16,15 +16,15 @@ Ein Wert, den eine Komponente von außen (von ihrer Elternkomponente) bekommt. I
 
 ## SPA
 
-Single Page Application. Der Browser lädt einmal eine Seite; danach tauscht JavaScript die Ansichten aus, ohne Neuladen. Knospe steuert die Ansichten über einen kleinen Hash-Router in `frontend/src/lib/router.svelte.ts`. Mehr in [Routing in der SPA](07-routing-sveltekit.md).
+Single Page Application. Der Browser lädt einmal eine Seite; danach tauscht JavaScript die Ansichten aus, ohne Neuladen. Knospe steuert die Ansichten über einen kleinen Hash-Router in [`frontend/src/lib/router.svelte.ts`](../../frontend/src/lib/router.svelte.ts). Mehr in [Routing in der SPA](07-routing-sveltekit.md).
 
 ## Proxy
 
-Eine Weiterleitung im Dev-Server: Vite reicht alle Anfragen an `/api` an das PHP-Backend weiter, damit für den Browser alles wie derselbe Ursprung aussieht (kein CORS, Cookie reist mit). Konfiguriert in `frontend/vite.config.ts`. Mehr in [Vite und Werkzeuge](05-vite-und-tooling.md).
+Eine Weiterleitung im Dev-Server: Vite reicht alle Anfragen an `/api` an das PHP-Backend weiter, damit für den Browser alles wie derselbe Ursprung aussieht (kein CORS, Cookie reist mit). Konfiguriert in [`frontend/vite.config.ts`](../../frontend/vite.config.ts). Mehr in [Vite und Werkzeuge](05-vite-und-tooling.md).
 
 ## Slot
 
-Eine benannte Stelle in der Oberfläche, an die Plugins eigene Komponenten hängen können. `PluginSlot.svelte` rendert alle für einen Slot registrierten Bausteine, die die Registry in `frontend/src/lib/plugins.ts` per `import.meta.glob` einsammelt. Mehr im [Plugin-System](../05-plugins/01-plugin-system-konzept.md).
+Eine benannte Stelle in der Oberfläche, an die Plugins eigene Komponenten hängen können. `PluginSlot.svelte` rendert alle für einen Slot registrierten Bausteine, die die Registry in [`frontend/src/lib/plugins.ts`](../../frontend/src/lib/plugins.ts) per `import.meta.glob` einsammelt. Mehr im [Plugin-System](../05-plugins/01-plugin-system-konzept.md).
 
 ## Weiteres
 

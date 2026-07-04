@@ -8,7 +8,7 @@ Ein Container ist eine abgeschottete, laufende Umgebung für einen Dienst - etwa
 
 ## Image
 
-Ein Image ist die Vorlage, aus der ein Container entsteht - vergleichbar mit einem Bauplan. Aus einem Image lassen sich beliebig viele gleiche Container starten. Knospe baut das php-Image selbst (aus `docker/php/Dockerfile`) und nutzt fertige Images für Postgres und Node.
+Ein Image ist die Vorlage, aus der ein Container entsteht - vergleichbar mit einem Bauplan. Aus einem Image lassen sich beliebig viele gleiche Container starten. Knospe baut das php-Image selbst (aus [`docker/php/Dockerfile`](../../docker/php/Dockerfile)) und nutzt fertige Images für Postgres und Node.
 
 ## Volume
 
@@ -20,7 +20,7 @@ Beim Bind-Mount wird ein echter Ordner deines Rechners in den Container gespiege
 
 ## Netzwerk
 
-Compose legt für das Projekt ein eigenes Netzwerk an. Darin erreichen sich die Container über ihren Dienstnamen: Das Backend spricht die Datenbank schlicht als `postgres:5432` an, ohne Host-Port. Die Host-Ports aus der `.env` sind nur für den Zugriff von außen (siehe [Umgebungen verwalten](06-environment-verwaltung.md)).
+Compose legt für das Projekt ein eigenes Netzwerk an. Darin erreichen sich die Container über ihren Dienstnamen: Das Backend spricht die Datenbank schlicht als `postgres:5432` an, ohne Host-Port. Die Host-Ports aus der [`.env`](../../.env) sind nur für den Zugriff von außen (siehe [Umgebungen verwalten](06-environment-verwaltung.md)).
 
 ## Healthcheck
 
@@ -28,4 +28,4 @@ Ein Healthcheck ist eine wiederkehrende Prüfung, ob ein Dienst wirklich bereit 
 
 ## Front-Controller
 
-Kein Docker-Begriff, aber zentral: `backend/public/index.php` ist der eine Einstiegspunkt, durch den jede Anfrage läuft, bevor der Router sie verteilt.
+Kein Docker-Begriff, aber zentral: [`backend/public/index.php`](../../backend/public/index.php) ist der eine Einstiegspunkt, durch den jede Anfrage läuft, bevor der Router sie verteilt.

@@ -37,6 +37,6 @@ Statt roher Docker-Befehle nutzt du im Alltag das Projekt-Skript:
 | `./knospe logs` | `docker compose logs -f` |
 | `./knospe status` | Status und tatsächliche Ports |
 
-`./knospe status` ist wichtig: die Host-Ports werden pfad-eindeutig abgeleitet (`tools/setup-env.sh`), stehen also nicht fest. Hier siehst du, unter welchem Port deine Installation gerade läuft.
+`./knospe status` ist wichtig: die Host-Ports werden pfad-eindeutig abgeleitet ([`tools/setup-env.sh`](../../../tools/setup-env.sh)), stehen also nicht fest. Hier siehst du, unter welchem Port deine Installation gerade läuft.
 
 Vertiefung: [Betrieb mit Docker Compose](../../06-deployment/01-docker-compose-detailliert.md) und [Das knospe-Skript](../../06-deployment/02-docker-befehle-alltag.md). Referenz: die offizielle Docker-Dokumentation.

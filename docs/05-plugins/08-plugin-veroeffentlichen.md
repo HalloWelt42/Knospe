@@ -4,7 +4,7 @@ Ein Plugin ist ein in sich geschlossener Ordner - das macht das Teilen einfach. 
 
 ## README im Plugin
 
-Jedes Plugin bekommt eine eigene `README.md` (wie `plugins/knospe-comments/README.md`). Sie beantwortet kurz: Was tut das Plugin? Welche Routen bringt es mit? Welche Hooks nutzt es? Welche Einstellungen gibt es? Ein Nutzer soll ohne Blick in den Code verstehen, was ihn erwartet.
+Jedes Plugin bekommt eine eigene [`README.md`](../../README.md) (wie [`plugins/knospe-comments/README.md`](../../plugins/knospe-comments/README.md)). Sie beantwortet kurz: Was tut das Plugin? Welche Routen bringt es mit? Welche Hooks nutzt es? Welche Einstellungen gibt es? Ein Nutzer soll ohne Blick in den Code verstehen, was ihn erwartet.
 
 ## Versionierung
 
@@ -37,7 +37,7 @@ Das schützt vor SQL-Injection - der einzige verlässliche Weg.
 
 ## Als ZIP verpacken
 
-Zum Weitergeben den Plugin-Ordner samt `manifest.json`, `src/`, `migrations/`, `frontend/` und `README.md` als ZIP packen - ohne temporäre Dateien oder lokale IDE-Ordner:
+Zum Weitergeben den Plugin-Ordner samt `manifest.json`, `src/`, `migrations/`, `frontend/` und [`README.md`](../../README.md) als ZIP packen - ohne temporäre Dateien oder lokale IDE-Ordner:
 
 ```bash
 cd plugins && zip -r knospe-comments.zip knospe-comments

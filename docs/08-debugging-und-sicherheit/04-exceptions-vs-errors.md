@@ -43,4 +43,4 @@ Darauf bauen `NotFoundException` (404), `MethodNotAllowedException` (405), `Unau
 
 Der Vorteil: Du wirfst die passende Exception dort, wo der Fehler entsteht, und die zentrale `ErrorHandlingMiddleware` in `backend/src/Http/Middleware/` verwandelt sie in eine saubere JSON-Antwort - mit dem richtigen Code, ohne interne Details nach außen. Nur echte, unerwartete `Throwable` werden zu einem protokollierten 500er.
 
-Diese Trennung erklärt das Kapitel [Fehlertypen verstehen](01-fehlertypen-verstehen.md) genauer. Die Architektur dahinter steht in `docs/02-architektur/07-exception-handling-zentral.md`.
+Diese Trennung erklärt das Kapitel [Fehlertypen verstehen](01-fehlertypen-verstehen.md) genauer. Die Architektur dahinter steht in [`docs/02-architektur/07-exception-handling-zentral.md`](../02-architektur/07-exception-handling-zentral.md).

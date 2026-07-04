@@ -1,6 +1,6 @@
 # Hooks: Aktionen und Filter
 
-Hooks sind Einhängepunkte. Der Kern ruft sie an bestimmten Stellen auf, und ein Plugin hängt sich dort ein - ohne den Kern zu ändern. Es gibt zwei Arten, umgesetzt in `backend/src/Plugin/Hook/HookDispatcher.php`.
+Hooks sind Einhängepunkte. Der Kern ruft sie an bestimmten Stellen auf, und ein Plugin hängt sich dort ein - ohne den Kern zu ändern. Es gibt zwei Arten, umgesetzt in [`backend/src/Plugin/Hook/HookDispatcher.php`](../../backend/src/Plugin/Hook/HookDispatcher.php).
 
 ## doAction: "etwas ist passiert"
 
@@ -49,4 +49,4 @@ $manager->hooks()->addFilter('comment.content', $prüfen, 20);
 - `post.deleted` (Aktion) - nach dem Löschen, übergibt die `int`-ID.
 - `comment.content` (Filter) - der Kommentartext, bevor er gespeichert wird.
 
-Geworfen werden die Post-Aktionen in `backend/src/Domain/Post/PostService.php`. Wie man einen Hook im eigenen Plugin registriert, zeigt [Dein erstes Plugin](04-dein-erstes-plugin.md).
+Geworfen werden die Post-Aktionen in [`backend/src/Domain/Post/PostService.php`](../../backend/src/Domain/Post/PostService.php). Wie man einen Hook im eigenen Plugin registriert, zeigt [Dein erstes Plugin](04-dein-erstes-plugin.md).

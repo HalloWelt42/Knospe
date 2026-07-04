@@ -54,6 +54,6 @@ enum PostStatus: string
 
 ## Nutzen im Code
 
-In Knospe wäre ein solcher Status ein sauberer Typ auf einem `Post` (siehe `backend/src/Domain/Post/Post.php`). Der Vorteil: `if ($status->isVisible())` ist selbsterklärend, und `match` ohne `default` zwingt dazu, jeden neuen Fall auch zu behandeln - vergisst man einen, meckert die Analyse ([PHPStan](../09-entwicklung/04-testing-kultur.md)).
+In Knospe wäre ein solcher Status ein sauberer Typ auf einem `Post` (siehe [`backend/src/Domain/Post/Post.php`](../../backend/src/Domain/Post/Post.php)). Der Vorteil: `if ($status->isVisible())` ist selbsterklärend, und `match` ohne `default` zwingt dazu, jeden neuen Fall auch zu behandeln - vergisst man einen, meckert die Analyse ([PHPStan](../09-entwicklung/04-testing-kultur.md)).
 
 Weiter geht es mit [Wann Attribute?](08-attributes-konzept.md).

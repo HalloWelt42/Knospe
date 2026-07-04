@@ -4,7 +4,7 @@ Manche Daten braucht nicht nur eine Komponente, sondern die halbe Oberfläche. D
 
 ## $state im .svelte.ts-Modul
 
-Runes wie `$state` funktionieren nicht nur in `.svelte`-Dateien, sondern auch in normalen Modulen - sofern deren Name auf `.svelte.ts` endet. Genau das nutzt Knospe für den geteilten Zustand. In `frontend/src/lib/auth.svelte.ts`:
+Runes wie `$state` funktionieren nicht nur in `.svelte`-Dateien, sondern auch in normalen Modulen - sofern deren Name auf `.svelte.ts` endet. Genau das nutzt Knospe für den geteilten Zustand. In [`frontend/src/lib/auth.svelte.ts`](../../frontend/src/lib/auth.svelte.ts):
 
 ```ts
 export const auth = $state<{ user: User | null; bereit: boolean }>({
@@ -41,6 +41,6 @@ und schreibt im Markup `{#if auth.user}` oder `{auth.user.displayName}` (so in `
 
 ## Warum kein klassischer Store
 
-Frühere Svelte-Versionen boten dafür eigene Store-Objekte mit `subscribe`. Mit den Runes aus Svelte 5 ist das nicht mehr nötig: ein exportiertes `$state`-Objekt ist bereits geteilter, reaktiver Zustand - schlicht und ohne Zusatzbegriffe. Denselben Ansatz nutzt auch der Router in `frontend/src/lib/router.svelte.ts` (siehe [Routing in der SPA](07-routing-sveltekit.md)).
+Frühere Svelte-Versionen boten dafür eigene Store-Objekte mit `subscribe`. Mit den Runes aus Svelte 5 ist das nicht mehr nötig: ein exportiertes `$state`-Objekt ist bereits geteilter, reaktiver Zustand - schlicht und ohne Zusatzbegriffe. Denselben Ansatz nutzt auch der Router in [`frontend/src/lib/router.svelte.ts`](../../frontend/src/lib/router.svelte.ts) (siehe [Routing in der SPA](07-routing-sveltekit.md)).
 
 Wie diese Daten überhaupt vom Backend kommen, steht in [API-Aufrufe mit fetch](03-api-aufrufe-fetch.md). Begriffe im [Glossar: Frontend](glossar-frontend.md).

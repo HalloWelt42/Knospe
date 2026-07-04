@@ -1,8 +1,8 @@
 # Der Weg einer Anfrage
 
-Jede HTTP-Anfrage nimmt in Knospe denselben, offen sichtbaren Weg. Es gibt keine versteckte Magie: Du kannst den ganzen Ablauf in `backend/public/index.php` und `backend/src/Core/Kernel.php` nachlesen. Wer diesen Weg einmal versteht, versteht das ganze Backend.
+Jede HTTP-Anfrage nimmt in Knospe denselben, offen sichtbaren Weg. Es gibt keine versteckte Magie: Du kannst den ganzen Ablauf in [`backend/public/index.php`](../../backend/public/index.php) und [`backend/src/Core/Kernel.php`](../../backend/src/Core/Kernel.php) nachlesen. Wer diesen Weg einmal versteht, versteht das ganze Backend.
 
-Der Front-Controller ist der einzige Einstiegspunkt. Er lädt den Autoloader, liest die `.env`, baut die Konfiguration, erzeugt den Kernel und wandelt die PHP-Globals in ein PSR-7-Anfrageobjekt um. Dann übergibt er die Anfrage an den Kernel und sendet am Ende die Antwort zurück.
+Der Front-Controller ist der einzige Einstiegspunkt. Er lädt den Autoloader, liest die [`.env`](../../.env), baut die Konfiguration, erzeugt den Kernel und wandelt die PHP-Globals in ein PSR-7-Anfrageobjekt um. Dann übergibt er die Anfrage an den Kernel und sendet am Ende die Antwort zurück.
 
 ```
     HTTP-Anfrage

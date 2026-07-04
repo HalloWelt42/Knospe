@@ -37,7 +37,7 @@ php bin/console seed
 php -S localhost:8000 -t public
 ```
 
-Der Front-Controller ist `backend/public/index.php`. Über `php bin/console` läuft das CLI mit `migrate`, `rollback`, `status` und `seed`.
+Der Front-Controller ist [`backend/public/index.php`](../../backend/public/index.php). Über `php bin/console` läuft das CLI mit `migrate`, `rollback`, `status` und `seed`.
 
 ## Frontend starten
 

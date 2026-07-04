@@ -52,6 +52,6 @@ final readonly class Post
 }
 ```
 
-So sieh es in `backend/src/Domain/Post/Post.php` und `backend/src/Domain/User/User.php`. Willst du einen geänderten Beitrag, erzeugst du bewusst ein neues Objekt, statt das alte zu überschreiben.
+So sieh es in [`backend/src/Domain/Post/Post.php`](../../backend/src/Domain/Post/Post.php) und [`backend/src/Domain/User/User.php`](../../backend/src/Domain/User/User.php). Willst du einen geänderten Beitrag, erzeugst du bewusst ein neues Objekt, statt das alte zu überschreiben.
 
 Die Grundidee von Konstruktor und Eigenschaften steht in [Klassen und Objekte](01-oop-klassen-intro.md). Wie sich einzelne Eigenschaften mit Logik anreichern lassen, zeigt [Property Hooks (PHP 8.4)](05-property-hooks.md).

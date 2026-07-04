@@ -21,7 +21,7 @@ Wird das Limit erreicht, ist der richtige Status 429 Too Many Requests. Optional
 
 ## Wo es in der Pipeline sitzt
 
-In Knospe läuft jede Anfrage durch eine PSR-15-Pipeline aus Middleware, siehe `src/Core/Pipeline.php`. Rate-Limiting ist als Middleware ideal aufgehoben: früh in der Kette, noch vor dem eigentlichen Handler. So wird eine zu häufige Anfrage abgewiesen, bevor teure Arbeit wie Datenbankzugriff oder Passwort-Hashing überhaupt beginnt. Als eigene Middleware bleibt es zudem austauschbar - vorbildlich für ein Boilerplate zum Verstehen.
+In Knospe läuft jede Anfrage durch eine PSR-15-Pipeline aus Middleware, siehe [`src/Core/Pipeline.php`](../../backend/src/Core/Pipeline.php). Rate-Limiting ist als Middleware ideal aufgehoben: früh in der Kette, noch vor dem eigentlichen Handler. So wird eine zu häufige Anfrage abgewiesen, bevor teure Arbeit wie Datenbankzugriff oder Passwort-Hashing überhaupt beginnt. Als eigene Middleware bleibt es zudem austauschbar - vorbildlich für ein Boilerplate zum Verstehen.
 
 ```php
 // Skizze einer RateLimitMiddleware

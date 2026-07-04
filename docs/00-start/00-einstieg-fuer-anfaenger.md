@@ -29,7 +29,7 @@ Zwei Befehle genügen:
 ./knospe up
 ```
 
-`setup` erzeugt eine `.env` mit eindeutigen Ports und baut die Container - das dauert beim ersten Mal ein paar Minuten. `up` startet dann alles und spielt Datenbank-Migrationen ein. Danach zeigt dir das Skript die Adressen:
+`setup` erzeugt eine [`.env`](../../.env) mit eindeutigen Ports und baut die Container - das dauert beim ersten Mal ein paar Minuten. `up` startet dann alles und spielt Datenbank-Migrationen ein. Danach zeigt dir das Skript die Adressen:
 
 ```
 ./knospe status

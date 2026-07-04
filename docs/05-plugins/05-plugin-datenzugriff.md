@@ -4,7 +4,7 @@ Ein Plugin soll seine Daten nicht in Kern-Tabellen quetschen, sondern eigene mit
 
 ## Die Migration
 
-Jede SQL-Datei unter `migrations/` gehört dem Plugin. Der Zahl-Präfix bestimmt die Reihenfolge. So legt das Kommentar-Plugin seine Tabelle an (`plugins/knospe-comments/migrations/001_create_comments_table.sql`):
+Jede SQL-Datei unter `migrations/` gehört dem Plugin. Der Zahl-Präfix bestimmt die Reihenfolge. So legt das Kommentar-Plugin seine Tabelle an ([`plugins/knospe-comments/migrations/001_create_comments_table.sql`](../../plugins/knospe-comments/migrations/001_create_comments_table.sql)):
 
 ```sql
 CREATE TABLE IF NOT EXISTS comments (

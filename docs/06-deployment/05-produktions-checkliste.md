@@ -26,11 +26,11 @@ Setze am Webserver Schutz-Header, etwa `Content-Security-Policy`, `X-Content-Typ
 
 ## Rate-Limiting
 
-Begrenze Anfragen pro IP, besonders an `POST /api/auth/login`. Das bremst Passwort-Rateangriffe. Die Passwörter selbst liegen bereits als Argon2id-Hash vor (`backend/src/Support/PasswordHasher.php`).
+Begrenze Anfragen pro IP, besonders an `POST /api/auth/login`. Das bremst Passwort-Rateangriffe. Die Passwörter selbst liegen bereits als Argon2id-Hash vor ([`backend/src/Support/PasswordHasher.php`](../../backend/src/Support/PasswordHasher.php)).
 
 ## Secrets sauber halten
 
-`APP_SECRET` und `POSTGRES_PASSWORD` erzeugt das Setup zufällig. Die `.env` ist gitignored - checke sie nie ein. In Produktion setzt man Secrets über die Umgebung des Hosts, nicht als Datei im Repo.
+`APP_SECRET` und `POSTGRES_PASSWORD` erzeugt das Setup zufällig. Die [`.env`](../../.env) ist gitignored - checke sie nie ein. In Produktion setzt man Secrets über die Umgebung des Hosts, nicht als Datei im Repo.
 
 ## Backups einrichten
 

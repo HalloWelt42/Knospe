@@ -1,6 +1,6 @@
 # Vite und Werkzeuge
 
-Der Browser versteht keine `.svelte`-Dateien und kein TypeScript. Etwas muss diese Quellen also in JavaScript und CSS übersetzen, das der Browser lädt. Diese Aufgabe übernimmt Vite - der Build- und Entwicklungsserver des Frontends. Die Konfiguration steht in `frontend/vite.config.ts`, die Befehle in `frontend/package.json`.
+Der Browser versteht keine `.svelte`-Dateien und kein TypeScript. Etwas muss diese Quellen also in JavaScript und CSS übersetzen, das der Browser lädt. Diese Aufgabe übernimmt Vite - der Build- und Entwicklungsserver des Frontends. Die Konfiguration steht in [`frontend/vite.config.ts`](../../frontend/vite.config.ts), die Befehle in [`frontend/package.json`](../../frontend/package.json).
 
 ## Der Dev-Server und HMR
 
@@ -37,7 +37,7 @@ fs: {
 }
 ```
 
-So kann die Registry in `frontend/src/lib/plugins.ts` per `import.meta.glob` die `*.plugin.ts`-Dateien der Plugins einsammeln. Details dazu im [Plugin-System](../05-plugins/01-plugin-system-konzept.md).
+So kann die Registry in [`frontend/src/lib/plugins.ts`](../../frontend/src/lib/plugins.ts) per `import.meta.glob` die `*.plugin.ts`-Dateien der Plugins einsammeln. Details dazu im [Plugin-System](../05-plugins/01-plugin-system-konzept.md).
 
 ## Bauen für den Betrieb
 

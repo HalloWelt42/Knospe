@@ -2,7 +2,7 @@
 
 Eine Anwendung läuft in verschiedenen Umgebungen: bei dir lokal, später auf einem Server. Datenbankzugang, Debug-Schalter und Geheimnisse unterscheiden sich dabei. Diese Werte gehören deshalb **nicht in den Code**, sondern in die Umgebung. So bleibt derselbe Code überall gleich - nur die Umgebung ändert sich.
 
-In Knospe kommen die Werte aus **Umgebungsvariablen**. Lokal liest der Front-Controller eine `.env`-Datei ein, im Container liefert Docker Compose die Werte direkt. Der Front-Controller macht das bewusst so, dass gesetzte Werte nicht überschrieben werden:
+In Knospe kommen die Werte aus **Umgebungsvariablen**. Lokal liest der Front-Controller eine [`.env`](../../.env)-Datei ein, im Container liefert Docker Compose die Werte direkt. Der Front-Controller macht das bewusst so, dass gesetzte Werte nicht überschrieben werden:
 
 ```php
 if (is_file(dirname(__DIR__, 2) . '/.env')) {
@@ -10,7 +10,7 @@ if (is_file(dirname(__DIR__, 2) . '/.env')) {
 }
 ```
 
-Statt nun überall verstreut `getenv()` aufzurufen, gibt es ein einziges, typisiertes Konfigurationsobjekt in `backend/src/Support/Config.php`. Es wird über `config/config.php` mit `Config::fromEnv()` gebaut:
+Statt nun überall verstreut `getenv()` aufzurufen, gibt es ein einziges, typisiertes Konfigurationsobjekt in [`backend/src/Support/Config.php`](../../backend/src/Support/Config.php). Es wird über [`config/config.php`](../../backend/config/config.php) mit `Config::fromEnv()` gebaut:
 
 ```php
 public static function fromEnv(): self
@@ -32,8 +32,8 @@ Der Vorteil: Jeder Wert hat einen klaren Namen und Typ. `dbPort` ist ein `int`, 
 Sicherheit steht dabei im Vordergrund:
 
 - **Geheimnisse nie hardcoden.** Passwörter und Zugangsdaten gehören in die Umgebung, nie in den Quellcode.
-- **`.env` gehört nicht ins Repository.** Sie enthält lokale Geheimnisse und bleibt ausgeschlossen.
+- **[`.env`](../../.env) gehört nicht ins Repository.** Sie enthält lokale Geheimnisse und bleibt ausgeschlossen.
 - **`APP_DEBUG` im Betrieb auf `false`.** Nur so bleiben interne Fehlerdetails verborgen (siehe [Zentrale Fehlerbehandlung](07-exception-handling-zentral.md)).
 - **Standard ist der sichere Wert.** `APP_ENV` fällt auf `production`, `APP_DEBUG` auf `false` - vergisst man die Variable, ist man nicht versehentlich im offenen Modus.
 
-Die passenden Ports pro Installation leitet `tools/setup-env.sh` pfad-eindeutig ab und schreibt sie in die `.env`, sodass sich zwei Kopien nie in die Quere kommen. `./knospe status` zeigt die tatsächlichen Werte.
+Die passenden Ports pro Installation leitet [`tools/setup-env.sh`](../../tools/setup-env.sh) pfad-eindeutig ab und schreibt sie in die [`.env`](../../.env), sodass sich zwei Kopien nie in die Quere kommen. `./knospe status` zeigt die tatsächlichen Werte.

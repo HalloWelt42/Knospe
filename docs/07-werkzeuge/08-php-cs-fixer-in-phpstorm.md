@@ -4,7 +4,7 @@ Einheitlich formatierter Code ist leichter zu lesen und erzeugt saubere Änderun
 
 ## Die Konfiguration
 
-Die Regeln stehen in der Datei `.php-cs-fixer.dist.php` im Backend. Sie legt fest, welche Ordner geprüft werden (der Quellcode unter `backend/src` und die Tests) und dass PSR-12 gilt. Diese Datei ist Teil des Repositorys, damit alle dieselbe Norm nutzen.
+Die Regeln stehen in der Datei [`.php-cs-fixer.dist.php`](../../backend/.php-cs-fixer.dist.php) im Backend. Sie legt fest, welche Ordner geprüft werden (der Quellcode unter `backend/src` und die Tests) und dass PSR-12 gilt. Diese Datei ist Teil des Repositorys, damit alle dieselbe Norm nutzen.
 
 ## Auf der Kommandozeile
 

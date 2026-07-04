@@ -4,7 +4,7 @@ Diese Sammlung erklärt die wichtigsten Begriffe, die dir in Knospe immer wieder
 
 ## Backend-Begriffe (PHP)
 
-- **Klasse**: Bauplan für Objekte mit Daten und Verhalten, etwa `src/Domain/Post/Post.php`.
+- **Klasse**: Bauplan für Objekte mit Daten und Verhalten, etwa [`src/Domain/Post/Post.php`](../backend/src/Domain/Post/Post.php).
 - **Interface**: Vertrag, der Methoden vorschreibt, aber nicht ausprogrammiert, zum Beispiel `PostRepositoryInterface`.
 - **Enum**: Aufzählungstyp mit festen erlaubten Werten, in PHP als `enum` deklariert.
 - **Attribut**: Metadaten direkt am Code in eckigen Klammern, etwa `#[Route]`, vom Kern ausgewertet.
@@ -17,7 +17,7 @@ Diese Sammlung erklärt die wichtigsten Begriffe, die dir in Knospe immer wieder
 - **PSR-4**: Standard, der Namensraum `Knospe\` auf `backend/src` abbildet.
 - **REST**: Stil für HTTP-APIs mit klaren Ressourcen und Methoden, siehe [Endpoint-Übersicht](02-architektur/09-restful-apis-kurz.md).
 - **Endpoint**: Konkrete Adresse plus Methode, etwa `GET /api/posts`.
-- **PDO**: PHP-Datenbankschicht, in `src/Database/Connection.php` mit dem pgsql-Treiber.
+- **PDO**: PHP-Datenbankschicht, in [`src/Database/Connection.php`](../backend/src/Database/Connection.php) mit dem pgsql-Treiber.
 - **Migration**: Versionierte Schemaänderung in `database/migrations`, ausgeführt vom `MigrationRunner`.
 
 ## Frontend-Begriffe (Svelte 5)

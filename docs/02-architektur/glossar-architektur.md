@@ -2,7 +2,7 @@
 
 Diese Kurzdefinitionen sammeln die Begriffe, die in der Architektur-Doku immer wieder auftauchen. Jeder Eintrag verweist auf die Stelle, an der er ausführlich erklärt wird.
 
-**Front-Controller** - Der einzige Einstiegspunkt für alle HTTP-Anfragen. In Knospe ist das `backend/public/index.php`. Statt viele einzelne PHP-Dateien direkt aufzurufen, läuft alles durch diese eine Datei, die den immer gleichen Ablauf startet. Siehe [Der Weg einer Anfrage](03-request-flow-diagramm.md).
+**Front-Controller** - Der einzige Einstiegspunkt für alle HTTP-Anfragen. In Knospe ist das [`backend/public/index.php`](../../backend/public/index.php). Statt viele einzelne PHP-Dateien direkt aufzurufen, läuft alles durch diese eine Datei, die den immer gleichen Ablauf startet. Siehe [Der Weg einer Anfrage](03-request-flow-diagramm.md).
 
 **Namespace** - Ein Präfix, das Klassennamen eindeutig macht und Kollisionen vermeidet. Knospe nutzt `Knospe\`, per PSR-4 auf `backend/src` abgebildet. `Knospe\Domain\Post\PostService` liegt also in `Domain/Post/PostService.php`. Siehe [PSR-Standards](01-psr-standards-intro.md).
 
@@ -10,7 +10,7 @@ Diese Kurzdefinitionen sammeln die Begriffe, die in der Architektur-Doku immer w
 
 **Middleware** - Ein Stück Code, das sich zwischen Anfrage und Handler hängt und Querschnittsaufgaben erledigt (Fehler abfangen, CSRF prüfen). Mehrere Middleware bilden eine Kette. Siehe [Middleware-Pipeline](06-middleware-pipeline.md).
 
-**Container** - Der Ort, an dem Dienste gebaut und ihre Abhängigkeiten automatisch verkabelt werden (`backend/src/Core/Container.php`, PSR-11). Statt `new` überall zu streuen, holt man Dienste aus dem Container. Siehe [Dependency Injection](04-dependency-injection.md).
+**Container** - Der Ort, an dem Dienste gebaut und ihre Abhängigkeiten automatisch verkabelt werden ([`backend/src/Core/Container.php`](../../backend/src/Core/Container.php), PSR-11). Statt `new` überall zu streuen, holt man Dienste aus dem Container. Siehe [Dependency Injection](04-dependency-injection.md).
 
 **Handler** - Die dünne Schicht, die eine einzelne Route bedient: Eingabe lesen, Service rufen, JSON antworten. Jeder Handler folgt dem PSR-15-Vertrag mit `handle()`. Siehe [Das Service-Muster](05-services-pattern.md).
 

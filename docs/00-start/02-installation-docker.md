@@ -22,7 +22,7 @@ Wechsle in den Projektordner und führe der Reihe nach aus:
 ./knospe status
 ```
 
-- `setup` erzeugt eine `.env` (falls noch keine existiert) und baut die Images. Beim ersten Mal dauert das etwas.
+- `setup` erzeugt eine [`.env`](../../.env) (falls noch keine existiert) und baut die Images. Beim ersten Mal dauert das etwas.
 - `up` startet den Stack im Hintergrund und spielt ausstehende Migrationen ein.
 - `status` zeigt den Zustand und - wichtig - die tatsächlichen Adressen.
 
@@ -36,13 +36,13 @@ Die Ausgabe von `status` sieht sinngemäß so aus:
   Postgres:  localhost:15432  (DB knospe, User knospe)
 ```
 
-Die Zahlen können bei dir anders lauten. Der Grund: `tools/setup-env.sh` leitet aus dem Projektpfad (per `cksum`) einen eindeutigen Projektnamen und freie Host-Ports ab und schreibt sie in die `.env`. So stören sich zwei Installationen nie. Verlass dich immer auf das, was `./knospe status` anzeigt, nicht auf feste Zahlen.
+Die Zahlen können bei dir anders lauten. Der Grund: [`tools/setup-env.sh`](../../tools/setup-env.sh) leitet aus dem Projektpfad (per `cksum`) einen eindeutigen Projektnamen und freie Host-Ports ab und schreibt sie in die [`.env`](../../.env). So stören sich zwei Installationen nie. Verlass dich immer auf das, was `./knospe status` anzeigt, nicht auf feste Zahlen.
 
 Öffne die genannte Frontend-Adresse im Browser. Zum Testen der API rufe die PHP-API-Adresse mit `/api/health` auf - sie sollte eine kurze Statusmeldung liefern. Anmelden kannst du dich mit dem Demo-Zugang `demo@knospe.local` und dem Passwort `passwort`.
 
 ## Erste Änderung
 
-Ändere im Frontend eine Überschrift, etwa in `frontend/src/App.svelte`, und speichere. Der Dev-Server aktualisiert die Seite sofort. Backend-Änderungen greifen beim nächsten Aufruf, da PHP je Anfrage neu lädt.
+Ändere im Frontend eine Überschrift, etwa in [`frontend/src/App.svelte`](../../frontend/src/App.svelte), und speichere. Der Dev-Server aktualisiert die Seite sofort. Backend-Änderungen greifen beim nächsten Aufruf, da PHP je Anfrage neu lädt.
 
 ## Weiter
 

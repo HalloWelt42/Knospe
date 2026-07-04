@@ -11,7 +11,7 @@ Docker ist der bequeme Weg, aber Knospe braucht es nicht zwingend. Wer versteht,
 
 ## Datenbank vorbereiten
 
-Lege Datenbank und Benutzer an, passend zu deiner `.env`:
+Lege Datenbank und Benutzer an, passend zu deiner [`.env`](../../.env):
 
 ```sh
 createdb knospe
@@ -31,7 +31,7 @@ DB_PASSWORD=dein-passwort
 APP_ENV=development
 ```
 
-Die Klasse `backend/src/Support/Config.php` liest diese Werte, `backend/src/Database/Connection.php` baut daraus die PDO-Verbindung.
+Die Klasse [`backend/src/Support/Config.php`](../../backend/src/Support/Config.php) liest diese Werte, [`backend/src/Database/Connection.php`](../../backend/src/Database/Connection.php) baut daraus die PDO-Verbindung.
 
 ## Backend starten
 
@@ -43,7 +43,7 @@ php bin/console seed      # Demo-Daten (demo@knospe.local / passwort)
 php -S localhost:8000 -t public public/index.php
 ```
 
-Das ist exakt der Befehl aus dem Container - `public/index.php` ist der Front-Controller.
+Das ist exakt der Befehl aus dem Container - [`public/index.php`](../../backend/public/index.php) ist der Front-Controller.
 
 ## Frontend starten
 

@@ -6,7 +6,7 @@ Diese Liste sammelt gute Anlaufstellen zum Weiterlernen. Wo es geht, sind deutsc
 
 - <https://www.php.net/manual/de/> - Deutschsprachiges PHP-Handbuch, Nachschlagewerk für Sprache und Funktionen, ab Einsteiger geeignet.
 - <https://www.php.net/manual/de/language.oop5.php> - Objektorientierung in PHP (Klassen, Interfaces, Enums), passend zu `src/Domain/`, ab Grundkenntnissen.
-- <https://www.php.net/manual/de/book.pdo.php> - PDO-Datenbankschicht, Grundlage von `src/Database/Connection.php`, mittleres Niveau.
+- <https://www.php.net/manual/de/book.pdo.php> - PDO-Datenbankschicht, Grundlage von [`src/Database/Connection.php`](../../backend/src/Database/Connection.php), mittleres Niveau.
 - <https://www.php-fig.org/psr/> - PSR-Standards (Autoloading, HTTP-Handler), erklärt die Basis unseres Kerns, fortgeschritten.
 
 ## Frontend (Svelte, Vite, TypeScript)
