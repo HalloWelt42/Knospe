@@ -1,0 +1,9 @@
+{
+  "id": "knospe-comments",
+  "name": "Kommentare",
+  "version": "1.0.0",
+  "php": ">=8.5",
+  "namespace": "KnospeComments\\",
+  "bootClass": "KnospeComments\\CommentsPlugin",
+  "capabilities": ["routes", "migrations", "hooks", "frontend"]
+}
