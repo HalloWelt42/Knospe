@@ -38,7 +38,15 @@ ensure_deps() {
 }
 
 cmd_setup() {
-  ensure_env
+  # Bei Erstinstallation nach einem Projekt-Postfix fragen (oder einen
+  # mitgegebenen verwenden: ./knospe setup <postfix>).
+  if [ ! -f "$ENV_FILE" ]; then
+    if [ "$#" -gt 0 ] && [ -n "$1" ]; then
+      sh "$ROOT_DIR/tools/setup-env.sh" "$1"
+    else
+      sh "$ROOT_DIR/tools/setup-env.sh" --ask
+    fi
+  fi
   echo "[knospe] Baue Images (das kann beim ersten Mal dauern) ..."
   dc build
   ensure_deps
@@ -137,7 +145,7 @@ EOF
 CMD="${1:-help}"
 shift 2>/dev/null || true
 case "$CMD" in
-  setup)          cmd_setup ;;
+  setup)          cmd_setup "$@" ;;
   up|start)       cmd_up ;;
   down|stop)      cmd_down ;;
   restart)        cmd_restart ;;
