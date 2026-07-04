@@ -28,15 +28,27 @@ ensure_env() {
 
 # --- Befehle -----------------------------------------------------------------
 
+# Installiert die Backend-Abhängigkeiten (composer), falls sie fehlen.
+# Nutzt einen Einweg-Container, braucht also keinen laufenden Stack.
+ensure_deps() {
+  if [ ! -f backend/vendor/autoload.php ]; then
+    echo "[knospe] Installiere Backend-Abhängigkeiten (composer) ..."
+    dc run --rm --no-deps php composer install --no-interaction
+  fi
+}
+
 cmd_setup() {
   ensure_env
   echo "[knospe] Baue Images (das kann beim ersten Mal dauern) ..."
   dc build
+  ensure_deps
   echo "[knospe] Bereit. Starten mit: ./knospe up"
 }
 
 cmd_up() {
   ensure_env
+  # Auf einem frischen Klon fehlen die Composer-Abhängigkeiten - dann nachziehen.
+  ensure_deps
   dc up -d
   # Migrationen laufen, sobald der Runner existiert (ab Meilenstein M2).
   if [ -f backend/bin/console ]; then
