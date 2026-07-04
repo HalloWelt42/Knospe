@@ -20,7 +20,7 @@ use Throwable;
  *    darum läuft jede Migration in einer eigenen Transaktion.
  *
  * Keine Magie, kein ORM - alles ist als SQL sichtbar und nachvollziehbar.
- * Lern mehr: docs/03-datenbank/04-migrationen-system.md
+ * Lern mehr: ../../../../docs/03-datenbank/04-migrationen-system.md
  */
 final class MigrationRunner
 {

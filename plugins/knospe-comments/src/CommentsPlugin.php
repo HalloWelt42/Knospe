@@ -19,7 +19,7 @@ use Knospe\Plugin\PluginMetadata;
  *  - einen Frontend-Teil (frontend/comments.plugin.ts + CommentsPanel.svelte)
  *
  * Zum Nachbauen: dieses Verzeichnis kopieren, id/namespace anpassen, loslegen.
- * Lern mehr: docs/05-plugins/04-dein-erstes-plugin.md
+ * Lern mehr: ../../../docs/05-plugins/04-dein-erstes-plugin.md
  */
 final class CommentsPlugin extends AbstractPlugin
 {

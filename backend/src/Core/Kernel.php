@@ -31,7 +31,7 @@ use Throwable;
  * booten (die dabei Routen und Hooks registrieren) und eine Anfrage durch die
  * Middleware-Pipeline zum Router leiten.
  *
- * Lern mehr: docs/02-architektur/02-ordner-bedeutung-detailliert.md
+ * Lern mehr: ../../../docs/02-architektur/02-ordner-bedeutung-detailliert.md
  */
 final class Kernel
 {

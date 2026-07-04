@@ -1,6 +1,6 @@
 <script lang="ts">
   // Startseite: Liste der Beiträge und (bei Anmeldung) ein Formular zum Anlegen.
-  // Lern mehr: docs/04-frontend/08-forms-und-validierung.md
+  // Lern mehr: ../../../docs/04-frontend/08-forms-und-validierung.md
   import { onMount } from 'svelte';
   import { api, ApiError } from '../lib/api';
   import type { Post } from '../lib/types';

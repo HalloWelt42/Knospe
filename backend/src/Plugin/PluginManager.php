@@ -12,7 +12,7 @@ use PDO;
  * Ueber sie registriert es Hooks und Routen, liest/schreibt Einstellungen
  * und greift auf die Datenbank zu.
  *
- * Lern mehr: docs/05-plugins/02-plugin-struktur.md
+ * Lern mehr: ../../../docs/05-plugins/02-plugin-struktur.md
  */
 final class PluginManager
 {

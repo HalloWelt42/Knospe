@@ -15,7 +15,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * Testet die Geschäftslogik für Beiträge - ohne Datenbank, mit einem
  * einfachen Test-Repository. So bleibt der Test schnell und fokussiert.
- * Lern mehr: docs/02-architektur/05-services-pattern.md
+ * Lern mehr: ../../../docs/02-architektur/05-services-pattern.md
  */
 final class PostServiceTest extends TestCase
 {

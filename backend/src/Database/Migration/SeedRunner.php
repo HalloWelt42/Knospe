@@ -13,7 +13,7 @@ use Throwable;
  * sollten idempotent sein (z.B. mit ON CONFLICT DO NOTHING), damit ein
  * erneutes Ausführen keine Duplikate erzeugt.
  *
- * Lern mehr: docs/03-datenbank/05-erste-tabelle-anlegen.md
+ * Lern mehr: ../../../../docs/03-datenbank/05-erste-tabelle-anlegen.md
  */
 final class SeedRunner
 {

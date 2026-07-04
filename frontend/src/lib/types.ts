@@ -1,6 +1,6 @@
 // Gemeinsame Datentypen für die Oberfläche. Sie spiegeln die JSON-Antworten
 // der PHP-API wider.
-// Lern mehr: docs/04-frontend/02-typescript-in-svelte.md
+// Lern mehr: ../../../docs/04-frontend/02-typescript-in-svelte.md
 
 export interface User {
   id: number;

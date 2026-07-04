@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Testet das Passwort-Hashing.
- * Lern mehr: docs/08-debugging-und-sicherheit/08-passwort-sicherheit.md
+ * Lern mehr: ../../../docs/08-debugging-und-sicherheit/08-passwort-sicherheit.md
  */
 final class PasswordHasherTest extends TestCase
 {

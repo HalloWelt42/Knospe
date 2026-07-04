@@ -25,7 +25,7 @@ use Throwable;
  * Diese Middleware steht ganz vorne in der Pipeline, damit sie wirklich
  * jeden Fehler dahinter einfangen kann.
  *
- * Lern mehr: docs/02-architektur/07-exception-handling-zentral.md
+ * Lern mehr: ../../../../docs/02-architektur/07-exception-handling-zentral.md
  */
 final class ErrorHandlingMiddleware implements MiddlewareInterface
 {

@@ -1,7 +1,7 @@
 // Geteilter Anmeldezustand als Svelte-5-Rune ($state in einem .svelte.ts-Modul).
 // Statt eines klassischen Stores nutzen wir ein reaktives Objekt: Änderungen
 // an seinen Feldern aktualisieren automatisch alle Komponenten, die es lesen.
-// Lern mehr: docs/04-frontend/04-state-management-einfach.md
+// Lern mehr: ../../../docs/04-frontend/04-state-management-einfach.md
 
 import { api } from './api';
 import type { User } from './types';

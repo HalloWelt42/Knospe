@@ -17,7 +17,7 @@ use Psr\Http\Server\RequestHandlerInterface;
  * Antwort läuft denselben Weg zurück. Die Kette wird von hinten nach vorne
  * gefaltet - so bleibt die Reihenfolge intuitiv (erste Middleware zuerst).
  *
- * Lern mehr: docs/02-architektur/06-middleware-pipeline.md
+ * Lern mehr: ../../../docs/02-architektur/06-middleware-pipeline.md
  */
 final class Pipeline implements RequestHandlerInterface
 {

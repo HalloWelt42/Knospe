@@ -21,7 +21,7 @@ use RuntimeException;
  * Der Router ist selbst ein RequestHandler (PSR-15) und bildet das Ende
  * der Middleware-Pipeline.
  *
- * Lern mehr: docs/02-architektur/03-request-flow-diagramm.md
+ * Lern mehr: ../../../docs/02-architektur/03-request-flow-diagramm.md
  */
 final class Router implements RequestHandlerInterface
 {

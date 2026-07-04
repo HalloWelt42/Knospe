@@ -34,4 +34,4 @@ In der App unter **Plugins** auf "Aktivieren" klicken. Dabei laufen die Migratio
 
 Diesen Ordner kopieren, in `manifest.json` `id`, `namespace` und `bootClass` anpassen, die Klassen im neuen Namensraum umbenennen - fertig ist das Gerüst.
 
-Mehr dazu im Handbuch: `docs/05-plugins/`.
+Mehr dazu im Handbuch: [Plugins-Kapitel](../../docs/05-plugins/).

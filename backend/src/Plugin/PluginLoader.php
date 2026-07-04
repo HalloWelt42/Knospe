@@ -15,7 +15,7 @@ use RuntimeException;
  *    eigenständig, ohne Eintrag in der composer.json).
  *  - instantiate(): erzeugt die Boot-Klasse des Plugins.
  *
- * Lern mehr: docs/05-plugins/02-plugin-struktur.md
+ * Lern mehr: ../../../docs/05-plugins/02-plugin-struktur.md
  */
 final class PluginLoader
 {

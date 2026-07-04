@@ -14,7 +14,7 @@ use Psr\Http\Server\RequestHandlerInterface;
  * Liefert das CSRF-Token der Sitzung. Die Oberfläche ruft dies einmal beim
  * Start auf und schickt das Token danach bei verändernden Anfragen mit.
  *
- * Lern mehr: docs/08-debugging-und-sicherheit/07-sicherheits-basics.md
+ * Lern mehr: ../../../../../docs/08-debugging-und-sicherheit/07-sicherheits-basics.md
  */
 final class CsrfHandler implements RequestHandlerInterface
 {

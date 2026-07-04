@@ -19,7 +19,7 @@ use Psr\Http\Message\ServerRequestInterface;
  * Abhängigkeiten (PDO, Hook-Bus, Anmeldung) werden automatisch verkabelt -
  * ein Plugin-Controller funktioniert also genauso wie ein Kern-Handler.
  *
- * Lern mehr: docs/05-plugins/05-plugin-datenzugriff.md
+ * Lern mehr: ../../../docs/05-plugins/05-plugin-datenzugriff.md
  */
 final class CommentController
 {

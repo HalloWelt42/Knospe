@@ -3,7 +3,7 @@
   // (eigene fetch-Aufrufe), damit das Plugin ohne Abhängigkeit vom Kern-Code
   // der Oberfläche funktioniert. Die globalen CSS-Klassen (karte, btn, ...)
   // stammen aus der App und sorgen für ein einheitliches Aussehen.
-  // Lern mehr: docs/05-plugins/04-dein-erstes-plugin.md
+  // Lern mehr: ../../../docs/05-plugins/04-dein-erstes-plugin.md
   import { onMount } from 'svelte';
 
   interface Comment {

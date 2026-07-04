@@ -10,7 +10,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import './app.css';
 
 // Svelte 5: Die Anwendung wird über mount() eingehängt.
-// Lern mehr: docs/04-frontend/01-svelte5-komponenten-intro.md
+// Lern mehr: ../../docs/04-frontend/01-svelte5-komponenten-intro.md
 const app = mount(App, {
   target: document.getElementById('app')!,
 });

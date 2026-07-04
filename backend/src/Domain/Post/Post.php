@@ -9,7 +9,7 @@ namespace Knospe\Domain\Post;
  * Lesen aus einer Verknüpfung (JOIN mit users) mitgefüllt, damit die
  * Oberfläche den Namen zeigen kann, ohne extra nachzufragen.
  *
- * Lern mehr: docs/01-grundlagen/01-oop-klassen-intro.md
+ * Lern mehr: ../../../../docs/01-grundlagen/01-oop-klassen-intro.md
  */
 final readonly class Post
 {

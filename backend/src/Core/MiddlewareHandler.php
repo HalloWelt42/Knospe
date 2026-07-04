@@ -13,7 +13,7 @@ use Psr\Http\Server\RequestHandlerInterface;
  * Verbindet eine einzelne Middleware mit dem nächsten Glied der Kette.
  * Ein Baustein, aus dem die Pipeline die gesamte Kette zusammensetzt.
  *
- * Lern mehr: docs/02-architektur/06-middleware-pipeline.md
+ * Lern mehr: ../../../docs/02-architektur/06-middleware-pipeline.md
  */
 final class MiddlewareHandler implements RequestHandlerInterface
 {

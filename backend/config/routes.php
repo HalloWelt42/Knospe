@@ -10,7 +10,7 @@ declare(strict_types=1);
  *   - Klassenname, der RequestHandlerInterface implementiert
  *   - oder "Klasse@methode"
  *
- * Lern mehr: docs/02-architektur/09-restful-apis-kurz.md
+ * Lern mehr: ../../docs/02-architektur/09-restful-apis-kurz.md
  */
 
 use Knospe\Http\Handler\Auth\CsrfHandler;

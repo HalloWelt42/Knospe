@@ -6,7 +6,7 @@ namespace Knospe\Plugin;
 
 /**
  * Metadaten eines Plugins, wie sie in der manifest.json stehen.
- * Lern mehr: docs/05-plugins/02-plugin-struktur.md
+ * Lern mehr: ../../../docs/05-plugins/02-plugin-struktur.md
  */
 final readonly class PluginMetadata
 {

@@ -13,7 +13,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 /**
  * Liste aller gefundenen Plugins mit Aktivierungsstatus. Erfordert Anmeldung.
- * Lern mehr: docs/05-plugins/01-plugin-system-konzept.md
+ * Lern mehr: ../../../../../docs/05-plugins/01-plugin-system-konzept.md
  */
 final class PluginListHandler implements RequestHandlerInterface
 {

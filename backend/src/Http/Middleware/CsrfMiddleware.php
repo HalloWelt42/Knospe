@@ -19,7 +19,7 @@ use Psr\Http\Server\RequestHandlerInterface;
  * holt das Token einmal über GET /api/csrf und schickt es danach mit.
  * Lesende Anfragen (GET) sind ausgenommen.
  *
- * Lern mehr: docs/08-debugging-und-sicherheit/10-cors-verstehen.md
+ * Lern mehr: ../../../../docs/08-debugging-und-sicherheit/10-cors-verstehen.md
  */
 final class CsrfMiddleware implements MiddlewareInterface
 {

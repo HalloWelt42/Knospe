@@ -16,7 +16,7 @@ use Knospe\Plugin\Hook\HookDispatcher;
  * Beim Anlegen und Löschen werden Hooks ausgelöst, damit Plugins reagieren
  * können (z.B. das Kommentar-Plugin löscht die Kommentare eines Beitrags).
  *
- * Lern mehr: docs/02-architektur/05-services-pattern.md
+ * Lern mehr: ../../../../docs/02-architektur/05-services-pattern.md
  */
 final class PostService
 {

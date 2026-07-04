@@ -14,7 +14,7 @@ namespace Knospe\Plugin\Hook;
  *
  * Kleinere Prioritätszahl = früher dran.
  *
- * Lern mehr: docs/05-plugins/03-hooks-und-events.md
+ * Lern mehr: ../../../../docs/05-plugins/03-hooks-und-events.md
  */
 final class HookDispatcher
 {

@@ -10,7 +10,7 @@ use Knospe\Tests\TestCase;
 /**
  * Testet das Beitrags-Repository gegen die echte Datenbank. Alles läuft in
  * einer Transaktion, die am Ende zurückgerollt wird - es bleibt nichts zurück.
- * Lern mehr: docs/03-datenbank/09-repository-pattern.md
+ * Lern mehr: ../../../docs/03-datenbank/09-repository-pattern.md
  */
 final class PostgresPostRepositoryTest extends TestCase
 {

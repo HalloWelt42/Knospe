@@ -16,7 +16,7 @@ declare(strict_types=1);
  *   7. Anfrage vom Kernel verarbeiten lassen
  *   8. Antwort senden
  *
- * Lern mehr: docs/02-architektur/03-request-flow-diagramm.md
+ * Lern mehr: ../../docs/02-architektur/03-request-flow-diagramm.md
  */
 
 // 1. Beim eingebauten PHP-Server existierende Dateien direkt ausliefern.

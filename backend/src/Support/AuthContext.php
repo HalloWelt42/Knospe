@@ -13,7 +13,7 @@ use Knospe\Domain\User\UserRepositoryInterface;
  * An- und Abmelden. Handler fragen hier nach "wer ist das?" statt selbst in
  * der Sitzung zu wühlen.
  *
- * Lern mehr: docs/08-debugging-und-sicherheit/07-sicherheits-basics.md
+ * Lern mehr: ../../../docs/08-debugging-und-sicherheit/07-sicherheits-basics.md
  */
 final class AuthContext
 {
