@@ -21,7 +21,7 @@ use Throwable;
  * aufgebaut, damit ein Ausfall als "nicht verbunden" gemeldet werden kann,
  * statt den ganzen Handler scheitern zu lassen.
  *
- * Lern mehr: ../../../../docs/02-architektur/03-request-flow-diagramm.md
+ * Lern mehr: ./docs/02-architektur/03-request-flow-diagramm.md
  */
 final class HealthHandler implements RequestHandlerInterface
 {

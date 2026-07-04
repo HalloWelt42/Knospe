@@ -7,7 +7,7 @@
 //  - Fehlerantworten der API werden zu einem ApiError mit Meldung und
 //    optionalen Feldfehlern.
 //
-// Lern mehr: ../../../docs/04-frontend/03-api-aufrufe-fetch.md
+// Lern mehr: ./docs/04-frontend/03-api-aufrufe-fetch.md
 
 import type { PluginInfo, Post, User } from './types';
 

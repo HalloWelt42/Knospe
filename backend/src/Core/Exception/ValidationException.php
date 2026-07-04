@@ -10,7 +10,7 @@ use Throwable;
  * Eingaben sind ungültig. Ergibt HTTP 422 und trägt die Feldfehler mit,
  * damit die Oberfläche gezielt Rückmeldung geben kann.
  *
- * Lern mehr: ../../../../docs/08-debugging-und-sicherheit/07-sicherheits-basics.md
+ * Lern mehr: ./docs/08-debugging-und-sicherheit/07-sicherheits-basics.md
  */
 final class ValidationException extends HttpException
 {

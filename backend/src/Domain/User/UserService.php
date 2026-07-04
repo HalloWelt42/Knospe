@@ -12,7 +12,7 @@ use Knospe\Support\PasswordHasher;
  * Geschäftslogik rund um Nutzer: Registrierung und Anmeldung.
  * Der Handler ruft nur diese Methoden auf und kümmert sich nicht um Details.
  *
- * Lern mehr: ../../../../docs/02-architektur/05-services-pattern.md
+ * Lern mehr: ./docs/02-architektur/05-services-pattern.md
  */
 final class UserService
 {

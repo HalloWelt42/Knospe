@@ -19,7 +19,7 @@ use ReflectionNamedType;
  *  - jeden Dienst genau einmal bauen (Singleton pro Container)
  *
  * Bewusst klein gehalten: kein magisches Framework, sondern nachvollziehbar.
- * Lern mehr: ../../../docs/02-architektur/04-dependency-injection.md
+ * Lern mehr: ./docs/02-architektur/04-dependency-injection.md
  */
 final class Container implements ContainerInterface
 {

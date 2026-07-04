@@ -6,7 +6,7 @@ namespace Knospe\Domain\Post;
 
 /**
  * Vertrag für den Beitrags-Datenzugriff.
- * Lern mehr: ../../../../docs/03-datenbank/09-repository-pattern.md
+ * Lern mehr: ./docs/03-datenbank/09-repository-pattern.md
  */
 interface PostRepositoryInterface
 {

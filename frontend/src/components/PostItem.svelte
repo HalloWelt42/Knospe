@@ -1,7 +1,7 @@
 <script lang="ts">
   // Ein Beitrag in der Liste. Der Autor sieht Bearbeiten und Löschen.
   // Statt eines Browser-Dialogs gibt es eine eigene Inline-Rückfrage.
-  // Lern mehr: ../../../docs/04-frontend/02-typescript-in-svelte.md
+  // Lern mehr: ./docs/04-frontend/02-typescript-in-svelte.md
   import { api, ApiError } from '../lib/api';
   import type { Post } from '../lib/types';
   import { auth } from '../lib/auth.svelte';

@@ -11,7 +11,7 @@ namespace Knospe\Support;
  * Objekt mit klar benannten, typsicheren Werten. Das ist leichter zu
  * lesen, zu testen und zu ändern.
  *
- * Lern mehr: ../../../docs/02-architektur/10-konfiguration-und-umgebung.md
+ * Lern mehr: ./docs/02-architektur/10-konfiguration-und-umgebung.md
  */
 final class Config
 {

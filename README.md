@@ -34,11 +34,11 @@ Das komplette Handbuch liegt in [`docs/`](docs/). Einstieg über [`docs/README.m
 
 ## Projektstruktur (Kurz)
 
-- `backend/` - PHP-Kern, Domänen-Code, Migrationen, Tests
-- `frontend/` - Svelte-5-Oberfläche (Vite, TypeScript)
-- `plugins/` - eigene Erweiterungen (mit Beispiel-Plugin)
-- `docs/` - das Handbuch
-- `docker/`, `docker-compose.yml`, `knospe` - Betrieb und Verwaltung
+- [`backend/`](backend/) - PHP-Kern, Domänen-Code, Migrationen, Tests
+- [`frontend/`](frontend/) - Svelte-5-Oberfläche (Vite, TypeScript)
+- [`plugins/`](plugins/) - eigene Erweiterungen (mit Beispiel-Plugin)
+- [`docs/`](docs/) - das Handbuch
+- [`docker/`](docker/), [`docker-compose.yml`](docker-compose.yml), [`knospe`](knospe) - Betrieb und Verwaltung
 
 ## Lizenz
 

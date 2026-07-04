@@ -11,7 +11,7 @@ use Throwable;
  * Basis für erwartbare HTTP-Fehler. Trägt den passenden Statuscode,
  * damit die zentrale Fehler-Middleware daraus eine saubere Antwort baut.
  *
- * Lern mehr: ../../../../docs/02-architektur/07-exception-handling-zentral.md
+ * Lern mehr: ./docs/02-architektur/07-exception-handling-zentral.md
  */
 class HttpException extends RuntimeException
 {

@@ -14,7 +14,7 @@ namespace Knospe\Support;
  * Die Anmeldung nutzt eine Sitzung mit HttpOnly-Cookie; zusätzlich schützt
  * ein CSRF-Token vor ungewollten Anfragen.
  *
- * Lern mehr: ../../../docs/08-debugging-und-sicherheit/07-sicherheits-basics.md
+ * Lern mehr: ./docs/08-debugging-und-sicherheit/07-sicherheits-basics.md
  */
 final class Session
 {

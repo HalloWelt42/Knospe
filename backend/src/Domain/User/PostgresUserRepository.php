@@ -10,7 +10,7 @@ use PDO;
  * PostgreSQL-Umsetzung des Nutzer-Repositorys. Nutzt ausschließlich
  * Prepared Statements (Schutz vor SQL-Injection).
  *
- * Lern mehr: ../../../../docs/03-datenbank/03-pdo-und-sql.md
+ * Lern mehr: ./docs/03-datenbank/03-pdo-und-sql.md
  */
 final class PostgresUserRepository implements UserRepositoryInterface
 {

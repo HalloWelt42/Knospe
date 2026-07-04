@@ -14,7 +14,7 @@ use PDO;
  *  - FETCH_ASSOC:       Ergebniszeilen als assoziative Arrays
  *  - EMULATE_PREPARES=false: echte Prepared Statements (Schutz vor Injection)
  *
- * Lern mehr: ../../../docs/03-datenbank/03-pdo-und-sql.md
+ * Lern mehr: ./docs/03-datenbank/03-pdo-und-sql.md
  */
 final class Connection
 {

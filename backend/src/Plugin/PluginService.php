@@ -16,7 +16,7 @@ use Throwable;
  * Beim Aktivieren laufen die Plugin-Migrationen und enable() wird einmal
  * aufgerufen. Beim Deaktivieren bleiben die Daten erhalten (nur disable()).
  *
- * Lern mehr: ../../../docs/05-plugins/05-plugin-datenzugriff.md
+ * Lern mehr: ./docs/05-plugins/05-plugin-datenzugriff.md
  */
 final class PluginService
 {

@@ -11,7 +11,7 @@ use Psr\Http\Message\ResponseInterface;
  * Kleiner Helfer, um aus Daten eine JSON-Antwort zu bauen.
  * Hält die Handler kurz und sorgt für einheitliche Header und Umlaute.
  *
- * Lern mehr: ../../../docs/02-architektur/09-restful-apis-kurz.md
+ * Lern mehr: ./docs/02-architektur/09-restful-apis-kurz.md
  */
 final class Json
 {

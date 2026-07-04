@@ -1,7 +1,7 @@
 -- Migration 002: Tabelle "posts"
 -- Beiträge gehören zu einem Nutzer (Fremdschlüssel author_id). Wird der
 -- Nutzer gelöscht, verschwinden seine Beiträge mit (ON DELETE CASCADE).
--- Lern mehr: ../../../docs/03-datenbank/07-beziehungen-foreign-keys.md
+-- Lern mehr: ./docs/03-datenbank/07-beziehungen-foreign-keys.md
 
 CREATE TABLE IF NOT EXISTS posts (
     id         BIGSERIAL PRIMARY KEY,

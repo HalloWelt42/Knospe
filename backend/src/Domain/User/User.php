@@ -11,7 +11,7 @@ namespace Knospe\Domain\User;
  * berechenbar. Der Passwort-Hash bleibt im Objekt, wird aber von toArray()
  * bewusst NICHT ausgegeben (er darf nie zum Client gelangen).
  *
- * Lern mehr: ../../../../docs/01-grundlagen/04-properties-constructor-promotion.md
+ * Lern mehr: ./docs/01-grundlagen/04-properties-constructor-promotion.md
  */
 final readonly class User
 {

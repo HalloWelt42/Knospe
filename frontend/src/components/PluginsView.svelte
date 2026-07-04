@@ -1,7 +1,7 @@
 <script lang="ts">
   // Verwaltung der Plugins: auflisten, aktivieren, deaktivieren.
   // So kann der Nutzer alles in der Oberfläche erledigen (kein Skript nötig).
-  // Lern mehr: ../../../docs/05-plugins/01-plugin-system-konzept.md
+  // Lern mehr: ./docs/05-plugins/01-plugin-system-konzept.md
   import { onMount } from 'svelte';
   import { api, ApiError } from '../lib/api';
   import type { PluginInfo } from '../lib/types';

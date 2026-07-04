@@ -1,6 +1,6 @@
 <script lang="ts">
   // Registrierungsformular mit Feldfehlern aus der API.
-  // Lern mehr: ../../../docs/04-frontend/08-forms-und-validierung.md
+  // Lern mehr: ./docs/04-frontend/08-forms-und-validierung.md
   import { registrieren } from '../lib/auth.svelte';
   import { navigate } from '../lib/router.svelte';
   import { ApiError } from '../lib/api';

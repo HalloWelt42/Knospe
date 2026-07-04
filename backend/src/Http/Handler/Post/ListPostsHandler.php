@@ -13,7 +13,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 /**
  * Liste der neuesten Beiträge. Öffentlich lesbar.
- * Lern mehr: ../../../../../docs/02-architektur/09-restful-apis-kurz.md
+ * Lern mehr: ./docs/02-architektur/09-restful-apis-kurz.md
  */
 final class ListPostsHandler implements RequestHandlerInterface
 {

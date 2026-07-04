@@ -14,7 +14,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 /**
  * Registrierung: legt einen Nutzer an und meldet ihn direkt an.
- * Lern mehr: ../../../../../docs/08-debugging-und-sicherheit/08-passwort-sicherheit.md
+ * Lern mehr: ./docs/08-debugging-und-sicherheit/08-passwort-sicherheit.md
  */
 final class RegisterHandler implements RequestHandlerInterface
 {

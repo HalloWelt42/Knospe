@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Testet den Hook-Bus: Aktionen laufen nach Priorität, Filter verändern Werte.
- * Lern mehr: ../../../docs/05-plugins/03-hooks-und-events.md
+ * Lern mehr: ./docs/05-plugins/03-hooks-und-events.md
  */
 final class HookDispatcherTest extends TestCase
 {

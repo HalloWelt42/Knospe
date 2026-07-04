@@ -10,7 +10,7 @@ use Psr\Http\Message\ServerRequestInterface;
  * Kleiner Helfer, um den JSON-Rumpf einer Anfrage als Array zu lesen.
  * Gibt bei fehlerhaftem oder leerem Rumpf ein leeres Array zurück.
  *
- * Lern mehr: ../../../docs/04-frontend/03-api-aufrufe-fetch.md
+ * Lern mehr: ./docs/04-frontend/03-api-aufrufe-fetch.md
  */
 final class Input
 {

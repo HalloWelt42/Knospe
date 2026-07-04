@@ -1,7 +1,7 @@
 /* Globale Gestaltung und ein paar wiederverwendbare Klassen.
    Bewusst schlicht und dunkel gehalten. Akzente über volle Ränder oder
    Flächen - keine reinen Links/Rechts-Randstreifen.
-   Lern mehr: ../../docs/04-frontend/06-styling-css.md */
+   Lern mehr: ./docs/04-frontend/06-styling-css.md */
 
 :root {
   --bg: #0f1115;

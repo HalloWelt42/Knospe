@@ -2,7 +2,7 @@
 // er liest den aktuellen Pfad, faengt interne Link-Klicks ab (kein volles
 // Neuladen) und bietet navigate(). So sehen die Adressen sauber aus
 // (z.B. /register statt /#/register).
-// Lern mehr: ../../../docs/04-frontend/07-routing-sveltekit.md
+// Lern mehr: ./docs/04-frontend/07-routing-sveltekit.md
 
 export interface Route {
   name: 'home' | 'login' | 'register' | 'post' | 'plugins';

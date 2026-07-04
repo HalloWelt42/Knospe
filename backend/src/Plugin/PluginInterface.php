@@ -16,7 +16,7 @@ namespace Knospe\Plugin;
  * Für den Alltag gibt es AbstractPlugin mit leeren Standard-Umsetzungen,
  * sodass ein Plugin nur überschreibt, was es wirklich braucht.
  *
- * Lern mehr: ../../../docs/05-plugins/02-plugin-struktur.md
+ * Lern mehr: ./docs/05-plugins/02-plugin-struktur.md
  */
 interface PluginInterface
 {

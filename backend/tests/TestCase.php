@@ -14,7 +14,7 @@ use PHPUnit\Framework\TestCase as BaseTestCase;
  * tearDown() zurückgerollt wird - so bleibt die Datenbank sauber, ganz ohne
  * Aufräum-SQL. Es wird nur die projekteigene Datenbank angefasst.
  *
- * Lern mehr: ../../docs/09-entwicklung/04-testing-kultur.md
+ * Lern mehr: ./docs/09-entwicklung/04-testing-kultur.md
  */
 abstract class TestCase extends BaseTestCase
 {

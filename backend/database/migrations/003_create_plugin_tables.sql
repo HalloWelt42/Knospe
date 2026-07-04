@@ -2,7 +2,7 @@
 --   plugins            - welche Plugins bekannt und aktiviert sind
 --   plugin_options     - Einstellungen je Plugin (Schlüssel/Wert)
 --   plugin_migrations  - welche Plugin-Migrationen schon liefen (je Plugin)
--- Lern mehr: ../../../docs/05-plugins/05-plugin-datenzugriff.md
+-- Lern mehr: ./docs/05-plugins/05-plugin-datenzugriff.md
 
 CREATE TABLE IF NOT EXISTS plugins (
     id            VARCHAR(64)  PRIMARY KEY,

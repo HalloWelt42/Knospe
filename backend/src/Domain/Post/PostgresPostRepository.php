@@ -10,7 +10,7 @@ use PDO;
  * PostgreSQL-Umsetzung des Beitrags-Repositorys. Beim Lesen wird der Name
  * des Autors per JOIN mitgeholt. Alle Abfragen nutzen Prepared Statements.
  *
- * Lern mehr: ../../../../docs/03-datenbank/03-pdo-und-sql.md
+ * Lern mehr: ./docs/03-datenbank/03-pdo-und-sql.md
  */
 final class PostgresPostRepository implements PostRepositoryInterface
 {

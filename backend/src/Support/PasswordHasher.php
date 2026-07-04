@@ -13,7 +13,7 @@ namespace Knospe\Support;
  *  - verify() sollte immer aufgerufen werden, auch wenn es den Nutzer nicht
  *    gibt (gegen Timing-Rückschlüsse) - siehe UserService::authenticate().
  *
- * Lern mehr: ../../../docs/08-debugging-und-sicherheit/08-passwort-sicherheit.md
+ * Lern mehr: ./docs/08-debugging-und-sicherheit/08-passwort-sicherheit.md
  */
 final class PasswordHasher
 {

@@ -9,7 +9,7 @@
 // die sagen: "diese Komponente gehört an diese Stelle (Slot)". Gibt es noch
 // kein Plugin, bleibt die Liste einfach leer.
 //
-// Lern mehr: ../../../docs/05-plugins/01-plugin-system-konzept.md
+// Lern mehr: ./docs/05-plugins/01-plugin-system-konzept.md
 import type { Component } from 'svelte';
 
 export interface SlotEntry {

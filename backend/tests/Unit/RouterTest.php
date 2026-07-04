@@ -17,7 +17,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 /**
  * Testet das Routing: Treffer mit Platzhalter, 404 und 405.
- * Lern mehr: ../../../docs/02-architektur/03-request-flow-diagramm.md
+ * Lern mehr: ./docs/02-architektur/03-request-flow-diagramm.md
  */
 final class RouterTest extends TestCase
 {
