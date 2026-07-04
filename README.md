@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/knospe-logo.svg" alt="Knospe" width="96" height="96" /></p>
+
 # Knospe
 
 Ein Lehr-Boilerplate zum Verstehen: PHP 8.5 mit eigenem kleinen Kern (ohne Framework), eine getrennte Svelte-5-Oberfläche und PostgreSQL als Datenbank. Ziel ist nicht das fertige Produkt, sondern das Begreifen jeder Ecke - der Code versteckt nichts, jede Datei erklärt ihr Warum, und ein ausführliches deutsches Handbuch begleitet dich.
