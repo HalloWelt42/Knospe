@@ -1,0 +1,60 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+/*
+ * Knospe - Kommandozeilen-Werkzeug
+ * --------------------------------
+ * Nutzung:
+ *   php bin/console migrate       Ausstehende Migrationen ausfuehren
+ *   php bin/console rollback [n]  Die letzten n Migrationen zuruecknehmen
+ *   php bin/console status        Zeigen, was ausgefuehrt ist
+ *   php bin/console seed          Startdaten einspielen
+ *
+ * Lern mehr: docs/03-datenbank/04-migrationen-system.md
+ */
+
+require dirname(__DIR__) . '/vendor/autoload.php';
+
+if (is_file(dirname(__DIR__, 2) . '/.env')) {
+    Dotenv\Dotenv::createImmutable(dirname(__DIR__, 2))->safeLoad();
+}
+
+$config = require dirname(__DIR__) . '/config/config.php';
+$pdo = Knospe\Database\Connection::create($config);
+
+$migrations = new Knospe\Database\Migration\MigrationRunner(
+    $pdo,
+    dirname(__DIR__) . '/database/migrations',
+);
+
+$command = $argv[1] ?? 'status';
+
+try {
+    switch ($command) {
+        case 'migrate':
+            $migrations->migrate();
+            break;
+        case 'rollback':
+            $migrations->rollback((int) ($argv[2] ?? 1));
+            break;
+        case 'status':
+            $migrations->status();
+            break;
+        case 'seed':
+            (new Knospe\Database\Migration\SeedRunner(
+                $pdo,
+                dirname(__DIR__) . '/database/seeds',
+            ))->run();
+            break;
+        default:
+            fwrite(STDERR, "Unbekannter Befehl: {$command}\n");
+            exit(1);
+    }
+} catch (Throwable $e) {
+    fwrite(STDERR, 'Fehler: ' . $e->getMessage() . "\n");
+    exit(1);
+}
+
+exit(0);
