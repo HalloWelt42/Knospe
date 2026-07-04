@@ -17,3 +17,11 @@ export interface Post {
   body: string;
   createdAt: string;
 }
+
+export interface PluginInfo {
+  id: string;
+  name: string;
+  version: string;
+  capabilities: string[];
+  enabled: boolean;
+}

@@ -9,7 +9,7 @@
 //
 // Lern mehr: docs/04-frontend/03-api-aufrufe-fetch.md
 
-import type { Post, User } from './types';
+import type { PluginInfo, Post, User } from './types';
 
 let csrfToken: string | null = null;
 
@@ -74,4 +74,7 @@ export const api = {
   updatePost: (id: number, title: string, body: string) =>
     request<{ post: Post }>('PUT', `/posts/${id}`, { title, body }),
   deletePost: (id: number) => request<{ status: string }>('DELETE', `/posts/${id}`),
+  listPlugins: () => request<{ plugins: PluginInfo[] }>('GET', '/plugins'),
+  enablePlugin: (id: string) => request<{ status: string }>('POST', `/plugins/${id}/enable`),
+  disablePlugin: (id: string) => request<{ status: string }>('POST', `/plugins/${id}/disable`),
 };

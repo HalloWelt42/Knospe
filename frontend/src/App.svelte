@@ -8,6 +8,7 @@
   import PostDetail from './components/PostDetail.svelte';
   import LoginView from './components/LoginView.svelte';
   import RegisterView from './components/RegisterView.svelte';
+  import PluginsView from './components/PluginsView.svelte';
   import { ladeAnmeldung } from './lib/auth.svelte';
   import { route, initRouter } from './lib/router.svelte';
   import { api } from './lib/api';
@@ -31,6 +32,8 @@
     <LoginView />
   {:else if route.name === 'register'}
     <RegisterView />
+  {:else if route.name === 'plugins'}
+    <PluginsView />
   {:else if route.name === 'post' && route.id !== undefined}
     {#key route.id}
       <PostDetail id={route.id} />

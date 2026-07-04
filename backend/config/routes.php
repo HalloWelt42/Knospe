@@ -19,6 +19,9 @@ use Knospe\Http\Handler\Auth\LogoutHandler;
 use Knospe\Http\Handler\Auth\MeHandler;
 use Knospe\Http\Handler\Auth\RegisterHandler;
 use Knospe\Http\Handler\HealthHandler;
+use Knospe\Http\Handler\Plugin\PluginDisableHandler;
+use Knospe\Http\Handler\Plugin\PluginEnableHandler;
+use Knospe\Http\Handler\Plugin\PluginListHandler;
 use Knospe\Http\Handler\Post\CreatePostHandler;
 use Knospe\Http\Handler\Post\DeletePostHandler;
 use Knospe\Http\Handler\Post\ListPostsHandler;
@@ -42,4 +45,9 @@ return [
     ['POST', '/api/posts', CreatePostHandler::class],
     ['PUT', '/api/posts/{id}', UpdatePostHandler::class],
     ['DELETE', '/api/posts/{id}', DeletePostHandler::class],
+
+    // Plugin-Verwaltung
+    ['GET', '/api/plugins', PluginListHandler::class],
+    ['POST', '/api/plugins/{id}/enable', PluginEnableHandler::class],
+    ['POST', '/api/plugins/{id}/disable', PluginDisableHandler::class],
 ];

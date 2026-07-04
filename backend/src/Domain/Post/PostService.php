@@ -7,17 +7,23 @@ namespace Knospe\Domain\Post;
 use Knospe\Core\Exception\ForbiddenException;
 use Knospe\Core\Exception\NotFoundException;
 use Knospe\Core\Exception\ValidationException;
+use Knospe\Plugin\Hook\HookDispatcher;
 
 /**
  * Geschaeftslogik fuer Beitraege: Validierung, Rechtepruefung (nur der Autor
  * darf aendern/loeschen) und das Zusammenspiel mit dem Repository.
  *
+ * Beim Anlegen und Loeschen werden Hooks ausgeloest, damit Plugins reagieren
+ * koennen (z.B. das Kommentar-Plugin loescht die Kommentare eines Beitrags).
+ *
  * Lern mehr: docs/02-architektur/05-services-pattern.md
  */
 final class PostService
 {
-    public function __construct(private PostRepositoryInterface $posts)
-    {
+    public function __construct(
+        private PostRepositoryInterface $posts,
+        private HookDispatcher $hooks,
+    ) {
     }
 
     /**
@@ -37,8 +43,11 @@ final class PostService
     public function create(int $authorId, string $title, string $body): Post
     {
         [$title, $body] = $this->validate($title, $body);
+        $post = $this->posts->create($authorId, $title, $body);
 
-        return $this->posts->create($authorId, $title, $body);
+        $this->hooks->doAction('post.created', $post);
+
+        return $post;
     }
 
     public function update(int $id, int $currentUserId, string $title, string $body): Post
@@ -55,6 +64,8 @@ final class PostService
         $post = $this->get($id);
         $this->assertOwner($post, $currentUserId);
         $this->posts->delete($id);
+
+        $this->hooks->doAction('post.deleted', $id);
     }
 
     /**
