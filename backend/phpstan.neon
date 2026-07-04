@@ -1,0 +1,7 @@
+# Statische Analyse. Level 6 ist ein guter Einstieg: er verlangt Typen an
+# vielen Stellen, ohne gleich alles zu erzwingen.
+# Lern mehr: docs/07-werkzeuge/07-phpstorm-code-inspection.md
+parameters:
+    level: 6
+    paths:
+        - src

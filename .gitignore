@@ -22,5 +22,9 @@ frontend/dist/
 .DS_Store
 Thumbs.db
 
+# Werkzeug-Zwischenspeicher
+backend/.phpunit.cache/
+backend/.php-cs-fixer.cache
+
 # Logs
 *.log

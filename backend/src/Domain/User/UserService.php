@@ -16,6 +16,10 @@ use Knospe\Support\PasswordHasher;
  */
 final class UserService
 {
+    // Ein ungueltiger Hash, gegen den auch bei unbekanntem Nutzer geprueft wird,
+    // damit die Antwortzeit keinen Rueckschluss zulaesst (verify liefert false).
+    private const DUMMY_HASH = '$argon2id$v=19$m=65536,t=4,p=1$MDAwMDAwMDAwMDAw$0000000000000000000000000000000000000000000';
+
     public function __construct(private UserRepositoryInterface $users)
     {
     }
@@ -52,10 +56,8 @@ final class UserService
     {
         $user = $this->users->findByEmail(trim($email));
 
-        // Auch bei unbekanntem Nutzer verifizieren, damit die Antwortzeit
-        // keinen Rueckschluss zulaesst (Schutz vor Timing-Angriffen).
-        $hash = $user?->passwordHash
-            ?? '$argon2id$v=19$m=65536,t=4,p=1$MDAwMDAwMDAwMDAw$0000000000000000000000000000000000000000000';
+        // Auch bei unbekanntem Nutzer verifizieren (Schutz vor Timing-Angriffen).
+        $hash = $user !== null ? $user->passwordHash : self::DUMMY_HASH;
 
         $ok = PasswordHasher::verify($password, $hash);
 

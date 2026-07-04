@@ -46,7 +46,7 @@ final class Config
     {
         $value = $_ENV[$key] ?? getenv($key);
 
-        return ($value === false || $value === null || $value === '')
+        return ($value === false || $value === '')
             ? $default
             : (string) $value;
     }
